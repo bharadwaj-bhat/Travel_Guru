@@ -1,6 +1,5 @@
 import Tippy from "@tippyjs/react";
-import styles from "../../App.module.css"
-
+import styles from "../../Styles/LandingPage.module.css";
 
 export const NavBar = () => {
   return (
