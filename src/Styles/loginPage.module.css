@@ -144,3 +144,35 @@
 	font-weight: 570;
 	padding: 8px 10px;
 }
+.register_main_container_body {
+	border: 1px solid rgb(211, 209, 209);
+	height: 110vh;
+	width: 65vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.register_main_container_body_left_main_forget_password {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.register_main_container_body_left_main_forget_password > p {
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 400;
+	outline: none;
+	color: rgb(114, 111, 111);
+	margin-top: 3px;
+	margin-left: 0px;
+	cursor: text;
+}
+.register_main_container_body_left_main_title {
+	font-size: 16px;
+}
