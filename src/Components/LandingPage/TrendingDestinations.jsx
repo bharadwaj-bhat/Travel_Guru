@@ -45,9 +45,7 @@ export const TrendingDestinations = () => {
                 </div>
                     })
                 }
-            </Carousel>
-                
-                
+            </Carousel>  
             </div>
         </div>
     )

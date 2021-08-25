@@ -8,8 +8,9 @@ function App() {
 	return (
 		<div className={styles.App}>
 			{/* <NavBar /> */}
-			<BestSelling />
-			<TrendingDestinations />
+			<Routes />
+			{/* <BestSelling />
+			<TrendingDestinations /> */}
 		</div>
 	);
 }
