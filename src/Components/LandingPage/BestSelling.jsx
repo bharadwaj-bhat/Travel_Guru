@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../Styles/LandingPage.module.css'
+import styles from '../../Styles/landingPage.module.css'
 import { BestSellingData } from '../../fakeData/BestSellingData'
 export const BestSelling = () => {
     return (
