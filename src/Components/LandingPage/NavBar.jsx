@@ -7,24 +7,13 @@ import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { useState } from "react";
-import styles from "../../Styles/LandingPage.module.css";
+import styles from "../../Styles/landingPage.module.css";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const useStyles = makeStyles((theme) => ({
-  Popover: {
-    width: "20%",
-    marginTop: "40px",
-    marginLeft: "925px",
-    cursor: "pointer",
-  },
-  Popover2: {
-    width: "20%",
-    marginTop: "40px",
-    marginLeft: "1100px",
-    cursor: "pointer",
-  },
   Paper: {
     textAlign: "left",
+    width: "200px",
     padding: "0px 4px",
   },
   Paper2: {
@@ -33,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     fontSize: "0.8rem",
+  },
+  span: {
+    color: "orange",
+    cursor: "pointer",
   },
   Nav: {
     fontSize: "0.8rem",
@@ -50,25 +43,36 @@ const useStyles = makeStyles((theme) => ({
   },
   flex: {
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
-  },
-  offerTag: {
-    marginLeft: "-30px",
   },
 }));
 
 export const NavBar = () => {
   const classes = useStyles();
 
-  const [helpPopup, setHelpPopup] = useState(false);
-  const [myAccountsPopup, setMyAccountsPopup] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const [anchorEl2, setAnchorEl2] = useState(null);
+  const open2 = Boolean(anchorEl2);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClick2 = (event) => {
+    setAnchorEl2(event.currentTarget);
+  };
 
   const handleClose = (e) => {
     // e.stopPropagation();
-    setHelpPopup(false);
+    setAnchorEl(null);
   };
 
+  const handleClose2 = (e) => {
+    // e.stopPropagation();
+    setAnchorEl2(null);
+  };
   return (
     <div>
       <div className={styles.NavBar}>
@@ -79,21 +83,24 @@ export const NavBar = () => {
           />
         </div>
         <div></div>
-        <div className={styles.grid}>
+        <div className={styles.gridDiv}>
           <button className={styles.NavButton}> Become a Host </button>
-          <div
-            onMouseEnter={() => setHelpPopup(true)}
-            onMouseLeave={(e) => handleClose(e)}
-          >
-            <div className={classes.flex}>
+          <div onMouseLeave={(e) => handleClose(e)}>
+            <div
+              className={classes.flex}
+              onMouseOver={handleClick}
+              // onMouseLeave={handleClose}
+            >
               <p> Help </p>
               <ArrowDropDownIcon />
             </div>
+
             <Popover
-              className={classes.Popover}
-              open={helpPopup}
-              aria-labelledby="simple-modal-title"
-              aria-describedby="simple-modal-description"
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              anchorReference="anchorEl"
+              anchorOrigin={{ vertical: 40, horizontal: -70 }}
             >
               <Paper className={classes.Paper} onMouseLeave={handleClose}>
                 <Box m={2}>
@@ -112,23 +119,29 @@ export const NavBar = () => {
             </Popover>
           </div>
 
-          <p className={classes.offerTag}> Offers </p>
+          <p> Offers </p>
 
-          <div onMouseEnter={() => setMyAccountsPopup(true)}>
-            <div className={classes.flex}>
+          <div>
+            <div className={classes.flex} onMouseOver={handleClick2}>
               <p> My Accounts </p>
               <ArrowDropDownIcon />
             </div>
-            <Popover className={classes.Popover2} open={myAccountsPopup}>
-              <Paper
-                className={classes.Paper2}
-                onMouseLeave={() => setMyAccountsPopup(false)}
-              >
+            <Popover
+              open={open2}
+              anchorEl={anchorEl2}
+              onClose={handleClose2}
+              anchorReference="anchorEl"
+              anchorOrigin={{ vertical: 45, horizontal: -50 }}
+            >
+              <Paper className={classes.Paper2} onMouseLeave={handleClose2}>
                 <button className={classes.LogIn}> LogIn </button>
                 <Box m={2}>
                   <Typography variant="subtitle">
                     {" "}
-                    New customer SIGN UP here{" "}
+                    New customer <span className={classes.span}>
+                      SIGN UP{" "}
+                    </span>{" "}
+                    here{" "}
                   </Typography>
                 </Box>
               </Paper>
