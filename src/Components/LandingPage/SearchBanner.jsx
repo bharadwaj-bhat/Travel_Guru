@@ -1,4 +1,4 @@
-import styles from "../../Styles/LandingPage.module.css";
+import styles from "../../Styles/landingPage.module.css";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import DatePicker from "react-modern-calendar-datepicker";
 import { useRef, useState } from "react";

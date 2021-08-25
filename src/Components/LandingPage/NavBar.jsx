@@ -7,7 +7,7 @@ import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { useState } from "react";
-import styles from "../../Styles/LandingPage.module.css";
+import styles from "../../Styles/landingPage.module.css";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const useStyles = makeStyles((theme) => ({
