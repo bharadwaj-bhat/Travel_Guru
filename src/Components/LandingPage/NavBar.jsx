@@ -3,6 +3,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
+import { Link, useHistory } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -56,6 +57,8 @@ export const NavBar = () => {
   const [anchorEl2, setAnchorEl2] = useState(null);
   const open2 = Boolean(anchorEl2);
 
+  const history = useHistory();
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -73,6 +76,12 @@ export const NavBar = () => {
     // e.stopPropagation();
     setAnchorEl2(null);
   };
+
+  const handleLoginRoute = () => {
+    handleClose2();
+    history.push("/login");
+  };
+
   return (
     <div>
       <div className={styles.NavBar}>
@@ -134,13 +143,20 @@ export const NavBar = () => {
               anchorOrigin={{ vertical: 45, horizontal: -50 }}
             >
               <Paper className={classes.Paper2} onMouseLeave={handleClose2}>
-                <button className={classes.LogIn}> LogIn </button>
+                <button onClick={handleLoginRoute} className={classes.LogIn}>
+                  {" "}
+                  LogIn{" "}
+                </button>
+
                 <Box m={2}>
                   <Typography variant="subtitle">
                     {" "}
-                    New customer <span className={classes.span}>
-                      SIGN UP{" "}
-                    </span>{" "}
+                    New customer
+                    <Link to="/register" style={{ textDecoration: "none" }}>
+                      <span onClick={handleClose2} className={classes.span}>
+                        SIGN UP{" "}
+                      </span>
+                    </Link>{" "}
                     here{" "}
                   </Typography>
                 </Box>
