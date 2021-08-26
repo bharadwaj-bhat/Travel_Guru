@@ -10,7 +10,7 @@ const FooterUpper = () => {
                     <p>Our Family</p>
                 </div>
                 <div>
-                    <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/02/yatra_logo.png" alt="" />
+                    <img src="https://www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg" alt="" />
                 </div>
                 <div>
                     <img src="http://www.adventurenation.com/blog/wp-content/uploads/2016/01/Trans-Logo-Red.png" alt="" />
