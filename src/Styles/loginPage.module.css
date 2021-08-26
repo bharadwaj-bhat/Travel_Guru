@@ -146,7 +146,7 @@
 }
 .register_main_container_body {
 	border: 1px solid rgb(211, 209, 209);
-	height: 110vh;
+	height: 800px;
 	width: 65vw;
 	display: flex;
 	justify-content: center;

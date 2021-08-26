@@ -2,8 +2,7 @@ import { SearchBanner } from "./SearchBanner"
 import { BestSelling } from "./BestSelling"
 import {TrendingDestinations} from './TrendingDestinations'
 import { CustomerReviews } from './CustomerReviews'
-import { Features } from "./Features"
-import { Footer } from "./Footer"
+import MainFooter from './MainFooter'
 
 
 export const LandingPage = () => {
@@ -13,8 +12,7 @@ export const LandingPage = () => {
             <BestSelling />
             <TrendingDestinations />
             <CustomerReviews />
-            <Features />
-            <Footer/>
+            <MainFooter/>
         </div>
     )
 }

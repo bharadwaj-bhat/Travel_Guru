@@ -7,7 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "../../Styles/landingPage.module.css";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
@@ -56,8 +56,9 @@ export const NavBar = () => {
 
   const [anchorEl2, setAnchorEl2] = useState(null);
   const open2 = Boolean(anchorEl2);
-
   const history = useHistory();
+
+  const checkOutRef = useRef();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
