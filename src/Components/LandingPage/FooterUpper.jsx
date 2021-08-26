@@ -16,7 +16,7 @@ const FooterUpper = () => {
                     <img src="http://www.adventurenation.com/blog/wp-content/uploads/2016/01/Trans-Logo-Red.png" alt="" />
                 </div>
                 <div>
-                    <img src="https://lh3.googleusercontent.com/proxy/qJ6am4GXFb094akOenFz8R1l7eDAMmlIh8Tfi0s9lVUXxbrB8_d-gluSVJ9juKuIpbyZGpEiNWIbFOh5wdJNKRltscCzuJ-mCt9AB72nNCrt96rZT3opi5t_2Vcpsalj3Tzm" alt="" />
+                    <img src="https://www.yatraexoticroutes.com/wp-content/uploads/2017/03/new-logo-w.png" alt="" />
                 </div>
                 <div>
                     <img src="https://res.cloudinary.com/www-oysterconnect-com/image/upload/v1599480153/company/TSI_Yatra_logo_transy_1599480151644.png" alt="" />
