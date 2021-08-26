@@ -98,11 +98,7 @@ export const NavBar = () => {
         <div className={styles.gridDiv}>
           <button className={styles.NavButton}> Become a Host </button>
           <div onMouseLeave={(e) => handleClose(e)}>
-            <div
-              className={classes.flex}
-              onMouseOver={handleClick}
-              // onMouseLeave={handleClose}
-            >
+            <div className={classes.flex} onMouseOver={handleClick}>
               <p> Help </p>
               <ArrowDropDownIcon />
             </div>

@@ -1,0 +1,246 @@
+.roomsLayoutWrapper {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(242, 242, 242);
+  height: 1900px;
+}
+
+.roomsLayout {
+  width: 85%;
+  margin: auto;
+}
+
+.BreadCrumWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: rgb(136, 135, 135);
+  align-items: center;
+}
+
+.BreadCrum {
+  display: flex;
+  margin: 10px 0px;
+  align-items: center;
+}
+.BreadCrumSearchBtn {
+  align-items: center;
+  display: flex;
+  font-size: 0.7rem;
+  border: 1px solid gray;
+  padding: 0px 12px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+}
+.BreadCrumSearchBtn:hover {
+  border: 1px solid black;
+}
+
+.BreadCrumUnderLine:hover {
+  cursor: pointer;
+  color: rgb(244, 121, 50);
+  text-decoration: underline;
+  text-decoration-color: rgb(244, 121, 50);
+}
+
+/* Details Card */
+
+.NameHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NameHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: -20px;
+  color: rgb(51, 51, 51);
+}
+.NameHeader img {
+  height: 26px;
+  font-size: 0.8rem;
+}
+.NameHeader h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(51, 51, 51);
+  padding-right: 10px;
+}
+.locationP {
+  font-size: 0.94rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+}
+.PricePer {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: rgb(51, 51, 51);
+}
+.PricePer button {
+  margin-top: 4px;
+  border: none;
+  color: white;
+  background-color: rgb(85, 150, 28);
+  font-size: 1rem;
+  font-weight: 500;
+  height: 40px;
+  border-radius: 3px;
+  padding: 1px 18px;
+  margin-left: 15px;
+}
+.PricePer button:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in;
+}
+.perNightPtag {
+  font-size: 0.9rem;
+  margin-top: -25px;
+  margin-left: -15px;
+}
+.navigationBar {
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  height: 35px;
+  border-radius: 4px;
+  align-items: center;
+  color: white;
+  font-size: 0.93rem;
+  cursor: pointer;
+  transition: ease-in 200ms;
+}
+.navigationBar p {
+  padding: 5px 12px;
+  border-left: 1px solid grey;
+  margin: 0px 1px;
+}
+.navigationBar p:hover {
+  background-color: white;
+  color: black;
+}
+.CarouselWrapper {
+  background-color: white;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  width: 100%;
+  height: 500px;
+}
+.otherReviews {
+  display: flex;
+  margin-left: 5px;
+  flex-direction: column;
+  width: 90%;
+  /* margin: 0 auto; */
+}
+.otherReviews > p {
+  margin-top: -5px;
+  font-size: 1rem;
+}
+.otherReviews > div {
+  display: flex;
+  align-items: center;
+}
+.otherReviews h1 {
+  color: rgb(0, 166, 128);
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: -10px;
+}
+.reviewsP {
+  font-size: 0.7rem;
+  text-decoration: underline;
+  margin-left: 40px;
+}
+.otherReviewsP {
+  color: rgb(0, 166, 128);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.checkInsP {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 20px;
+}
+.checkInsP p {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.checkInsP span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Overview Card */
+.OverViewCard {
+  margin-top: -14px;
+  width: 100%;
+  height: 700px;
+  background-color: white;
+}
+.OverViewCard > div {
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.OverViewIcons {
+  display: flex;
+  overflow-x: hidden;
+}
+.OverViewIcons div {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(242, 242, 242);
+  font-size: 2rem;
+  margin-right: 5px;
+  color: grey;
+}
+.longText {
+  font-weight: 500;
+  font-size: 0.92rem;
+  line-height: 1.5rem;
+  max-width: 90%;
+  overflow: hidden;
+}
+.ReadMore {
+  color: rgb(63, 63, 235);
+}
+.ReadLess {
+  color: orange;
+}
+.advantagesDiv {
+  display: flex;
+  flex-direction: column;
+}
+.advantagesDiv > div {
+  margin-top: 25px;
+  display: flex;
+  text-align: center;
+}
+.advantagesDiv img {
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.pointersP {
+  display: flex;
+  flex-direction: column;
+}
+.pointersP div {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
