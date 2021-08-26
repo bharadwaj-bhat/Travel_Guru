@@ -94,6 +94,7 @@ export const SearchBanner = () => {
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  var checkOutRef;
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -103,16 +104,13 @@ export const SearchBanner = () => {
     setAnchorEl(null);
   };
 
-  let checkOutInp = null;
-
   const handleCheckIn = (e) => {
     setSelectedDay(e);
-    checkOutInp.current.focus();
+    checkOutRef.current.focus();
   };
 
   const renderCustomInput = ({ ref }) => {
-    checkOutInp = ref;
-
+    checkOutRef = ref;
     return (
       <>
         <input

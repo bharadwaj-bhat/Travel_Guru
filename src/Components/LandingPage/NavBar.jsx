@@ -86,10 +86,12 @@ export const NavBar = () => {
     <div>
       <div className={styles.NavBar}>
         <div className={classes.Nav}>
-          <img
-            src="https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png"
-            alt="logo"
-          />
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <img
+              src="https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png"
+              alt="logo"
+            />
+          </Link>
         </div>
         <div></div>
         <div className={styles.gridDiv}>
@@ -151,7 +153,7 @@ export const NavBar = () => {
                 <Box m={2}>
                   <Typography variant="subtitle">
                     {" "}
-                    New customer
+                    New customer ?
                     <Link to="/register" style={{ textDecoration: "none" }}>
                       <span onClick={handleClose2} className={classes.span}>
                         SIGN UP{" "}
