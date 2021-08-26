@@ -86,10 +86,12 @@ export const NavBar = () => {
     <div>
       <div className={styles.NavBar}>
         <div className={classes.Nav}>
+          <Link to="/">
           <img
             src="https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png"
             alt="logo"
-          />
+            />
+          </Link>
         </div>
         <div></div>
         <div className={styles.gridDiv}>
