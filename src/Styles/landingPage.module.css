@@ -58,6 +58,7 @@
 	text-align: center;
 	padding: 0px 20px;
 	position: relative;
+	justify-content: center;
 }
 
 .locationIcon {

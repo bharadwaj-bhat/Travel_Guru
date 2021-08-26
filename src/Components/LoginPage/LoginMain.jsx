@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from '../../Styles/loginPage.module.css'
 
 export function LoginMain() {
@@ -27,7 +28,7 @@ export function LoginMain() {
                 <div className={styles.login_main_container_body_right}>
                     <div className={styles.login_main_container_body_right_body}>
                         <h6>Don't have Travelguru Account?</h6>
-                        <span>Register Now!</span>
+                        <span><Link to="register">Register Now!</Link></span>
                     </div>
                 </div>
             </div>

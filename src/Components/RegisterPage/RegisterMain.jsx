@@ -3,6 +3,7 @@ import styles from '../../Styles/loginPage.module.css'
 import Checkbox from '@material-ui/core/Checkbox';
 import { withStyles } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
+import { Link } from 'react-router-dom';
 const RedCheckbox = withStyles({
   root: {
         color: red[400],
@@ -54,7 +55,7 @@ export function RegisterMain() {
                 <div className={styles.login_main_container_body_right}>
                     <div className={styles.login_main_container_body_right_body}>
                         <h6>Already have an account on Travelguru.com?</h6>
-                        <span>Login Here</span>
+                        <span><Link to="/login" >Login Here</Link></span>
                     </div>
                 </div>
             </div>

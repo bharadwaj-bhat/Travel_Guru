@@ -144,6 +144,10 @@
 	font-weight: 570;
 	padding: 8px 10px;
 }
+.login_main_container_body_right_body > span > a {
+	text-decoration: none;
+	color: #fff;
+}
 .register_main_container_body {
 	border: 1px solid rgb(211, 209, 209);
 	height: 800px;
