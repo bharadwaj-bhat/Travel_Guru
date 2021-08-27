@@ -51,7 +51,6 @@
 }
 
 .BannerInputScreen {
-<<<<<<< HEAD
 	width: 100%;
 	height: 90px;
 	background: rgba(0, 0, 0, 0.637);
@@ -61,17 +60,6 @@
 	padding: 0px 20px;
 	position: relative;
 	justify-content: center;
-=======
-  width: 100%;
-  height: 90px;
-  background: rgba(0, 0, 0, 0.637);
-  border-radius: 5px;
-  display: flex;
-  text-align: center;
-  padding: 0px 20px;
-  position: relative;
-  justify-content: center;
->>>>>>> 5e2c63ebea3b0348ef0f02d2d2bd1b85010ce4bc
 }
 
 .locationIcon {

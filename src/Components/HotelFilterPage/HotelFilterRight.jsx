@@ -18,21 +18,27 @@ export function HotelFilterRight(props) {
                 const payload = HotelData.sort((a,b) => {
                     return a.price-b.price;
                 })
+                console.log(payload)
                 props.setData(payload)
                 break;
                 }
             case "rating": {
+                console.log("ll")
                 const payload = HotelData.sort((a,b) => {
                     return a.rating-b.rating;
                 })
+                console.log(payload)
                 props.setData(payload)
                 break;
                 }
             case "trip": {
+                console.log("ll")
                 const payload = HotelData.sort((a,b) => {
                     return a.tripAdvisorRating-b.tripAdvisorRating;
                 })
+                console.log(payload)
                 props.setData(payload)
+                console.log(props.data)
                 break;
                 }
             default: {

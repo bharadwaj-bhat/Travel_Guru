@@ -274,6 +274,7 @@
 .hotel_right_container_middle_top_bottom > button:first-child {
 	background: #fff;
 	color: #333;
+	cursor: pointer;
 	border: 1px solid #333;
 	border-radius: 3px;
 	text-align: center;
@@ -298,6 +299,7 @@
 	font-size: 14px;
 	vertical-align: top;
 	position: relative;
+	cursor: pointer;
 	margin-right: 10px;
 	font-weight: 520;
 }
@@ -320,7 +322,7 @@
 	justify-content: space-between;
 	width: 96%;
 	margin-left: 2%;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 .search_icon {
 	cursor: pointer;
@@ -334,6 +336,7 @@
 }
 .div_hover:hover {
 	color: #2b6dad;
+	cursor: pointer;
 }
 .div_hover:hover > span {
 	color: #666;
