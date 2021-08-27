@@ -19,7 +19,7 @@ const GreyCheckbox = withStyles({
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
 
-export default function HotelFilterLeft() {
+export default function HotelFilterLeft(props) {
     const [hotelSearch, setHotelSearch] = React.useState(true);
     const [hotelPrice, setHotelPrice] = React.useState(true);
     const [starRating, setStarRating] = React.useState(true);
