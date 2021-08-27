@@ -7,9 +7,11 @@ import { Link, useHistory } from "react-router-dom";
 
 import { makeStyles } from "@material-ui/core/styles";
 
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import styles from "../../Styles/landingPage.module.css";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../redux/auth/actions";
 
 const useStyles = makeStyles((theme) => ({
   Paper: {
@@ -42,6 +44,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     cursor: "pointer",
   },
+  LogOut: {
+    border: "none",
+    padding: "10px 4px",
+    margin: "5px 25px",
+    background: "#fff ",
+    color: "#999",
+    fontSize: "1rem",
+    cursor: "pointer",
+  },
   flex: {
     display: "flex",
     alignItems: "center",
@@ -50,6 +61,12 @@ const useStyles = makeStyles((theme) => ({
 
 export const NavBar = () => {
   const classes = useStyles();
+  const isAuth = useSelector((state) => state.auth.isAuth);
+  const user = useSelector((state) => state.auth.user);
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logoutUser());
+  }
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -57,8 +74,6 @@ export const NavBar = () => {
   const [anchorEl2, setAnchorEl2] = useState(null);
   const open2 = Boolean(anchorEl2);
   const history = useHistory();
-
-  const checkOutRef = useRef();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -131,10 +146,21 @@ export const NavBar = () => {
 
           <div>
             <div className={classes.flex} onMouseOver={handleClick2}>
-              <p> My Accounts </p>
+              <p> {isAuth?`Hi, ${user.firstName}`:"My Accounts"} </p>
               <ArrowDropDownIcon />
             </div>
-            <Popover
+            {isAuth?<Popover
+              open={open2}
+              anchorEl={anchorEl2}
+              onClose={handleClose2}
+              anchorReference="anchorEl"
+              anchorOrigin={{ vertical: 45, horizontal: 0 }}
+            >
+              <Paper className={classes.Paper3} onMouseLeave={handleClose2}>
+                <button onClick={handleLogout} className={classes.LogOut}>
+                  {" "}
+                  LogOut{" "}
+                </button></Paper></Popover>:<Popover
               open={open2}
               anchorEl={anchorEl2}
               onClose={handleClose2}
@@ -160,7 +186,7 @@ export const NavBar = () => {
                   </Typography>
                 </Box>
               </Paper>
-            </Popover>
+            </Popover>}
           </div>
         </div>
       </div>

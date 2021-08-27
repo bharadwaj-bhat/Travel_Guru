@@ -1,4 +1,7 @@
 import {
+	GET_DATA_FAILURE,
+	GET_DATA_REQUEST,
+	GET_DATA_SUCCESS,
 	LOGIN_FAILURE,
 	LOGIN_REQUEST,
 	LOGIN_SUCCESS,
@@ -17,6 +20,15 @@ export const loginSuccess = (user) => {
 export const loginFailure = (err) => {
 	return { type: LOGIN_FAILURE, payload: err };
 };
+export const getRequest = () => {
+	return { type: GET_DATA_REQUEST };
+};
+export const getSuccess = (user) => {
+	return { type: GET_DATA_SUCCESS, payload: user };
+};
+export const getFailure = (err) => {
+	return { type: GET_DATA_FAILURE, payload: err };
+};
 export const registerRequest = () => {
 	return { type: REGISTER_REQUEST };
 };
@@ -28,41 +40,36 @@ export const registerFailure = (err) => {
 };
 export const loginUser = (payload) => (dispatch) => {
 	dispatch(loginRequest());
-	const { username, password } = payload;
+	dispatch(loginSuccess(payload));
+};
+export const logoutUser = (payload) => (dispatch) => {
+	dispatch(loginRequest());
+	dispatch(loginFailure());
+};
+export const getData = () => (dispatch) => {
+	dispatch(getRequest());
 	axios
-		.post("https://masai-api-mocker.herokuapp.com/auth/login", {
-			username: username,
-			password: password,
-		})
+		.get("http://localhost:3001/users")
 		.then((res) => {
-			console.log(res.data);
-			dispatch(loginSuccess(res.data));
+			//console.log(res.data);
+			dispatch(getSuccess(res.data));
 		})
 		.catch((err) => {
 			dispatch(loginFailure(err.message));
-			alert(err.message);
+			//alert(err.message);
 		});
 };
 export const registerUser = (payload) => (dispatch) => {
 	dispatch(registerRequest());
-	const { username, password, description, name, email, mobile } = payload;
-	axios
-		.post("https://masai-api-mocker.herokuapp.com/auth/register", {
-			username: username,
-			password: password,
-			description: description,
-			name: name,
-			email: email,
-			mobile: mobile,
-		})
-		.then((res) => {
-			console.log(res.data);
-			if (res.data.error) {
-				dispatch(registerFailure(res.data.message));
-				alert(res.data.message);
-			} else {
-				dispatch(registerSuccess());
-				alert(res.data.message);
-			}
-		});
+	console.log(payload);
+	axios.post("http://localhost:3001/users", payload).then((res) => {
+		console.log(res.data);
+		if (res.data.error) {
+			dispatch(registerFailure(res.data.message));
+			//alert(res.data.message);
+		} else {
+			dispatch(registerSuccess());
+			//alert(res.data.message);
+		}
+	});
 };
