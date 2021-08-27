@@ -10,23 +10,31 @@ import { OverViewCard } from "./Overview";
 export const CarouselComp = ({ data }) => {
   const { tripAdvicerRating, otherRatingName1, ratingArray, images } = data;
 
+  console.log("from overview", otherRatingName1, ratingArray);
+
   return (
     <>
-      {data && (
+      {data ? (
         <>
           <div className={styles.CarouselWrapper}>
             <div
               style={{
                 width: "95%",
                 margin: "15px",
-                overflow: "hidden",
               }}
             >
-              <Carousel animation="fade" interval="100000">
-                {images.map((el, i) => (
-                  <img src={el} alt=" carousal" style={{ width: "100%" }} />
-                ))}
-              </Carousel>
+              {images && (
+                <Carousel animation="fade" interval="100000">
+                  {images.map((el, i) => (
+                    <img
+                      key={i}
+                      src={el}
+                      alt=" carousal"
+                      style={{ width: "100%" }}
+                    />
+                  ))}
+                </Carousel>
+              )}
             </div>
 
             <div className={styles.otherReviews}>
@@ -42,23 +50,26 @@ export const CarouselComp = ({ data }) => {
               </div>
               <p> Based on Overall Traveller Rating</p>
               <Divider />
-              {otherRatingName1.map((el, i) => (
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <CheckIcon fontSize="inherit" />{" "}
-                  <p
-                    style={{ fontSize: "0.9rem", padding: "0px 4px" }}
-                  >{`${el}`}</p>
-                  <p style={{ color: "rgb(0, 166, 128)", fontSize: "0.9rem" }}>
-                    {" "}
-                    {ratingArray[i]}{" "}
-                  </p>
-                </div>
-              ))}
+              {otherRatingName1 &&
+                otherRatingName1.map((el, i) => (
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                    }}
+                  >
+                    <CheckIcon fontSize="inherit" />{" "}
+                    <p
+                      style={{ fontSize: "0.9rem", padding: "0px 4px" }}
+                    >{`${el}`}</p>
+                    <p
+                      style={{ color: "rgb(0, 166, 128)", fontSize: "0.9rem" }}
+                    >
+                      {" "}
+                      {ratingArray[i]}{" "}
+                    </p>
+                  </div>
+                ))}
 
               <Divider />
               <div className={styles.checkInsP}>
@@ -75,6 +86,8 @@ export const CarouselComp = ({ data }) => {
           </div>
           <OverViewCard />
         </>
+      ) : (
+        <h1> ...Loading </h1>
       )}
     </>
   );

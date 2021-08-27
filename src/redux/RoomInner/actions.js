@@ -18,18 +18,18 @@ const dataRequestSuccess = (payload) => {
   };
 };
 
-const dataRequestFailed = () => {
+const dataRequestFailed = (payload) => {
+  console.log(payload);
   return {
     type: DATA_REQUEST_FAILED,
   };
 };
 
 export const getData = (payload) => (dispatch) => {
-  console.log("trigered");
   dispatch(dataRequest());
 
   axios
     .get("http://localhost:3001/data")
     .then(({ data }) => dispatch(dataRequestSuccess(data)))
-    .catch(() => dispatch(dataRequestFailed()));
+    .catch((err) => dispatch(dataRequestFailed(err)));
 };

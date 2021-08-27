@@ -14,10 +14,13 @@ export const DetailsCard = () => {
     dispatch(getData());
   }, []);
 
+  if (loading) {
+    return <h1> Loading...</h1>;
+  }
+
   return (
     <div>
-      {loading && <h1> ...loading </h1>}
-      {!loading && (
+      {data && (
         <>
           <NameHeader data={data} />
           <NavigationBar />
