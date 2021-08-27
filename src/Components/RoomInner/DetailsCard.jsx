@@ -6,21 +6,24 @@ import { NameHeader } from "./NameHeader";
 import { NavigationBar } from "./NavigationBar";
 
 export const DetailsCard = () => {
-  const data = useSelector((state) => state.room.data);
+  const data = useSelector((state) => state.room.data[0]);
   const loading = useSelector((state) => state.room.isLoading);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getData());
-    console.log(data);
   }, []);
 
   return (
     <div>
       {loading && <h1> ...loading </h1>}
-      <NameHeader />
-      <NavigationBar />
-      <CarouselComp />
+      {!loading && (
+        <>
+          <NameHeader data={data} />
+          <NavigationBar />
+          <CarouselComp data={data} />
+        </>
+      )}
     </div>
   );
 };
