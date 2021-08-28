@@ -2,44 +2,57 @@ import React from 'react'
 import styles from "../../Styles/hotelFilter.module.css"
 import SearchIcon from '@material-ui/icons/Search';
 import HotelFilterCard from './HotelFilterCard';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {sortData} from "../../redux/hotelData/actions"
 
-export function HotelFilterRight(props) {
+export function HotelFilterRight() {
     const [min, setMin] = React.useState(100000);
     const [minStr, setMinStr] = React.useState("")
     const data = useSelector((state) => state.hotel.data);
+    const [highPrice, setHighPrice] = React.useState(true);
+    const [highRating, setHighRating] = React.useState(true);
+    const [tripRating, setTripRating] = React.useState(true);
+    const dispatch = useDispatch();
     const handleSort=(str) => {
         switch(str){
             case "recommended": {
-                props.setData(data);
+                const payload = data.sort((a, b) => {
+                    return b.otherRating-a.otherRating;
+                })
+                dispatch(sortData(payload));
                 break;
                 }
             case "price": {
-                console.log("ll")
-                const payload = data.sort((a,b) => {
-                    return a.price-b.price;
+                const payload = data.sort((a, b) => {
+                    if (highPrice) {   
+                        return a.price-b.price;
+                    }
+                    return b.price-a.price;
                 })
-                console.log(payload)
-                props.setData(payload)
+                dispatch(sortData(payload));
+                setHighPrice(!highPrice)
                 break;
                 }
             case "rating": {
-                console.log("ll")
-                const payload = data.sort((a,b) => {
+                const payload = data.sort((a, b) => {
+                    if (highRating) {   
+                        return b.rating-a.rating;
+                    }
                     return a.rating-b.rating;
                 })
-                console.log(payload)
-                props.setData(payload)
+                dispatch(sortData(payload));
+                setHighRating(!highRating);
                 break;
                 }
             case "trip": {
-                console.log("ll")
-                const payload = data.sort((a,b) => {
-                    return a.tripAdvisorRating-b.tripAdvisorRating;
+                const payload = data.sort((a, b) => {
+                    if (tripRating) {   
+                        return b.tripAdvicerRating-a.tripAdvicerRating;
+                    }
+                    return a.tripAdvicerRating-b.tripAdvicerRating;
                 })
-                console.log(payload)
-                props.setData(payload)
-                console.log(props.data)
+                dispatch(sortData(payload));
+                setTripRating(!tripRating);
                 break;
                 }
             default: {
@@ -55,7 +68,7 @@ export function HotelFilterRight(props) {
             }
             return item;
         })
-    },[min,data])
+    })
     return <div className={ styles.hotel_right_container}>
         <div className={ styles.hotel_right_container_top}>
             <div className={ styles.hotel_right_container_top_top}><button className={ styles.hotel_right_container_top_btn}><SearchIcon className={styles.search_icon} color="disabled"/>Modify Search</button></div>

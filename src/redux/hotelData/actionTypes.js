@@ -1,3 +1,7 @@
 export const UPDATE_SUCCESS = "UPDATE_SUCCESS";
 export const UPDATE_FAILURE = "UPDATE_FAILURE";
 export const UPDATE_REQUEST = "UPDATE_REQUEST";
+
+export const SORT_SUCCESS = "SORT_SUCCESS";
+export const SORT_FAILURE = "SORT_FAILURE";
+export const SORT_REQUEST = "SORT_REQUEST";
