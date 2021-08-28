@@ -95,25 +95,6 @@ export function HotelFilterRight() {
           </div>
         </div>
       </div>
-      <div className={styles.hotel_right_container_middle_top}>
-        <div className={styles.hotel_right_container_middle_top_top}>
-          <button>
-            ALL HOTELS
-            <br />
-            {/* from ₹ {minStr} */}
-          </button>
-        </div>
-        <div className={styles.hotel_right_container_middle_top_bottom}>
-          <button>
-            VILLAS AND STAYS
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from ₹ 5,000
-          </button>
-          <button>
-            LIST | <span>MAPS</span>
-          </button>
-        </div>
-      </div>
       <div className={styles.hotel_right_container_middle_bottom}>
         <div className={styles.hotel_right_container_middle_bottom_top}>
           <div>SORT BY:</div>
