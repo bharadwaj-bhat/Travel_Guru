@@ -7,6 +7,7 @@ import RoomIcon from "@material-ui/icons/Room";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import FreeBreakfastOutlinedIcon from "@material-ui/icons/FreeBreakfastOutlined";
 import LoyaltyOutlinedIcon from "@material-ui/icons/LoyaltyOutlined";
+import { Link } from "react-router-dom";
 
 const carouselStyles = {
   style: {
@@ -107,7 +108,7 @@ export default function HotelFilterCard({ data }) {
           <span className={styles.hotel_card_right_3}>₹{data.sPrice}</span>
           <span className={styles.hotel_card_right_4}>For 1 night</span>
           <span className={styles.hotel_card_right_5}>
-            <button>Choose Room</button>
+            <button><Link to={`/rooms/${data.id}`}>Choose Room</Link></button>
           </span>
         </div>
       </div>
