@@ -38,7 +38,11 @@ export const updateData = (payload) => (dispatch) => {
 	const min = data.sort((a, b) => {
 		return a.price - b.price;
 	});
-	dispatch(updateMin(min[0].sPrice));
+	if (min.length !== 0) {
+		dispatch(updateMin(min[0].sPrice));
+	} else {
+		dispatch(updateMin("0"));
+	}
 };
 export const sortData = (payload) => (dispatch) => {
 	dispatch(sortRequest());

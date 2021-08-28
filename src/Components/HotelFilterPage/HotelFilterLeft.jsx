@@ -89,11 +89,11 @@ export default function HotelFilterLeft(props) {
             </span>
             {hotelPrice&&<span className={ styles.hotel_left_container_content_body_checkbox}>
                 <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox} size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Less than Rs. 1,000 <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 1,001 to Rs. 2,000 <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 2,001 to Rs. 4,000 <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 4,001 to Rs. 7,000 <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 7,001 to Rs. 10,000 <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,5,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Greater than Rs. 10,001 <p>0</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 1,001 to Rs. 2,000 <p>3</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 2,001 to Rs. 4,000 <p>4</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 4,001 to Rs. 7,000 <p>8</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Rs. 7,001 to Rs. 10,000 <p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,5,hotelPriceFilter,setHotelPriceFilter);handleDisplay()}} className={styles.custom_checkbox}  size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Greater than Rs. 10,001 <p>1</p></span></div>
             </span>
             }
         </div>
@@ -108,22 +108,22 @@ export default function HotelFilterLeft(props) {
                 <div className={starRatingFilter[0] && styles.active_border} onClick={() => { customFunction_2(0, starRatingFilter, setStarRatingFilter);handleDisplay();}}>
                     <div>0,1</div>
                     <div><StarIcon className={ styles.star_icon}/></div>
-                    <div>0</div>
+                    <div>1</div>
                 </div>
                 <div className={starRatingFilter[1]&&styles.active_border} onClick={()=>{customFunction_2(1,starRatingFilter,setStarRatingFilter);handleDisplay();}}>
                     <div>2</div>
                     <div><StarIcon className={ styles.star_icon}/></div>
-                    <div>0</div>
+                    <div>5</div>
                 </div>
                 <div className={starRatingFilter[2]&&styles.active_border} onClick={()=>{customFunction_2(2,starRatingFilter,setStarRatingFilter);handleDisplay();}}>
                     <div>3</div>
                     <div><StarIcon className={ styles.star_icon}/></div>
-                    <div>0</div>
+                    <div>8</div>
                 </div>
                 <div className={starRatingFilter[3]&&styles.active_border} onClick={()=>{customFunction_2(3,starRatingFilter,setStarRatingFilter);handleDisplay();}}>
                     <div>4</div>
                     <div><StarIcon className={ styles.star_icon}/></div>
-                    <div>0</div>
+                    <div>3</div>
                 </div>
                 <div className={starRatingFilter[4]&&styles.active_border} onClick={()=>{customFunction_2(4,starRatingFilter,setStarRatingFilter);handleDisplay();}}>
                     <div>5</div>
@@ -154,17 +154,17 @@ export default function HotelFilterLeft(props) {
                 <div className={advisorRatingFilter[2] && styles.active_border} onClick={()=>{customFunction_2(2,advisorRatingFilter,setAdvisorRatingFilter);handleDisplay()}}>
                     <div className={styles.trip_advisor_rating}>2-3</div>
                     <div><span className={styles.advisor_rating}></span></div>
-                    <div className={styles.top_padding}>0</div>
+                    <div className={styles.top_padding}>1</div>
                 </div>
                 <div className={advisorRatingFilter[3] && styles.active_border} onClick={()=>{customFunction_2(3,advisorRatingFilter,setAdvisorRatingFilter);handleDisplay()}}>
                     <div className={styles.trip_advisor_rating}>3-4</div>
                     <div><span className={styles.advisor_rating}></span></div>
-                    <div className={styles.top_padding}>0</div>
+                    <div className={styles.top_padding}>15</div>
                 </div>
                 <div className={advisorRatingFilter[4] && styles.active_border} onClick={()=>{customFunction_2(4,advisorRatingFilter,setAdvisorRatingFilter);handleDisplay()}}>
                     <div className={styles.trip_advisor_rating}>4-5</div>
                     <div><span className={styles.advisor_rating}></span></div>
-                    <div className={styles.top_padding}>0</div>
+                    <div className={styles.top_padding}>1</div>
                 </div>
             </span>
             }
@@ -177,10 +177,10 @@ export default function HotelFilterLeft(props) {
                 }}>{hotelPrice?"HIDE":"SHOW"}</p>
             </span>
             {hotelWith&&<span className={ styles.hotel_left_container_content_body_checkbox}>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Clean Pass <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Free Cancellation <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Couple Friendly <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Free BreakFast <p>0</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Clean Pass <p>14</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Free Cancellation <p>5</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Couple Friendly <p>8</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,hotelWithFilter,setHotelWithFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Free BreakFast <p>15</p></span></div>
             </span>
             }
         </div>
@@ -192,16 +192,16 @@ export default function HotelFilterLeft(props) {
                 }}>{localities?"HIDE":"SHOW"}</p>
             </span>
             {localities&&<span className={ styles.hotel_left_container_content_body_checkbox}>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Village Shelly<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Old Road  <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Changspa <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Skara <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Ayu <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,5,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Chulung Old Road <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,6,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Leh <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,7,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Chulung <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,8,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Lower Tukcha Road  <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,9,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Upper Tukcha Road <p>0</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Village Shelly<p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Old Road  <p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Changspa <p>2</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Skara <p>2</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Ayu <p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,5,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Chulung Old Road <p>2</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,6,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Leh <p>3</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,7,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Chulung <p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,8,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Lower Tukcha Road  <p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,9,localitiesFilter,setLocalitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Upper Tukcha Road <p>2</p></span></div>
             </span>
             }
         </div>
@@ -213,16 +213,16 @@ export default function HotelFilterLeft(props) {
                 }}>{amenities?"HIDE":"SHOW"}</p>
             </span>
             {amenities&&<span className={ styles.hotel_left_container_content_body_checkbox}>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>WIFI<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Airport transportation <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Laundry facilities<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Hotles <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Bar<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,5,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Suitable for children <p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,6,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Swimming pool<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,7,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Full Services Health Spa<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,8,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Restaurants that deliver<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,9,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Parking<p>0</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>WIFI<p>6</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Airport transportation <p>5</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Laundry facilities<p>9</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Hotles <p>13</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Bar<p>5</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,5,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Suitable for children <p>14</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,6,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Swimming pool<p>3</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,7,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Full Services Health Spa<p>13</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,8,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Restaurants that deliver<p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,9,amenitiesFilter,setAmenitiesFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Parking<p>7</p></span></div>
             </span>
             }
         </div>
@@ -234,11 +234,11 @@ export default function HotelFilterLeft(props) {
                 }}>{propertyType?"HIDE":"SHOW"}</p>
             </span>
             {propertyType&&<span className={ styles.hotel_left_container_content_body_checkbox}>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Hotels<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Resort<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Guest House<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Bed and Breakfast<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Villa<p>0</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Hotels<p>13</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Resort<p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,2,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Guest House<p>1</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,3,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Bed and Breakfast<p>3</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,4,propertyTypeFilter,setPropertyTypeFilter);handleDisplay()}} className={styles.custom_checkbox} color="disabled" size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Villa<p>2</p></span></div>
             </span>
             }
         </div>
@@ -250,8 +250,8 @@ export default function HotelFilterLeft(props) {
                 }}>{hotelChain?"HIDE":"SHOW"}</p>
             </span>
             {hotelChain&&<span className={ styles.hotel_left_container_content_body_checkbox}>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,hotelChainFilter,setHotelChainFilter);handleDisplay()}} className={styles.custom_checkbox} size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Yatra Smart<p>0</p></span></div>
-                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,hotelChainFilter,setHotelChainFilter);handleDisplay()}} className={styles.custom_checkbox} size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Welcome Heritage Hotels<p>0</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,0,hotelChainFilter,setHotelChainFilter);handleDisplay()}} className={styles.custom_checkbox} size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Yatra Smart<p>6</p></span></div>
+                <div><GreyCheckbox onChange={(e)=>{customFunction(e,1,hotelChainFilter,setHotelChainFilter);handleDisplay()}} className={styles.custom_checkbox} size="small" inputProps={{ 'aria-label': 'checkbox with default color' }}/><span>Welcome Heritage Hotels<p>6</p></span></div>
             </span>
             }
         </div>      
