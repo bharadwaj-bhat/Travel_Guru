@@ -190,7 +190,14 @@ export const SearchBanner = () => {
         </div>
         <div>
           <div className={styles.BannerInputScreen}>
-            <input type="text" name="" id="" placeholder={hotels?"Search for Hotels":"Search for Home Stays"} />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder={
+                hotels ? "Search for Hotels" : "Search for Home Stays"
+              }
+            />
             <div className={styles.locationIcon}>
               <LocationOnIcon />
             </div>

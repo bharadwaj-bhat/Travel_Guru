@@ -6,11 +6,10 @@ import Box from "@material-ui/core/Box";
 
 import CheckIcon from "@material-ui/icons/Check";
 import { OverViewCard } from "./Overview";
+import { ChooseRoom } from "./ChooseRoom";
 
 export const CarouselComp = ({ data }) => {
   const { tripAdvicerRating, otherRatingName1, ratingArray, images } = data;
-
-  console.log("from overview", otherRatingName1, ratingArray);
 
   return (
     <>
@@ -85,6 +84,7 @@ export const CarouselComp = ({ data }) => {
             </div>
           </div>
           <OverViewCard />
+          <ChooseRoom />
         </>
       ) : (
         <h1> ...Loading </h1>

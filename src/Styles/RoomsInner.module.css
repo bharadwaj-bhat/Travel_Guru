@@ -182,7 +182,7 @@
 .OverViewCard {
   margin-top: -14px;
   width: 100%;
-  height: 700px;
+  /* height: 650px; */
   background-color: white;
 }
 .OverViewCard > div {
@@ -243,4 +243,64 @@
   align-items: center;
   font-size: 1rem;
   font-weight: 500;
+}
+
+/* Choose room component */
+.ChooseRoomP {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 6px 0px;
+  color: rgb(51, 51, 51);
+}
+.ChooseRoomWrapper {
+  background-color: white;
+  width: 100%;
+  margin: 0px auto;
+  color: rgb(51, 51, 51);
+}
+.ChooseRoomWrapper > div {
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+.ChooseRoomWrapper > div > div {
+  padding: 15px 0px;
+  position: relative;
+  margin-right: 25px;
+}
+.ChooseRoomWrapper > div > div > p {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.calendarIcon {
+  position: absolute;
+  left: 183px;
+  top: 5px;
+  color: rgb(51, 51, 51);
+}
+.calendarIcon2 {
+  position: absolute;
+  left: 183px;
+  top: 5px;
+  color: rgb(51, 51, 51);
+}
+.RoomsSelectorPopUp {
+  width: 180px;
+  height: 30px;
+  padding: 0px 5px;
+  outline: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.RoomsSelectorPopUp p {
+  font-size: 0.9rem;
+}
+.CheckAvailabilityBtn {
+  width: 200px;
+  height: 30px;
+  background-color: green;
+  color: white;
+  border: none;
 }
