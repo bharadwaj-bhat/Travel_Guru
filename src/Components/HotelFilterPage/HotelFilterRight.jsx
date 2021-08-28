@@ -2,45 +2,57 @@ import React from "react";
 import styles from "../../Styles/hotelFilter.module.css";
 import SearchIcon from "@material-ui/icons/Search";
 import HotelFilterCard from "./HotelFilterCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { sortData } from "../../redux/hotelData/actions";
 import { Link } from "react-router-dom";
 
-export function HotelFilterRight(props) {
-  const [min, setMin] = React.useState(100000);
-  const [minStr, setMinStr] = React.useState("");
+export function HotelFilterRight() {
   const data = useSelector((state) => state.hotel.data);
+  const min = useSelector((state) => state.hotel.min);
+  const [highPrice, setHighPrice] = React.useState(true);
+  const [highRating, setHighRating] = React.useState(true);
+  const [tripRating, setTripRating] = React.useState(true);
+  const dispatch = useDispatch();
   const handleSort = (str) => {
     switch (str) {
       case "recommended": {
-        props.setData(data);
+        const payload = data.sort((a, b) => {
+          return b.otherRating - a.otherRating;
+        });
+        dispatch(sortData(payload));
         break;
       }
       case "price": {
-        console.log("ll");
         const payload = data.sort((a, b) => {
-          return a.price - b.price;
+          if (highPrice) {
+            return a.price - b.price;
+          }
+          return b.price - a.price;
         });
-        console.log(payload);
-        props.setData(payload);
+        dispatch(sortData(payload));
+        setHighPrice(!highPrice);
         break;
       }
       case "rating": {
-        console.log("ll");
         const payload = data.sort((a, b) => {
+          if (highRating) {
+            return b.rating - a.rating;
+          }
           return a.rating - b.rating;
         });
-        console.log(payload);
-        props.setData(payload);
+        dispatch(sortData(payload));
+        setHighRating(!highRating);
         break;
       }
       case "trip": {
-        console.log("ll");
         const payload = data.sort((a, b) => {
-          return a.tripAdvisorRating - b.tripAdvisorRating;
+          if (tripRating) {
+            return b.tripAdvicerRating - a.tripAdvicerRating;
+          }
+          return a.tripAdvicerRating - b.tripAdvicerRating;
         });
-        console.log(payload);
-        props.setData(payload);
-        console.log(props.data);
+        dispatch(sortData(payload));
+        setTripRating(!tripRating);
         break;
       }
       default: {
@@ -48,27 +60,39 @@ export function HotelFilterRight(props) {
       }
     }
   };
-  React.useEffect(() => {
-    data.map((item) => {
-      if (item.price < min) {
-        setMin(item.price);
-        setMinStr(item.sPrice);
-      }
-      return item;
-    });
-  }, [min, data]);
   return (
-    <div className={styles.hotel_right_container}>
-      <div className={styles.hotel_right_container_top}>
-        <div className={styles.hotel_right_container_top_top}>
-          <button className={styles.hotel_right_container_top_btn}>
-            <SearchIcon className={styles.search_icon} color="disabled" />
-            Modify Search
-          </button>
+    <>
+      <div className={styles.hotel_right_container}>
+        <div className={styles.hotel_right_container_top}>
+          <div className={styles.hotel_right_container_top_top}>
+            <button className={styles.hotel_right_container_top_btn}>
+              <SearchIcon className={styles.search_icon} color="disabled" />
+              Modify Search
+            </button>
+          </div>
+          <div className={styles.hotel_right_container_top_bottom}>
+            <h6>Leh</h6>
+            <p>SAT, 28 AUG - SUN, 29 AUG (1 NIGHT) | 1 ROOM | 1 ADULT</p>
+          </div>
         </div>
-        <div className={styles.hotel_right_container_top_bottom}>
-          <h6>Leh</h6>
-          <p>SAT, 28 AUG - SUN, 29 AUG (1 NIGHT) | 1 ROOM | 1 ADULT</p>
+        <div className={styles.hotel_right_container_middle_top}>
+          <div className={styles.hotel_right_container_middle_top_top}>
+            <button>
+              ALL HOTELS
+              <br />
+              from ₹ {min}
+            </button>
+          </div>
+          <div className={styles.hotel_right_container_middle_top_bottom}>
+            <button>
+              VILLAS AND STAYS
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from ₹ 5,000
+            </button>
+            <button>
+              LIST | <span>MAPS</span>
+            </button>
+          </div>
         </div>
       </div>
       <div className={styles.hotel_right_container_middle_top}>
@@ -76,7 +100,7 @@ export function HotelFilterRight(props) {
           <button>
             ALL HOTELS
             <br />
-            from ₹ {minStr}
+            {/* from ₹ {minStr} */}
           </button>
         </div>
         <div className={styles.hotel_right_container_middle_top_bottom}>
@@ -136,6 +160,6 @@ export function HotelFilterRight(props) {
           </>
         ))}
       </div>
-    </div>
+    </>
   );
 }
