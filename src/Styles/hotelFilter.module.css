@@ -478,12 +478,12 @@
 }
 .hotel_card_right_1 > p > span {
 	color: #999;
-	font-family: "Rubix";
+	font-family: "Rubik";
 	font-size: 13px;
 }
 .hotel_card_right_2 {
 	color: #333;
-	font-family: "Rubix";
+	font-family: "Rubik";
 	font-size: 14px;
 	margin: 10px 10px 0 0;
 	font-weight: 530;
@@ -493,14 +493,14 @@
 }
 .hotel_card_right_3 {
 	color: #333;
-	font-family: "Rubix";
+	font-family: "Rubik";
 	font-size: 24px;
 	margin: 30px 10px 0 0;
 	font-weight: 600;
 }
 .hotel_card_right_4 {
 	color: #333;
-	font-family: "Rubix";
+	font-family: "Rubik";
 	font-size: 16px;
 	margin: 0px 10px 0 0;
 	font-weight: 400;
@@ -511,8 +511,13 @@
 	color: #fff;
 	padding: 8px 12px;
 	border-radius: 5px;
+	font-family: "Rubik";
 	margin-top: 30px;
 	cursor: pointer;
+}
+.hotel_card_right_5 > button > a {
+	text-decoration: none;
+	color: #fff;
 }
 .active_border {
 	border-top: 3px solid #55961c !important;

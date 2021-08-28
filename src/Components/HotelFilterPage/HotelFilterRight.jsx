@@ -4,7 +4,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import HotelFilterCard from "./HotelFilterCard";
 import { useDispatch, useSelector } from "react-redux";
 import { sortData } from "../../redux/hotelData/actions";
-import { Link } from "react-router-dom";
 
 export function HotelFilterRight() {
   const data = useSelector((state) => state.hotel.data);
@@ -135,9 +134,7 @@ export function HotelFilterRight() {
       <div className={styles.hotel_right_card}>
         {data.map((item) => (
           <>
-            <Link to={`/rooms/${item.id}`} style={{ textDecoration: "none" }}>
               <HotelFilterCard key={item.id} data={item} />
-            </Link>
           </>
         ))}
       </div>
