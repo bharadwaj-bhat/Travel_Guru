@@ -2,18 +2,20 @@ import styles from "../../../Styles/RoomsInner.module.css";
 import CheckIcon from "@material-ui/icons/Check";
 import MoneyOffIcon from "@material-ui/icons/MoneyOff";
 import FreeBreakfastIcon from "@material-ui/icons/FreeBreakfast";
+import { useSelector } from "react-redux";
 
-export const JuniorSuit = ({ price, title }) => {
-  console.log("from", price);
+export const JuniorSuit = ({ price, title, image }) => {
+  const dateI = useSelector((state) => state.date.checkInDate.day);
+  const dateO = useSelector((state) => state.date.checkOutDate.day);
+
+  let diff = Math.abs(dateI - dateO);
+
   return (
     <div className={styles.JuniorSuitWrapper}>
       <div>
         <p> {title} Suite</p>
         <div className={styles.JuniorSuitFlex}>
-          <img
-            src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v1524035854/Hotel/Leh/00096502/Executive_Room-4_utA9WJ.jpg"
-            alt=""
-          />
+          <img src={image} alt="" />
           <div className={styles.JuniorSuitFlexColumn}>
             <p className={styles.suiteHeader}> {title} Suite Only </p>
             <div className={styles.JuniorSuitDiv}>
@@ -22,7 +24,17 @@ export const JuniorSuit = ({ price, title }) => {
                 <p className={styles.highlightedPTag}> INCLUSIONS </p>
                 <p className={styles.highlightedPTag}> HIGHLIGHTS </p>
                 <p className={styles.highlightedPTag}> Price for 1 night</p>
-                {/* <p className={styles.highlightedPTag}> 5 ROOMS LEFT</p> */}
+                {/* {diff < 4 ? (
+                  <p
+                    className={styles.highlightedPTag}
+                    style={{ fontSize: "0.8rem", fontColor: "orange" }}
+                  >
+                    {" "}
+                    5 ROOMS LEFT
+                  </p>
+                ) : (
+                  <></>
+                )} */}
               </div>
               <div className={styles.JuniorSuitDivInner}>
                 <img

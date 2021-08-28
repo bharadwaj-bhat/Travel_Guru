@@ -6,7 +6,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import DateRangeIcon from "@material-ui/icons/DateRange";
-
+import { useHistory } from "react-router-dom";
 // for popover
 import Popover from "@material-ui/core/Popover";
 import Paper from "@material-ui/core/Paper";
@@ -15,6 +15,13 @@ import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  adults,
+  checkInDate,
+  checkOutDate,
+  children,
+} from "../../redux/DatesData/actionTypes";
 
 const useStyles = makeStyles((theme) => ({
   popUp: {},
@@ -83,13 +90,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const SearchBanner = () => {
-  const [selectedDay, setSelectedDay] = useState("");
-  const [selectedDay2, setSelectedDay2] = useState("");
-  const [adults, setAdults] = useState(0);
-  const [children, setChildren] = useState(0);
+  const checkInState = useSelector((state) => state.date.checkInDate);
+  const checkOutState = useSelector((state) => state.date.checkOutDate);
+
+  const adultsCount = useSelector((state) => state.date.adults);
+  const childrenCount = useSelector((state) => state.date.children);
 
   const [hotels, setHotels] = useState(true);
-
+  const history = useHistory();
+  const dispatch = useDispatch();
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -105,8 +114,25 @@ export const SearchBanner = () => {
   };
 
   const handleCheckIn = (e) => {
-    setSelectedDay(e);
+    dispatch(checkInDate(e));
     checkOutRef.current.focus();
+  };
+
+  const hadleCheckOut = (e) => {
+    dispatch(checkOutDate(e));
+  };
+
+  const handleSearch = () => {
+    console.log("fired form search btn");
+    history.push("hotel-search");
+  };
+
+  const addAdults = (payload) => {
+    dispatch(adults(payload));
+  };
+
+  const addChildren = (payload) => {
+    dispatch(children(payload));
   };
 
   const renderCustomInput = ({ ref }) => {
@@ -116,10 +142,10 @@ export const SearchBanner = () => {
         <input
           readOnly
           ref={ref} // necessary
-          placeholder="Check-in date"
+          placeholder="Check-In date"
           value={
-            selectedDay
-              ? `${selectedDay.day}/${selectedDay.month}/${selectedDay.year}`
+            checkInState
+              ? `${checkInState.day}/${checkInState.month}/${checkInState.year}`
               : ""
           }
           style={{
@@ -148,8 +174,8 @@ export const SearchBanner = () => {
         ref={ref} // necessary
         placeholder="Check-Out date"
         value={
-          selectedDay2
-            ? `${selectedDay2.day}/${selectedDay2.month}/${selectedDay2.year}`
+          checkOutState
+            ? `${checkOutState.day}/${checkOutState.month}/${checkOutState.year}`
             : ""
         }
         style={{
@@ -203,7 +229,6 @@ export const SearchBanner = () => {
             </div>
             <DatePicker
               calendarPopperPosition={"bottom"}
-              value={selectedDay}
               onChange={handleCheckIn}
               renderInput={renderCustomInput}
               shouldHighlightWeekends
@@ -211,8 +236,7 @@ export const SearchBanner = () => {
             />
             <DatePicker
               calendarPopperPosition={"bottom"}
-              value={selectedDay2}
-              onChange={setSelectedDay2}
+              onChange={hadleCheckOut}
               renderInput={renderCustomInput2}
               shouldHighlightWeekends
             />
@@ -240,16 +264,16 @@ export const SearchBanner = () => {
 
                           <div className={classes.grid}>
                             <button
-                              onClick={() => setAdults((prev) => prev - 1)}
+                              onClick={() => addAdults(-1)}
                               className={classes.btnM}
-                              disabled={adults === 0}
+                              disabled={adultsCount === 0}
                             >
                               {" "}
                               -{" "}
                             </button>
-                            <p className={classes.btnP}>{adults}</p>
+                            <p className={classes.btnP}>{adultsCount}</p>
                             <button
-                              onClick={() => setAdults((prev) => prev + 1)}
+                              onClick={() => addAdults(1)}
                               className={classes.btn}
                             >
                               {" "}
@@ -263,16 +287,16 @@ export const SearchBanner = () => {
                           <p className={classes.subHead2}> Below 12 Years </p>
                           <div className={classes.grid}>
                             <button
-                              onClick={() => setChildren((prev) => prev - 1)}
-                              disabled={children === 0}
+                              onClick={() => addChildren(-1)}
+                              disabled={childrenCount === 0}
                               className={classes.btnM}
                             >
                               {" "}
                               -{" "}
                             </button>
-                            <p className={classes.btnP}>{children}</p>
+                            <p className={classes.btnP}>{childrenCount}</p>
                             <button
-                              onClick={() => setChildren((prev) => prev + 1)}
+                              onClick={() => addChildren(1)}
                               className={classes.btn}
                             >
                               {" "}
@@ -282,16 +306,23 @@ export const SearchBanner = () => {
                         </div>
                       </div>
                       <Divider />
-                      <button className={classes.doneBtn}> DONE </button>
+                      <button className={classes.doneBtn} onClick={handleClose}>
+                        {" "}
+                        DONE{" "}
+                      </button>
                     </div>
                   </Paper>
                 </Box>
               </Popover>
             </div>
-            <button className={styles.searchBtn}>
+            <div onClick={handleSearch} className={styles.searchBtn}>
               {" "}
-              <SearchIcon color="inherit" fontSize="large" />{" "}
-            </button>
+              <SearchIcon
+                onClick={handleSearch}
+                color="inherit"
+                fontSize="large"
+              />{" "}
+            </div>
           </div>
         </div>
       </div>

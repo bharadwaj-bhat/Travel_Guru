@@ -7,7 +7,7 @@ export const BreadCrum = () => {
   return (
     <div className={styles.BreadCrumWrapper}>
       <Link
-        to="/"
+        to="/hotel-search"
         style={{ textDecoration: "none", color: "rgb(136, 135, 135)" }}
       >
         <div className={styles.BreadCrum}>

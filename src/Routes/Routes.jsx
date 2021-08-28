@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import { Testing } from "../Components/aTest/Testing";
 import HotelFilterPage from "../Components/HotelFilterPage/HotelFilterPage";
 import { LandingPage } from "../Components/LandingPage/LandingPage";
 import { LoginPage } from "../Components/LoginPage/LoginPage";
@@ -23,6 +24,9 @@ export const Routes = () => {
         </Route>
         <Route path="/hotel-search">
           <HotelFilterPage />
+        </Route>
+        <Route path="/tests">
+          <Testing />
         </Route>
       </Switch>
     </div>

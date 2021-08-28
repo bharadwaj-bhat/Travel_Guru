@@ -1,324 +1,327 @@
 .NavBar {
-	display: grid;
-	grid-template-columns: 1fr 5fr 4fr;
-	grid-gap: 10px;
-	align-items: center;
-	margin: 15px auto;
-	width: 85%;
-	font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 4fr;
+  grid-gap: 10px;
+  align-items: center;
+  margin: 15px auto;
+  width: 85%;
+  font-size: 0.9rem;
 }
 .gridDiv {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .NavButton {
-	padding: 8px;
-	background-color: white;
-	border: 1px solid black;
-	cursor: pointer;
-	border-radius: 3px;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 .SearchBanner {
-	width: 100%;
-	height: 430px;
-	background-image: url("https://www.travelguru.com/travelguru/resources/beetle/images/hero-img-bg6_1.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 0px;
-	display: flex;
-	flex-direction: column;
+  width: 100%;
+  height: 430px;
+  background-image: url("https://www.travelguru.com/travelguru/resources/beetle/images/hero-img-bg6_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .SearchBannerInner {
-	width: 80%;
-	margin: 100px 8%;
+  width: 80%;
+  margin: 100px 8%;
 }
 
 .SearchBannerHeader {
-	width: 300px;
-	display: flex;
-	justify-content: space-around;
-	color: white;
-	font-size: 0.8rem;
-	font-weight: 600;
-	letter-spacing: 2px;
-	margin-bottom: -12px;
-	transition: ease-in;
-	cursor: pointer;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: -12px;
+  transition: ease-in;
+  cursor: pointer;
 }
 
 .BannerInputScreen {
-	width: 100%;
-	height: 90px;
-	background: rgba(0, 0, 0, 0.637);
-	border-radius: 5px;
-	display: flex;
-	text-align: center;
-	padding: 0px 20px;
-	position: relative;
-	justify-content: center;
+  width: 100%;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.637);
+  border-radius: 5px;
+  display: flex;
+  text-align: center;
+  padding: 0px 20px;
+  position: relative;
+  justify-content: center;
 }
 
 .locationIcon {
-	position: absolute;
-	top: 40px;
-	left: 400px;
-	color: gray;
+  position: absolute;
+  top: 40px;
+  left: 400px;
+  color: gray;
 }
 
 .calendarIcon {
-	position: absolute;
-	top: 40px;
-	left: 180px;
-	color: gray;
+  position: absolute;
+  top: 40px;
+  left: 180px;
+  color: gray;
 }
 
 .calendar2Icon {
-	position: absolute;
-	top: 40px;
-	right: 5px;
-	color: gray;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  color: gray;
 }
 
 .underLine {
-	padding-bottom: 10px;
-	border-bottom: 3px solid rgb(240, 130, 67);
+  padding-bottom: 10px;
+  border-bottom: 3px solid rgb(240, 130, 67);
 }
 
 .BannerInputScreen > input {
-	height: 40px;
-	border: none;
-	outline: none;
-	margin-top: 30px;
-	padding: 2px 5px;
-	border-radius: 3px 0px 0px 3px;
-	width: 400px;
-	border-right: 1px solid grey;
+  height: 40px;
+  border: none;
+  outline: none;
+  margin-top: 30px;
+  padding: 2px 5px;
+  border-radius: 3px 0px 0px 3px;
+  width: 400px;
+  border-right: 1px solid grey;
 }
 .personDiv {
-	height: 40px;
-	width: 170px;
-	margin-top: 30px;
-	display: flex;
-	align-items: center;
-	outline: 1px solid black;
-	background: white;
-	padding: 2px 5px;
-	font-size: 0.9rem;
-	margin-bottom: 60px;
+  height: 40px;
+  width: 170px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  outline: 1px solid black;
+  background: white;
+  padding: 2px 5px;
+  font-size: 0.9rem;
+  margin-bottom: 60px;
 }
 
 .searchBtn {
-	width: 65px;
-	background-color: rgb(240, 130, 67);
-	height: 44px;
-	padding: 0px 0px;
-	border: none;
-	border-radius: 0px 3px 3px 0px;
-	color: white;
-	margin-top: 30px;
+  width: 65px;
+  background-color: rgb(240, 130, 67);
+  height: 44px;
+  padding: 0px 0px;
+  border: none;
+  border-radius: 0px 3px 3px 0px;
+  color: white;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .BestSelling_container *,
 .TrendingDestination_container * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .BestSelling_container,
 .TrendingDestination_container {
-	padding: 0 20px;
-	padding-top: 60px;
-	letter-spacing: 0.7px;
-	font-family: "Lato", sans-serif;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
+  padding: 0 20px;
+  padding-top: 60px;
+  letter-spacing: 0.7px;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 .BestSelling_container_card_img > img {
-	width: 100%;
+  width: 100%;
 }
 .BestSelling_container_1,
 .TrendingDestination_container_1 {
-	width: 84%;
-	margin-left: 8%;
+  width: 84%;
+  margin-left: 8%;
 }
 .BestSelling_container_1 > h1,
 .TrendingDestination_container_1 > h1 {
-	font-weight: 400;
-	color: #333;
-	font-size: 1.31429em;
-	text-transform: none;
-	margin-bottom: 20px;
+  font-weight: 400;
+  color: #333;
+  font-size: 1.31429em;
+  text-transform: none;
+  margin-bottom: 20px;
 }
 .BestSelling_container_2 {
-	display: flex;
-	justify-content: space-between;
-	width: 84%;
-	margin-left: 8%;
+  display: flex;
+  justify-content: space-between;
+  width: 84%;
+  margin-left: 8%;
 }
 .BestSelling_container_card {
-	box-shadow: 0px 0px 2px 0.3px rgb(211, 209, 209);
-	width: 31%;
-	cursor: pointer;
-	padding-bottom: 20px;
-	border-radius: 2px;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+  box-shadow: 0px 0px 2px 0.3px rgb(211, 209, 209);
+  width: 31%;
+  cursor: pointer;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .BestSelling_container_card:hover {
-	box-shadow: 0px 0px 2px 1.5px #999;
+  box-shadow: 0px 0px 2px 1.5px #999;
 }
 .BestSelling_container_card_body_1 {
-	display: flex;
+  display: flex;
 }
 .BestSelling_container_card_body_1_1 {
-	width: 50%;
+  width: 50%;
 }
 .BestSelling_container_card_body_rating {
-	background: transparent
-		url(https://www.travelguru.com/travelguru/resources/beetle/images/ico-rating-v2.png)
-		repeat-x scroll 0 0px;
-	height: 10px;
-	margin-left: 10px;
-	width: 56px;
-	margin-top: 3px;
+  background: transparent
+    url(https://www.travelguru.com/travelguru/resources/beetle/images/ico-rating-v2.png)
+    repeat-x scroll 0 0px;
+  height: 10px;
+  margin-left: 10px;
+  width: 56px;
+  margin-top: 3px;
 }
 .BestSelling_container_card_body_rating_2 {
-	margin-left: 10px;
-	margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 .BestSelling_container_card_body_rating_2 > div:nth-child(1) {
-	background: transparent
-		url(https://www.travelguru.com/travelguru/resources/beetle/images/tripAdv-logo.png)
-		no-repeat;
-	float: left;
-	height: 16px;
-	width: 26px;
+  background: transparent
+    url(https://www.travelguru.com/travelguru/resources/beetle/images/tripAdv-logo.png)
+    no-repeat;
+  float: left;
+  height: 16px;
+  width: 26px;
 }
 .BestSelling_container_card_body_rating_2 > div:nth-child(2) {
-	background: transparent
-		url(https://www.travelguru.com/travelguru/resources/beetle/images/tripadvisor-icon-rating.png)
-		repeat-x scroll 0 0px;
-	display: inline-block;
-	height: 12px;
-	padding: 0 !important;
-	width: 60px;
+  background: transparent
+    url(https://www.travelguru.com/travelguru/resources/beetle/images/tripadvisor-icon-rating.png)
+    repeat-x scroll 0 0px;
+  display: inline-block;
+  height: 12px;
+  padding: 0 !important;
+  width: 60px;
 }
 .BestSelling_container_card_body_1_2 {
-	border-left: 1px solid #969b97;
-	padding-left: 20px;
+  border-left: 1px solid #969b97;
+  padding-left: 20px;
 }
 .BestSelling_container_card_body_1_2 > div:nth-child(1) {
-	font-size: 1.12857rem;
-	color: #fb830b;
-	outline: 0;
-	letter-spacing: 0.7px;
-	font-family: "Lato", sans-serif;
-	font-weight: 500;
+  font-size: 1.12857rem;
+  color: #fb830b;
+  outline: 0;
+  letter-spacing: 0.7px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
 }
 .BestSelling_container_card_body_1_2 > div:nth-child(2) {
-	visibility: visible;
-	opacity: 1;
-	font-size: 0.73714rem;
-	color: #999;
+  visibility: visible;
+  opacity: 1;
+  font-size: 0.73714rem;
+  color: #999;
 }
 .BestSelling_container_card_body_title > h3 {
-	font-size: 0.95rem;
-	overflow: hidden;
-	padding-bottom: 5px;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	cursor: pointer;
-	color: #333;
-	outline: 0;
-	letter-spacing: 0.4px;
-	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	margin-left: 10px;
-	margin-top: 9px;
+  font-size: 0.95rem;
+  overflow: hidden;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #333;
+  outline: 0;
+  letter-spacing: 0.4px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-top: 9px;
 }
 .TrendingDestination_container {
-	padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 .TrendingDestination_container_card {
-	width: 90%;
-	position: relative;
+  width: 90%;
+  position: relative;
 }
 .TrendingDestination_container_card_img > img {
-	width: 100%;
-	cursor: pointer;
+  width: 100%;
+  cursor: pointer;
 }
 .TrendingDestination_container_card_img > img:hover {
-	opacity: 0.7;
+  opacity: 0.7;
 }
 .TrendingDestination_container_2 {
-	display: flex;
-	justify-content: space-between;
-	width: 90%;
-	margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 5%;
 }
 .TrendingDestination_container_card_img {
-	position: relative;
+  position: relative;
 }
 .TrendingDestination_container_card_content {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	top: -24%;
-	color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: -24%;
+  color: #fff;
 }
 .TrendingDestination_container_card_content > h3 {
-	outline: 0;
-	letter-spacing: 0.7px;
-	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	font-size: 1.2rem;
+  outline: 0;
+  letter-spacing: 0.7px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 .TrendingDestination_container_card_content > h4 {
-	outline: 0;
-	letter-spacing: 0.7px;
-	margin-top: 0px;
-	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	font-size: 0.9rem;
+  outline: 0;
+  letter-spacing: 0.7px;
+  margin-top: 0px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 .TrendingDestination_container_pagination {
-	margin: 0 7px;
-	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	font-size: 0.8rem;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	cursor: pointer;
-	color: #666;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  margin: 0 7px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #666;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .TrendingDestination_container_pagination_1 {
-	margin: 0 10px;
-	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	font-size: 0.8rem;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	cursor: pointer;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #666;
-	color: #fff;
+  margin: 0 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #666;
+  color: #fff;
 }

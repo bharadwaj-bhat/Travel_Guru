@@ -12,27 +12,29 @@ import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import { JuniorSuit } from "./Suits/JuniorSuit";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  adults,
+  checkInDate,
+  checkOutDate,
+} from "../../redux/DatesData/actionTypes";
 
 export const ChooseRoom = ({ price }) => {
-  const [selectedDay, setSelectedDay] = useState("");
-  const [selectedDay2, setSelectedDay2] = useState("");
-  const [adults, setAdults] = useState(0);
+  const checkInState = useSelector((state) => state.date.checkInDate);
+  const checkOutState = useSelector((state) => state.date.checkOutDate);
+  const dispatch = useDispatch();
+  const adultsCount = useSelector((state) => state.date.adults);
+
   const [children, setChildren] = useState(0);
-
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-
-  const [anchorEl2, setAnchorEl2] = useState(null);
-  const open2 = Boolean(anchorEl2);
 
   const [anchorElPop, setAnchorElPop] = useState(null);
   const openPop = Boolean(anchorElPop);
 
   const handleCheckIn = (e) => {
-    setSelectedDay(e);
+    dispatch(checkInDate(e));
   };
   const handleCheckIn2 = (e) => {
-    setSelectedDay2(e);
+    dispatch(checkOutDate(e));
   };
   const handleClose = () => {
     setAnchorElPop(null);
@@ -46,8 +48,8 @@ export const ChooseRoom = ({ price }) => {
           ref={ref}
           placeholder="Check-in date"
           value={
-            selectedDay
-              ? `${selectedDay.day}/${selectedDay.month}/${selectedDay.year}`
+            checkInState
+              ? `${checkInState.day}/${checkInState.month}/${checkInState.year}`
               : ""
           }
           style={{
@@ -72,8 +74,8 @@ export const ChooseRoom = ({ price }) => {
           ref={ref}
           placeholder="Check-out date"
           value={
-            selectedDay2
-              ? `${selectedDay2.day}/${selectedDay2.month}/${selectedDay2.year}`
+            checkOutState
+              ? `${checkOutState.day}/${checkOutState.month}/${checkOutState.year}`
               : ""
           }
           style={{
@@ -157,7 +159,7 @@ export const ChooseRoom = ({ price }) => {
             <p> CHECK-IN</p>
             <DatePicker
               calendarPopperPosition={"bottom"}
-              value={selectedDay}
+              value={checkInState}
               onChange={handleCheckIn}
               renderInput={checkInInputComp}
               shouldHighlightWeekends
@@ -168,7 +170,7 @@ export const ChooseRoom = ({ price }) => {
             <p> CHECK-OUT</p>
             <DatePicker
               calendarPopperPosition={"bottom"}
-              value={selectedDay2}
+              value={checkOutState}
               onChange={handleCheckIn2}
               renderInput={checkInInputComp2}
               shouldHighlightWeekends
@@ -181,7 +183,7 @@ export const ChooseRoom = ({ price }) => {
               onClick={(e) => setAnchorElPop(e.currentTarget)}
               className={styles.RoomsSelectorPopUp}
             >
-              <p>1 Adult - 1Room </p>
+              <p>{adultsCount} Adult - 1Room </p>
               <KeyboardArrowDownIcon />
             </div>
             <div>
@@ -203,16 +205,16 @@ export const ChooseRoom = ({ price }) => {
 
                           <div className={classes.grid}>
                             <button
-                              onClick={() => setAdults((prev) => prev - 1)}
+                              onClick={() => dispatch(adults(-1))}
                               className={classes.btnM}
-                              disabled={adults === 0}
+                              disabled={adultsCount === 1}
                             >
                               {" "}
                               -{" "}
                             </button>
-                            <p className={classes.btnP}>{adults}</p>
+                            <p className={classes.btnP}>{adultsCount}</p>
                             <button
-                              onClick={() => setAdults((prev) => prev + 1)}
+                              onClick={() => dispatch(adults(+1))}
                               className={classes.btn}
                             >
                               {" "}
@@ -259,9 +261,29 @@ export const ChooseRoom = ({ price }) => {
           </div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <JuniorSuit title={"Junior"} price={price} />
-          <JuniorSuit title={"Delux"} price={Number(price) + 1000} />
-          <JuniorSuit title={"Premium"} price={Number(price) + 2000} />
+          <JuniorSuit
+            title={"Junior"}
+            price={price}
+            dateI={checkInState.day}
+            dateO={checkOutState.day}
+            image={
+              "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v1524035854/Hotel/Leh/00096502/Executive_Room-4_utA9WJ.jpg"
+            }
+          />
+          <JuniorSuit
+            title={"Delux"}
+            price={Number(price) + 1000}
+            image={
+              "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v1524035810/Hotel/Leh/00096502/Executive_Room-1_zRvacF.jpg"
+            }
+          />
+          <JuniorSuit
+            title={"Premium"}
+            price={Number(price) + 2000}
+            image={
+              "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v1524035911/Hotel/Leh/00096502/Privilege_Suite-2_pBAn8J.jpg"
+            }
+          />
         </div>
       </div>
     </div>
