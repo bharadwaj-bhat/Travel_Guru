@@ -2,20 +2,21 @@ import React from 'react'
 import styles from "../../Styles/hotelFilter.module.css"
 import SearchIcon from '@material-ui/icons/Search';
 import HotelFilterCard from './HotelFilterCard';
-import { HotelData } from '../../fakeData/HotelData';
+import { useSelector } from 'react-redux';
 
 export function HotelFilterRight(props) {
     const [min, setMin] = React.useState(100000);
     const [minStr, setMinStr] = React.useState("")
+    const data = useSelector((state) => state.hotel.data);
     const handleSort=(str) => {
         switch(str){
             case "recommended": {
-                props.setData(HotelData);
+                props.setData(data);
                 break;
                 }
             case "price": {
                 console.log("ll")
-                const payload = HotelData.sort((a,b) => {
+                const payload = data.sort((a,b) => {
                     return a.price-b.price;
                 })
                 console.log(payload)
@@ -24,7 +25,7 @@ export function HotelFilterRight(props) {
                 }
             case "rating": {
                 console.log("ll")
-                const payload = HotelData.sort((a,b) => {
+                const payload = data.sort((a,b) => {
                     return a.rating-b.rating;
                 })
                 console.log(payload)
@@ -33,7 +34,7 @@ export function HotelFilterRight(props) {
                 }
             case "trip": {
                 console.log("ll")
-                const payload = HotelData.sort((a,b) => {
+                const payload = data.sort((a,b) => {
                     return a.tripAdvisorRating-b.tripAdvisorRating;
                 })
                 console.log(payload)
@@ -47,14 +48,14 @@ export function HotelFilterRight(props) {
         }
     }
     React.useEffect(() => {
-        props.data.map(item => {
+        data.map(item => {
             if (item.price < min) {
                 setMin(item.price);
                 setMinStr(item.sPrice);
             }
             return item;
         })
-    },[min,props.data])
+    },[min,data])
     return <div className={ styles.hotel_right_container}>
         <div className={ styles.hotel_right_container_top}>
             <div className={ styles.hotel_right_container_top_top}><button className={ styles.hotel_right_container_top_btn}><SearchIcon className={styles.search_icon} color="disabled"/>Modify Search</button></div>
@@ -87,7 +88,7 @@ export function HotelFilterRight(props) {
             </div>
         </div>
         <div className={styles.hotel_right_card}>
-            {props.data.map(item => <HotelFilterCard key={item.id} data={ item}/>)}
+            {data.map(item => <HotelFilterCard key={item.id} data={ item}/>)}
         </div>
     </div>
 }

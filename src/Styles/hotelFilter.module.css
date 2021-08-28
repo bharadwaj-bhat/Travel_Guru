@@ -514,3 +514,6 @@
 	margin-top: 30px;
 	cursor: pointer;
 }
+.active_border {
+	border-top: 3px solid #55961c !important;
+}
