@@ -2,8 +2,13 @@ import React from "react"
 import styles from '../../Styles/landingPage.module.css'
 import { TrendingDestinationData } from "../../fakeData/TrendingDestinationData"
 import Carousel from "react-elastic-carousel";
+import { useHistory } from "react-router-dom";
 
 export const TrendingDestinations = () => {
+    const history = useHistory()
+    const handleRoute = () => {
+        history.push("/hotel-search");
+    }
     return (
         <div className={styles.TrendingDestination_container}>
             <div className={styles.TrendingDestination_container_1}><h1>Trending Destinations</h1></div>
@@ -35,7 +40,7 @@ export const TrendingDestinations = () => {
                     {
                     TrendingDestinationData.map(item => {
                         return <div key={item.id} className={styles.TrendingDestination_container_card}>
-                    <div className={styles.TrendingDestination_container_card_img}>
+                    <div onClick={handleRoute} className={styles.TrendingDestination_container_card_img}>
                         <img src={item.url} alt="" />
                     </div>
                     <div className={styles.TrendingDestination_container_card_content}>
