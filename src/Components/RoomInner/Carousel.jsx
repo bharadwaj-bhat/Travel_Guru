@@ -84,7 +84,7 @@ export const CarouselComp = ({ data }) => {
             </div>
           </div>
           <OverViewCard />
-          <ChooseRoom />
+          <ChooseRoom price={data.price} />
         </>
       ) : (
         <h1> ...Loading </h1>

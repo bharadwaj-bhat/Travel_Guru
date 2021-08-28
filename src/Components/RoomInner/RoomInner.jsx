@@ -5,14 +5,16 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../redux/RoomInner/actions";
 import { DetailsCard } from "./DetailsCard";
+import { useParams } from "react-router-dom";
 
 export const RoomInner = () => {
+  const { id } = useParams();
   return (
     <div className={styles.roomsLayoutWrapper}>
       <div className={styles.roomsLayout}>
         <BreadCrum />
         <Divider />
-        <DetailsCard />
+        <DetailsCard id={id} />
       </div>
     </div>
   );

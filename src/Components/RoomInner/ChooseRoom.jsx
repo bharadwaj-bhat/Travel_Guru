@@ -11,8 +11,9 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
+import { JuniorSuit } from "./Suits/JuniorSuit";
 
-export const ChooseRoom = () => {
+export const ChooseRoom = ({ price }) => {
   const [selectedDay, setSelectedDay] = useState("");
   const [selectedDay2, setSelectedDay2] = useState("");
   const [adults, setAdults] = useState(0);
@@ -32,6 +33,9 @@ export const ChooseRoom = () => {
   };
   const handleCheckIn2 = (e) => {
     setSelectedDay2(e);
+  };
+  const handleClose = () => {
+    setAnchorElPop(null);
   };
 
   const checkInInputComp = ({ ref }) => {
@@ -184,7 +188,7 @@ export const ChooseRoom = () => {
               <Popover
                 open={openPop}
                 anchorEl={anchorElPop}
-                // onClose={handleClose}
+                onClose={handleClose}
                 anchorReference="anchorEl"
                 anchorOrigin={{ vertical: 40, horizontal: 0 }}
               >
@@ -253,6 +257,11 @@ export const ChooseRoom = () => {
               Check Availability
             </button>
           </div>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <JuniorSuit title={"Junior"} price={price} />
+          <JuniorSuit title={"Delux"} price={Number(price) + 1000} />
+          <JuniorSuit title={"Premium"} price={Number(price) + 2000} />
         </div>
       </div>
     </div>

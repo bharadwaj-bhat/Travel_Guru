@@ -18,7 +18,7 @@ export const Routes = () => {
         <Route path="/register">
           <RegisterPage />
         </Route>
-        <Route path="/roomsDemo">
+        <Route path="/rooms/:id">
           <RoomInner />
         </Route>
         <Route path="/hotel-search">

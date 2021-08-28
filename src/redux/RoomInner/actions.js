@@ -29,7 +29,7 @@ export const getData = (payload) => (dispatch) => {
   dispatch(dataRequest());
 
   axios
-    .get("http://localhost:3001/data")
+    .get(`http://localhost:3001/data/${payload}`)
     .then(({ data }) => dispatch(dataRequestSuccess(data)))
     .catch((err) => dispatch(dataRequestFailed(err)));
 };
