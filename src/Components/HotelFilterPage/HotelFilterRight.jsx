@@ -6,9 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import {sortData} from "../../redux/hotelData/actions"
 
 export function HotelFilterRight() {
-    const [min, setMin] = React.useState(100000);
-    const [minStr, setMinStr] = React.useState("")
     const data = useSelector((state) => state.hotel.data);
+    const min = useSelector((state) => state.hotel.min);
     const [highPrice, setHighPrice] = React.useState(true);
     const [highRating, setHighRating] = React.useState(true);
     const [tripRating, setTripRating] = React.useState(true);
@@ -60,15 +59,6 @@ export function HotelFilterRight() {
                 }
         }
     }
-    React.useEffect(() => {
-        data.map(item => {
-            if (item.price < min) {
-                setMin(item.price);
-                setMinStr(item.sPrice);
-            }
-            return item;
-        })
-    })
     return <div className={ styles.hotel_right_container}>
         <div className={ styles.hotel_right_container_top}>
             <div className={ styles.hotel_right_container_top_top}><button className={ styles.hotel_right_container_top_btn}><SearchIcon className={styles.search_icon} color="disabled"/>Modify Search</button></div>
@@ -76,7 +66,7 @@ export function HotelFilterRight() {
         </div>
         <div className={ styles.hotel_right_container_middle_top}>
             <div className={styles.hotel_right_container_middle_top_top}>
-                <button>ALL HOTELS<br/>from ₹ {minStr}</button>
+                <button>ALL HOTELS<br/>from ₹ {min}</button>
             </div>
             <div className={styles.hotel_right_container_middle_top_bottom}>
                 <button>VILLAS AND STAYS<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from ₹ 5,000</button>

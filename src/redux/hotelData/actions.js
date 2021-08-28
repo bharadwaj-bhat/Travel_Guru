@@ -3,6 +3,7 @@ import {
 	SORT_REQUEST,
 	SORT_SUCCESS,
 	UPDATE_FAILURE,
+	UPDATE_MIN_REQUEST,
 	UPDATE_REQUEST,
 	UPDATE_SUCCESS,
 } from "./actionTypes";
@@ -27,11 +28,17 @@ export const sortSuccess = (payload) => {
 export const sortFailure = () => {
 	return { type: SORT_FAILURE };
 };
-
+export const updateMin = (payload) => {
+	return { type: UPDATE_MIN_REQUEST, payload };
+};
 export const updateData = (payload) => (dispatch) => {
 	dispatch(updateRequest());
 	const data = scanData(payload);
 	dispatch(updateSuccess(data));
+	const min = data.sort((a, b) => {
+		return a.price - b.price;
+	});
+	dispatch(updateMin(min[0].sPrice));
 };
 export const sortData = (payload) => (dispatch) => {
 	dispatch(sortRequest());

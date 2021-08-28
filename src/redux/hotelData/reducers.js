@@ -3,6 +3,7 @@ import {
 	SORT_REQUEST,
 	SORT_SUCCESS,
 	UPDATE_FAILURE,
+	UPDATE_MIN_REQUEST,
 	UPDATE_REQUEST,
 	UPDATE_SUCCESS,
 } from "./actionTypes";
@@ -12,6 +13,7 @@ const initState = {
 	data: HotelData,
 	isLoading: false,
 	isError: false,
+	min: "1,760",
 };
 export const hotelDataReducer = (state = initState, { type, payload }) => {
 	switch (type) {
@@ -54,6 +56,11 @@ export const hotelDataReducer = (state = initState, { type, payload }) => {
 				data: [...HotelData],
 				isError: false,
 				isLoading: false,
+			};
+		case UPDATE_MIN_REQUEST:
+			return {
+				...state,
+				min: payload,
 			};
 		default:
 			return state;
