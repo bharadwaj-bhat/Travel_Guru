@@ -66,7 +66,7 @@ const Payment = () => {
             return;
         }
         const options = {
-            key: "rzp_test_k8s6vfpDLGVjUZ",
+            key: "order_Hr19OrvXHIoDLg",
             amount: "70000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             currency: "INR",
             name: "Travel Guru",
