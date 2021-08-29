@@ -52,7 +52,7 @@ export default function HotelFilterCard({ data }) {
         </Carousel>
         <div className={styles.hotel_card_middle}>
           <div className={styles.hotel_card_middle_1}>
-            <h3>{data.name}</h3>
+            <h3><Link to={`/rooms/${data.id}`}>{data.name}</Link></h3>
           </div>
           <div className={styles.hotel_card_middle_2}>
             {Array(Math.floor(data.rating))
