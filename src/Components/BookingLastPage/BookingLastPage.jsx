@@ -66,6 +66,7 @@ const Check = styled.div`
 
   p {
     color: #999999;
+    font-size: 0.9em;
   }
 
   h1 {
@@ -98,6 +99,7 @@ const Date = styled.div`
     width: 16%;
     color: #999999;
     margin-right: 4%;
+    font-size: 0.8em;
   }
 `;
 const Inclusion = styled.div`
@@ -155,16 +157,17 @@ const M1div = styled.div`
   text-align: right;
 `;
 const M2div = styled.div`
-  width: 20%;
+  width: 25%;
   padding: 1%;
   border: 1px solid;
+  font-size: 1em;
   margin-right: 1%;
   background-color: #eceeef;
   opacity: 1;
   border: 1px solid #a3a3a3;
 `;
 const M3div = styled.div`
-  width: 38%;
+  width: 35%;
   display: flex;
 `;
 const M31div = styled.div`
@@ -184,6 +187,7 @@ const M32div = styled.div`
 const Instruction = styled.div`
   width: 60%;
   margin-left: 31%;
+  font-size: 0.9em;
   padding-bottom: 3vh;
   margin-bottom: 1vh;
   border-bottom: 1px solid #a3a3a3;
@@ -271,6 +275,7 @@ const Instruction1 = styled.div`
   margin-left: 31%;
   padding-bottom: 3vh;
   margin-bottom: 1vh;
+  font-size: 0.9em;
 `;
 const Continue = styled.div`
   width: 30%;
@@ -514,7 +519,7 @@ export default function BookingLastPage() {
                 variant="contained"
                 color="default"
                 disableElevation
-                style={{ backgroundColor: "#DDDDDD", width: "100%" }}
+                style={{ backgroundColor: "#DDDDDD"}}
               >
                 Apply
               </Button>
