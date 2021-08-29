@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 
 export const RoomInner = () => {
   const { id } = useParams();
+
   return (
     <div className={styles.roomsLayoutWrapper}>
       <div className={styles.roomsLayout}>
