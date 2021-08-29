@@ -233,6 +233,7 @@
 	background: #e4e4e4;
 	border: 1px solid #333;
 	color: #333;
+	cursor: pointer;
 }
 .hotel_right_container_middle_top {
 	width: 96%;
@@ -391,14 +392,14 @@
 	margin-left: 5px;
 }
 .hotel_card_middle {
-	width: 45%;
+	width: 40%;
 	height: 100%;
 	margin-left: 20px;
 }
 
 .hotel_card_right {
 	height: 100%;
-	width: 23%;
+	width: 28%;
 	margin-right: 20px;
 }
 .hotel_card_middle > div,

@@ -1,7 +1,7 @@
 import styles from "../../Styles/landingPage.module.css";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import DatePicker from "react-modern-calendar-datepicker";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -10,11 +10,11 @@ import { useHistory } from "react-router-dom";
 // for popover
 import Popover from "@material-ui/core/Popover";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import {
   adults,
@@ -100,11 +100,9 @@ export const SearchBanner = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const classes = useStyles();
-
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   var checkOutRef;
-
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -124,13 +122,12 @@ export const SearchBanner = () => {
 
   const handleSearch = () => {
     console.log("fired form search btn");
-    history.push("hotel-search");
+    history.push("/hotel-search");
   };
 
   const addAdults = (payload) => {
     dispatch(adults(payload));
   };
-
   const addChildren = (payload) => {
     dispatch(children(payload));
   };
@@ -216,6 +213,7 @@ export const SearchBanner = () => {
         </div>
         <div>
           <div className={styles.BannerInputScreen}>
+            <div>
             <input
               type="text"
               name=""
@@ -223,7 +221,12 @@ export const SearchBanner = () => {
               placeholder={
                 hotels ? "Search for Hotels" : "Search for Home Stays"
               }
-            />
+              />
+              <div className={styles.popUp}>
+                <p onClick={handleSearch}>Leh</p>
+                <p onClick={handleSearch}>Ladakh</p>
+              </div>
+            </div>
             <div className={styles.locationIcon}>
               <LocationOnIcon />
             </div>

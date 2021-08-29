@@ -4,6 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import HotelFilterCard from "./HotelFilterCard";
 import { useDispatch, useSelector } from "react-redux";
 import { sortData } from "../../redux/hotelData/actions";
+import useDate from "../../hooks/useDate";
 
 export function HotelFilterRight() {
   const data = useSelector((state) => state.hotel.data);
@@ -12,6 +13,7 @@ export function HotelFilterRight() {
   const [highRating, setHighRating] = React.useState(true);
   const [tripRating, setTripRating] = React.useState(true);
   const dispatch = useDispatch();
+  const date = useDate();
   const handleSort = (str) => {
     switch (str) {
       case "recommended": {
@@ -71,7 +73,7 @@ export function HotelFilterRight() {
           </div>
           <div className={styles.hotel_right_container_top_bottom}>
             <h6>Leh</h6>
-            <p>SAT, 28 AUG - SUN, 29 AUG (1 NIGHT) | 1 ROOM | 1 ADULT</p>
+            <p>{date} (1 NIGHT) | 1 ROOM | 1 ADULT</p>
           </div>
         </div>
         <div className={styles.hotel_right_container_middle_top}>
