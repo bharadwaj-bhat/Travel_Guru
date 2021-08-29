@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# TravelGuru Website Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In this project we made fully-functional clone of TravelGuru website that provides travellers across India to book rooms in hotels at specified location.
 
-## Available Scripts
+### Technologies & Libraries used
 
-In the project directory, you can run:
+#### Tech Stack-
 
-### `npm start`
+1. react.js
+2. javaScript
+3. html
+4. css
+5. redux
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Libraries Stack-
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. styled-components
+2. material-ui
+3. react-elastic-carousel & react-material-ui-carousel
+4. axios
+5. react-modern-calendar-datepicker
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionalities associated with this website
 
-### `npm run build`
+1. A user can register his account.
+2. Can log in using given credentials during registration.
+3. User can search for a room in various hotels.
+4. User can filter and sort his search on various parameters, i.e. price, location, amenitities, and many more.
+5. User can select dates for booking rooms
+6. User can select a room in a particular hotel according to his requirements.
+7. User can make payments and succcessfully book a room.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Make sure you have node & npm install in your system. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Clone the App
 
-### `npm run eject`
+```
+git clone <url>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+cd Travel_Guru
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+json-server db.json --port 3001
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+Open another terminal
+and
 
-## Learn More
+```
+npm run start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [@Somesh-Kumar-Yadav](https://github.com/Somesh-Kumar-Yadav)
+- [@Dhruvasurya](https://github.com/dhruva-surya)
+- [@Ankit-Kumar](https://github.com/ankitkumar404)
+- [@Bharadwaj-S](https://github.com/bharadwaj-bhat)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributions are always welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can contribute with us to make this more functionable.
+  
+## Lessons Learned
 
-### Making a Progressive Web App
+We are a learner and this is our third clone so faced many issues to build this site. These are some topic that challenges us to make this:-
+- Routing of pages in react
+- using redux for state management
+- making custom hooks
+- using various styling libraries to write less code.
+  
+## Optimizations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
+  
+## Support
 
-### Advanced Configuration
+For support, email  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+dhruva_nj2_108@masai.school or
+bharadwaj_nj2_044@masai.school or
+ankit_nj2_068@masai.school or
+somesh_nj2_076@masai.school
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Join our Slack channel.
