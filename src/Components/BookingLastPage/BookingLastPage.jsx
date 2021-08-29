@@ -326,6 +326,10 @@ const Promo = styled.div`
   background-color: #fff;
   display: flex;
   border-radius: 3px;
+input{
+  width: 40%;
+}
+
 `;
 
 const Button=styled.div`
@@ -497,7 +501,7 @@ dispatch(totalPrice(tp))
                 <Ms>
                   <Md1 onClick={handleColor} value={cor}>
                     <div>
-                      <Select lable={value} onClick={handleClick}>
+                      <Select  onClick={handleClick}>
                         <option value="Title">Title</option>
                         <option value="Mr">Mr.</option>
                         <option value="Mrs">Mrs.</option>
@@ -507,7 +511,7 @@ dispatch(totalPrice(tp))
                       {" "}
                       <TextField
                         style={{ marginLeft: "10px",fontSize:"0.9em" }}
-                        placeholder="First Name and Middle Name"
+                        placeholder="First Name"
                         fullWidth
                       />
                     </div>
