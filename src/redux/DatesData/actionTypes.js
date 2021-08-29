@@ -4,6 +4,8 @@ import {
   CHECK_OUT_DATE,
   ROOMS,
   CHILDREN,
+  PRICE,
+  ID_STATE,
 } from "./actions";
 
 export const checkInDate = (payload) => {
@@ -38,6 +40,19 @@ export const adults = (payload) => {
 export const children = (payload) => {
   return {
     type: CHILDREN,
+    payload,
+  };
+};
+
+export const addPrice = (payload) => {
+  return {
+    type: PRICE,
+    payload,
+  };
+};
+export const idState = (payload) => {
+  return {
+    type: ID_STATE,
     payload,
   };
 };

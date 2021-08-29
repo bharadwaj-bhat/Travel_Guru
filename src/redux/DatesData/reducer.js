@@ -4,6 +4,8 @@ import {
   CHECK_OUT_DATE,
   ROOMS,
   CHILDREN,
+  PRICE,
+  ID_STATE,
 } from "./actions";
 
 const initState = {
@@ -12,6 +14,8 @@ const initState = {
   adults: 1,
   children: 0,
   rooms: 1,
+  price: 0,
+  id: -1,
 };
 
 export const DatesDataReducer = (state = initState, { type, payload }) => {
@@ -41,7 +45,16 @@ export const DatesDataReducer = (state = initState, { type, payload }) => {
         ...state,
         children: state.children + payload,
       };
-
+    case PRICE:
+      return {
+        ...state,
+        price: payload,
+      };
+    case ID_STATE:
+      return {
+        ...state,
+        id: payload,
+      };
     default:
       return state;
   }
