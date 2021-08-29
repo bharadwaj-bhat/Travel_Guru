@@ -197,12 +197,18 @@ span:hover {
 }
 .checked p:nth-child(1) {
   font-size: 14px;
+  text-align: center;
   font-weight: 500;
 }
 .checked p:nth-child(2) {
   font-size: 21px;
+  text-align: center;
   font-weight: 600;
   color: black;
+}
+
+.month {
+  text-align: center;
 }
 
 /**=======================
