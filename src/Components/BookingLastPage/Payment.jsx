@@ -9,13 +9,13 @@ const Payment = () => {
 
     const [open, setOpen] = React.useState(false);
 
-    const checkIndate=useSelector((state)=> state.date.checkInDate.day)
-  const checkOutdate=useSelector((state)=> state.date.checkOutDate.day)
-  const adults=useSelector((state)=>state.date.adults)
-  const totalPrice=useSelector((state)=> state.date.totalPrice);
-  const price = useSelector((state) => state.date.price);
-  const monthC=useSelector((state)=> state.date.checkInDate.month)
-  const monthO=useSelector((state)=> state.date.checkOutDate.month)
+    const checkIndate = useSelector((state) => state.date.checkInDate.day)
+    const checkOutdate = useSelector((state) => state.date.checkOutDate.day)
+    const adults = useSelector((state) => state.date.adults)
+    const totalPrice = useSelector((state) => state.date.totalPrice);
+    const price = useSelector((state) => state.date.price);
+    const monthC = useSelector((state) => state.date.checkInDate.month)
+    const monthO = useSelector((state) => state.date.checkOutDate.month)
 
 
     const handleOpen = () => {
@@ -123,7 +123,7 @@ const Payment = () => {
                         <div className={styles.pDiv}>
                             <p>The Verda Driftwood</p>
                             <p>Leh, India</p>
-                            <p>Rooms:1  Adults: {adults}</p>
+                            <p>Rooms: <strong>1</strong>  Adults: <strong>{adults}</strong></p>
                         </div>
                         <div className={styles.dates}>
                             <div>
@@ -131,7 +131,7 @@ const Payment = () => {
                                     <p>Check-in</p>
                                     <p>{checkIndate}</p>
                                 </div>
-                                <p>{(monthC==="08")?"Aug":(monthC==="09")?"Sep":"Oct"}</p>
+                                <p className={styles.month}>{(monthC === "08") ? "Aug" : (monthC === "09") ? "Sep" : "Oct"}</p>
                             </div>
 
                             <div>
@@ -139,7 +139,7 @@ const Payment = () => {
                                     <p>Check-out</p>
                                     <p>{checkOutdate}</p>
                                 </div>
-                                <p>{(monthO==="08")?"Aug":(monthO==="09")?"Sep":"Oct"}</p>
+                                <p className={styles.month}>{(monthO === "08") ? "Aug" : (monthO === "09") ? "Sep" : "Oct"}</p>
                             </div>
                         </div>
                     </div>

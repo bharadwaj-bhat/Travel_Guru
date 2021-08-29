@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import { useState } from "react";
-import Button from "@material-ui/core/Button";
 import {totalPrice} from "../../redux/DatesData/actionTypes"
 import TextField from "@material-ui/core/TextField";
 import { useDispatch, useSelector } from "react-redux";
@@ -143,6 +142,7 @@ const MiddleDiv = styled.div`
   padding: 1%;
   background: #fff;
   width: 95%;
+  margin-bottom: 2vh;
 `;
 const Mdiv = styled.div`
   display: flex;
@@ -198,7 +198,7 @@ const Instruction = styled.div`
 const Select = styled.select`
   padding: 1%;
   width: 100%;
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: 300;
   border: none;
   border-right: 1px solid #a3a3a3;
@@ -283,6 +283,7 @@ const Instruction1 = styled.div`
 const Continue = styled.div`
   width: 30%;
   margin: auto;
+
 `;
 const RightSide = styled.div`
   width: 23%;
@@ -326,6 +327,27 @@ const Promo = styled.div`
   display: flex;
   border-radius: 3px;
 `;
+
+const Button=styled.div`
+width: 50%;
+text-align: center;
+background-color: green;
+padding: 2%;
+font-size: 0.9em;
+color: #fff;
+cursor: pointer;
+
+`
+
+const Button1=styled.div`
+
+background-color: #DDDDDD ;
+padding: 2%;
+
+cursor: pointer;
+
+
+`
 
 export default function BookingLastPage() {
   const [value, setValue] = useState("");
@@ -484,9 +506,8 @@ dispatch(totalPrice(tp))
                     <div>
                       {" "}
                       <TextField
-                        style={{ marginLeft: "10px" }}
+                        style={{ marginLeft: "10px",fontSize:"0.9em" }}
                         placeholder="First Name and Middle Name"
-                        color={"none"}
                         fullWidth
                       />
                     </div>
@@ -514,15 +535,9 @@ dispatch(totalPrice(tp))
               </Instruction1>
             </MiddleDiv>
             <Continue>
-              <Button
-                variant="contained"
-                color="secondary"
-                disableElevation
-                onClick={()=> setFinalData(false) }
-                style={{ backgroundColor: "green", width: "100%" }}
-              >
-                CONTINUE
-              </Button>
+             <Button onClick={()=>setFinalData(false)}>
+               CONTINUE
+             </Button>
             </Continue>
           </LefSide>
           <RightSide>
@@ -546,14 +561,7 @@ dispatch(totalPrice(tp))
             <h3 style={{ color: "#333333" }}>Promo Code</h3>
             <Promo>
               <input type="text" placeholder="Apply Promo Code" />
-              <Button
-                variant="contained"
-                color="default"
-                disableElevation
-                style={{ backgroundColor: "#DDDDDD"}}
-              >
-                Apply
-              </Button>
+                <Button1>Apply</Button1>
             </Promo>
           </RightSide>
         </SubDiv>
