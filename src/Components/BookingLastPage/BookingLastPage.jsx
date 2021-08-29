@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import { useState } from "react";
-import { totalPrice } from "../../redux/DatesData/actionTypes"
+import {totalPrice} from "../../redux/DatesData/actionTypes"
 import TextField from "@material-ui/core/TextField";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -148,6 +148,7 @@ const Mdiv = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+    margin-bottom: 5px;
 `;
 const M1div = styled.div`
   width: 20%;
@@ -164,25 +165,34 @@ const M2div = styled.div`
   padding: 1%;
   border: 1px solid;
   font-size: 1em;
+  overflow:hidden;
   margin-right: 1%;
+  display: flex;
+  align-items: center;
   background-color: #eceeef;
   opacity: 1;
   border: 1px solid #a3a3a3;
+
 `;
 const M3div = styled.div`
   width: 35%;
   display: flex;
+
 `;
 const M31div = styled.div`
   width: 10%;
   padding: 2%;
   background-color: #eceeef;
   opacity: 1;
+  display: flex;
+  align-items: center;
   border: 1px solid #a3a3a3;
 `;
 const M32div = styled.div`
   width: 90%;
   padding: 2%;
+  display: flex;
+  align-items: center;
   background-color: #eceeef;
   opacity: 1;
   border: 1px solid #a3a3a3;
@@ -291,10 +301,9 @@ const RightSide = styled.div`
 `;
 
 const Price = styled.div`
-  padding: 2%;
+  padding:2% 5%;
   background-color: #fff;
   display: flex;
-
   p {
     color: #666666;
   }
@@ -307,7 +316,7 @@ const DDiv1 = styled.div`
   width: 40%;
 `;
 const Total = styled.div`
-  padding: 2%;
+  padding: 2% 5%;
   color: #666666;
   font-size: 1.3em;
   border-radius: 3px;
@@ -327,23 +336,24 @@ const Promo = styled.div`
   display: flex;
   border-radius: 3px;
 input{
-  width: 40%;
+  width: 80%;
 }
 
 `;
 
-const Button = styled.div`
+const Button=styled.div`
 width: 50%;
 text-align: center;
 background-color: green;
-padding: 2%;
+padding: 3%;
 font-size: 0.9em;
+border-radius:5px;
 color: #fff;
 cursor: pointer;
 
 `
 
-const Button1 = styled.div`
+const Button1=styled.div`
 
 background-color: #DDDDDD ;
 padding: 2%;
@@ -358,31 +368,32 @@ export default function BookingLastPage() {
   const [cor, setCor] = useState(false);
   const [corr, setCorr] = useState(false);
   const [finalData, setFinalData] = useState(true);
+  const user = useSelector((state) => state.auth.user);
 
-  const dispatch = useDispatch()
+  const dispatch=useDispatch()
   const priceState = useSelector((state) => state.date.price);
   const id_current = useSelector((state) => state.date.id);
-  const checkIndate = useSelector((state) => state.date.checkInDate.day)
-  const checkOutdate = useSelector((state) => state.date.checkOutDate.day)
-  const adults = useSelector((state) => state.date.adults)
-  const child = useSelector((state) => state.date.children)
-  const monthC = useSelector((state) => state.date.checkInDate.month)
-  const monthO = useSelector((state) => state.date.checkOutDate.month)
-  const dayCount = checkOutdate - checkIndate
-  const tp = priceState + 840 + 227;
-  const image = useSelector((state) => state.hotel.data[id_current - 1].headImage)
-  const name = useSelector((state) => state.hotel.data[id_current - 1].name)
+  const checkIndate=useSelector((state)=> state.date.checkInDate.day)
+  const checkOutdate=useSelector((state)=> state.date.checkOutDate.day)
+  const adults=useSelector((state)=>state.date.adults)
+  const child=useSelector((state)=> state.date.children)
+  const monthC=useSelector((state)=> state.date.checkInDate.month)
+  const monthO=useSelector((state)=> state.date.checkOutDate.month)
+  const dayCount=checkOutdate-checkIndate
+  const tp=priceState+840+227;
+const image=useSelector((state)=> state.hotel.data[id_current-1].headImage)
+const name=useSelector((state)=> state.hotel.data[id_current-1].name)
 
-  useEffect(() => {
-    dispatch(totalPrice(tp))
+useEffect(()=>{
+dispatch(totalPrice(tp))
 
-  }, [])
+},[])
 
-
-
-
+ 
 
 
+
+       
 
 
   const handleClick = (e) => {
@@ -405,175 +416,171 @@ export default function BookingLastPage() {
     }
   };
   return (
-
+    
     <>
-      {(finalData) ?
-        <MainDiv onClick={handleColor1}>
-          <SubDiv>
-            <LefSide>
-              <div>
-                <img src={process.env.PUBLIC_URL + "/read.png"} alt="" />
-              </div>
-              <LeftDivTop>
-                <LeftPic>
-                  <img
-                    src={`${image}`}
-                    alt=""
-                  />
-                </LeftPic>
-                <RightDetail>
-                  <RightP>{name}</RightP>
-                  <RightP1>
-                    Shey Yokma, Near Shey Church, Ladakh, Village Shey, Leh,
-                    194101, India
-                  </RightP1>
-                  <MidRight>
-                    <Check>
-                      <p>Check-In</p>
-                      <h1>{checkIndate}</h1>
-                    </Check>
-                    <Check>
-                      <p>Check-Out</p>
-                      <h1>{checkOutdate}</h1>
-                    </Check>
-                    <MiddleLastDiv>
-                      <div>
-                        <div>
-                          <h3 style={{ marginTop: "-3px" }}>{dayCount} Days & 1 Night</h3>
-                        </div>
-                        <div style={{ color: "#4197CD", cursor: "pointer" }}>
-                          Change Room
-                        </div>
-                      </div>
-                      <DetailDiv>
-                        <div>Room 1:</div>
-                        <div>{adults} Adult</div>
-                        {(child > 0) ? <div>{child} childrens</div> : ""
-
-                        }
-
-                      </DetailDiv>
-                    </MiddleLastDiv>
-                  </MidRight>
-                  <Date>
-                    <div>{(monthC === "08") ? "Aug" : (monthC === "09") ? "Sep" : "Oct"} | 12:00PM</div>
-                    <div>{(monthO === "08") ? "Aug" : (monthO === "09") ? "Sep" : "Oct"} | 10:00AM</div>
-                  </Date>
-                  <Inclusion>
+    { (finalData)?
+      <MainDiv onClick={handleColor1}>
+        <SubDiv>
+          <LefSide>
+            <div>
+              <img src={process.env.PUBLIC_URL + "/read.png"} alt="" />
+            </div>
+            <LeftDivTop>
+              <LeftPic>
+                <img
+                  src={`${image}`}
+                  alt=""
+                />
+              </LeftPic>
+              <RightDetail>
+                <RightP>{name}</RightP>
+                <RightP1>
+                  Shey Yokma, Near Shey Church, Ladakh, Village Shey, Leh,
+                  194101, India
+                </RightP1>
+                <MidRight>
+                  <Check>
+                    <p>Check-In</p>
+                    <h1>{checkIndate}</h1>
+                  </Check>
+                  <Check>
+                    <p>Check-Out</p>
+                    <h1>{checkOutdate}</h1>
+                  </Check>
+                  <MiddleLastDiv>
                     <div>
-                      <div style={{ marginRight: "10px" }}>Inclusion</div>
                       <div>
-                        <div>
-                          <CheckRoundedIcon style={{ color: "green" }} />
-                        </div>
-                        <div>Breakfast</div>
+                        <h3 style={{ marginTop: "-3px" }}>{dayCount} Days & 1 Night</h3>
+                      </div>
+                      <div style={{ color: "#4197CD", cursor: "pointer" }}>
+                        Change Room
                       </div>
                     </div>
-                  </Inclusion>
-                </RightDetail>
-              </LeftDivTop>
-              <Policy>
-                <D1>Cancellation Policy: </D1>
-                <D2>No refund if you cancel this booking. </D2>
-                <D3 style={{ color: "#4197CD", cursor: "pointer" }}>View More</D3>
-              </Policy>
+                    <DetailDiv>
+                      <div>Room 1:</div>
+                      <div>{adults} Adult</div>
+                      {(child>0)?<div>{child} childrens</div>:""
 
-              <div>
-                <img src={process.env.PUBLIC_URL + "/travel.png"} alt="" />
-              </div>
-              <MiddleDiv>
-                <Mdiv>
-                  <M1div>Contact Details</M1div>
-
-                  <M2div>koligesurya@gmail.com</M2div>
-                  <M3div>
-                    <M31div>+91 </M31div>
-                    <M32div>9481378985</M32div>
-                  </M3div>
-                </Mdiv>
-                <Instruction>
-                  Your booking details will be sent to this email address and
-                  mobile number.
-                </Instruction>
-
-                <MsecondRow>
-                  <Room>Room 1</Room>
-                  <Ms>
-                    <Md1 onClick={handleColor} value={cor}>
+                      }
+                    
+                    </DetailDiv>
+                  </MiddleLastDiv>
+                </MidRight>
+                <Date>
+                  <div>{(monthC==="08")?"Aug":(monthC==="09")?"Sep":"Oct"} | 12:00PM</div>
+                  <div>{(monthO==="08")?"Aug":(monthO==="09")?"Sep":"Oct"} | 10:00AM</div>
+                </Date>
+                <Inclusion>
+                  <div>
+                    <div style={{ marginRight: "10px" }}>Inclusion</div>
+                    <div>
                       <div>
-                        <Select onClick={handleClick}>
-                          <option value="Title">Title</option>
-                          <option value="Mr">Mr.</option>
-                          <option value="Mrs">Mrs.</option>
-                        </Select>
+                        <CheckRoundedIcon style={{ color: "green" }} />
                       </div>
-                      <div>
-                        {" "}
-                        <TextField
-                          style={{ marginLeft: "10px", fontSize: "0.9em" }}
-                          placeholder="First Name"
-                          fullWidth
-                        />
-                      </div>
-                    </Md1>
-                  </Ms>
+                      <div>Breakfast</div>
+                    </div>
+                  </div>
+                </Inclusion>
+              </RightDetail>
+            </LeftDivTop>
+            <Policy>
+              <D1>Cancellation Policy: </D1>
+              <D2>No refund if you cancel this booking. </D2>
+              <D3 style={{ color: "#4197CD", cursor: "pointer" }}>View More</D3>
+            </Policy>
 
-                  <Md2 onClick={handleColorr} value={corr}>
-                    <TextField
-                      id="standard-full-width"
-                      style={{ marginLeft: "10px", borderBottomColor: "none" }}
-                      placeholder="Last Name"
-                      fullWidth
-                    />
-                  </Md2>
-                </MsecondRow>
-                <MthirdRow>
-                  <Special>Special Request:</Special>
-                  <RequestIn>
-                    <Input />
-                  </RequestIn>
-                </MthirdRow>
-                <Instruction1>
-                  Special request can't be guaranteed. We will pass these requests
-                  to the hotels.
-                </Instruction1>
-              </MiddleDiv>
-              <Continue>
-                <Button onClick={() => setFinalData(false)}>
-                  CONTINUE
-                </Button>
-              </Continue>
-            </LefSide>
-            <RightSide>
-              <h3 style={{ color: "#333333" }}>Tariff Details</h3>
-              <Price>
-                <DDiv>
-                  <p>Hotel Charges</p>
-                  <p>Hotel GST</p>
-                  <p>Service Charge </p>
-                </DDiv>
-                <DDiv1>
-                  <p> &#8377; {priceState}</p>
-                  <p>&#8377;840</p>
-                  <p>&#8377;277</p>
-                </DDiv1>
-              </Price>
-              <Total>
-                <Dddiv>You Pay</Dddiv>
-                <div style={{ color: "#333333" }}>&#8377;{tp}</div>
-              </Total>
-              <h3 style={{ color: "#333333" }}>Promo Code</h3>
-              <Promo>
-                <input type="text" placeholder="Apply Promo Code" />
+            <div>
+              <img src={process.env.PUBLIC_URL + "/travel.png"} alt="" />
+            </div>
+            <MiddleDiv>
+              <Mdiv>
+                <M1div>Contact Details</M1div>
+
+                <M2div>{user.email}</M2div>
+                <M3div>
+                  <M31div>+91 </M31div>
+                    <M32div>{ user.mobile}</M32div>
+                </M3div>
+              </Mdiv>
+              <Instruction>
+                Your booking details will be sent to this email address and
+                mobile number.
+              </Instruction>
+
+              <MsecondRow>
+                <Room>Room 1</Room>
+                <Ms>
+                  <Md1 onClick={handleColor} value={cor}>
+                    <div>
+                      
+                    </div>
+                    <div>
+                      {" "}
+                      <TextField
+                        style={{ marginLeft: "10px",fontSize:"0.9em" }}
+                        placeholder="First Name"
+                        fullWidth
+                      />
+                    </div>
+                  </Md1>
+                </Ms>
+
+                <Md2 onClick={handleColorr} value={corr}>
+                  <TextField
+                    id="standard-full-width"
+                    style={{ marginLeft: "10px", borderBottomColor: "none" }}
+                    placeholder="Last Name"
+                    fullWidth
+                  />
+                </Md2>
+              </MsecondRow>
+              <MthirdRow>
+                <Special>Special Request:</Special>
+                <RequestIn>
+                  <Input />
+                </RequestIn>
+              </MthirdRow>
+              <Instruction1>
+                Special request can't be guaranteed. We will pass these requests
+                to the hotels.
+              </Instruction1>
+            </MiddleDiv>
+            <Continue>
+             <Button onClick={()=>setFinalData(false)}>
+               CONTINUE
+             </Button>
+            </Continue>
+          </LefSide>
+          <RightSide>
+            <h3 style={{ color: "#333333" }}>Tariff Details</h3>
+            <Price>
+              <DDiv>
+                <p>Hotel Charges</p>
+                <p>Hotel GST</p>
+                <p>Service Charge </p>
+              </DDiv>
+              <DDiv1>
+                <p> &#8377; {priceState}</p>
+                <p>&#8377;840</p>
+                <p>&#8377;277</p>
+              </DDiv1>
+            </Price>
+            <Total>
+              <Dddiv>You Pay</Dddiv>
+              <div style={{color:"#333333"}}>&#8377;{tp}</div>
+            </Total>
+            <h3 style={{ color: "#333333" }}>Promo Code</h3>
+            <Promo>
+              <input type="text" placeholder="Apply Promo Code" />
                 <Button1>Apply</Button1>
-              </Promo>
-            </RightSide>
-          </SubDiv>
-        </MainDiv>
-        :
-        <FinalPaymentPage />
+            </Promo>
+          </RightSide>
+        </SubDiv>
+      </MainDiv>
+      :
+      <FinalPaymentPage />
 
-      }
+     }
     </>
   );
 }

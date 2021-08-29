@@ -73,14 +73,15 @@ const Payment = () => {
             description: "Thank you",
             image:
                 "https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png",
-            order_id: "order_HqwYVpWN61KC15", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            order_id: "order_Hr0p5ASx2f3Bsv", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
             handler: function (response) {
                 setOpen(true);
                 // alert(response.razorpay_order_id);
                 // alert(response.razorpay_signature);
             },
             prefill: {
-                name: "Bhat",
+                name: "Somesh Yadav",
+                phone: "6354136407"
             },
         };
         const paymentObj = new Razorpay(options);
