@@ -5,6 +5,7 @@ import {
   ROOMS,
   CHILDREN,
   PRICE,
+  TOTAL_PRICE,
   ID_STATE,
 } from "./actions";
 
@@ -15,6 +16,7 @@ const initState = {
   children: 0,
   rooms: 1,
   price: 0,
+  totalPrice:0,
   id: -1,
 };
 
@@ -55,6 +57,12 @@ export const DatesDataReducer = (state = initState, { type, payload }) => {
         ...state,
         id: payload,
       };
+    case TOTAL_PRICE:
+      return {
+        ...state,
+        totalPrice:payload
+
+      }  
     default:
       return state;
   }

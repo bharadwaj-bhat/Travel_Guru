@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.finalPayment * {
+  margin: 0;
+  padding: 0;
+}
+.mainDivision {
+  width: 100%;
+  height: 100%;
+  padding-top: 3%;
+  background-color: rgb(226, 226, 226);
+}
+
+.mainHeading {
+  width: 75rem;
+  text-align: left;
+  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin: 0 auto 1%;
+  color: rgb(140, 90, 114);
+}
+
+.portal {
+  width: 75rem;
+  display: flex;
+  margin: auto;
+}
+/**=======================
+ * !      left Division
+ *========================**/
+.methods {
+  width: 68.7%;
+  display: flex;
+  height: 600px;
+  border: 2px soid black;
+  background-color: white;
+}
+.cards {
+  width: 17%;
+  border: 1px solid rgb(235, 234, 234);
+}
+.cards > div {
+  align-items: center;
+  text-align: left;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #666;
+  border-bottom: 1px solid rgb(235, 234, 234);
+}
+.cards > div:hover {
+  cursor: pointer;
+  background-color: rgb(203, 179, 228);
+  border-left: 3px solid green;
+}
+.paymentText {
+  width: 85%;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+.paymentText > p:nth-child(1) {
+  color: rgb(51, 51, 51);
+  padding-top: 4rem;
+}
+
+.buttonDiv {
+  width: 83.5%;
+  display: flex;
+  margin: 1.6rem auto 0;
+}
+
+.buttonDiv > div:nth-child(1) {
+  font-family: "Roboto", sans-serif;
+  margin-right: 2rem;
+}
+.buttonDiv h1 {
+  margin-top: 7%;
+  color: rgb(51, 51, 51);
+  font-family: "Roboto", sans-serif;
+}
+
+.payBtn {
+  width: 150px;
+  padding: 9%;
+  font-size: 20px;
+  background-color: #55961c;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.payBtn:hover {
+  background-color: rgb(78, 164, 3);
+}
+.terms {
+  width: 83.5%;
+  height: 55px;
+  text-align: justify;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+}
+.terms > p {
+  padding-top: 16px;
+  color: #666;
+  font-size: 12px;
+}
+span:hover {
+  cursor: pointer;
+  color: red;
+  text-decoration: underline;
+}
+
+/**=======================
+ * !      Small Divison
+ *========================**/
+
+.rightDiv {
+  width: 25%;
+  margin-left: 1%;
+}
+
+.paymentDetails {
+  width: 80%;
+  height: 180px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #666;
+  background-color: white;
+}
+.paymentDetails > div {
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+}
+.youPay {
+  font-size: 21px;
+  font-weight: 700;
+  margin-top: 30px;
+  height: 64px;
+  align-items: center;
+  padding-top: 0;
+  color: #666;
+  border-top: 1px solid rgb(242, 242, 242);
+  border-bottom: 1px solid rgb(242, 242, 242);
+}
+
+.bookingText {
+  text-align: left;
+  color: #666;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+.bookingSummary {
+  width: 80%;
+  height: 180px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #666;
+  background-color: white;
+}
+
+.pDiv {
+  text-align: left;
+}
+.pDiv > p {
+  padding-bottom: 6px;
+}
+.pDiv > p:nth-child(1) {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dates {
+  width: 100%;
+  display: flex;
+  margin-top: 19px;
+  justify-content: space-between;
+}
+.dates > div {
+  border: 1px solid rgb(235, 234, 234);
+}
+.checked {
+  padding: 5px 13px;
+  background-color: rgb(235, 234, 234);
+}
+.checked p:nth-child(1) {
+  font-size: 14px;
+  font-weight: 500;
+}
+.checked p:nth-child(2) {
+  font-size: 21px;
+  font-weight: 600;
+  color: black;
+}
+
+/**=======================
+ * !      Modal CSS
+ *========================**/
+.modal * {
+  margin: 0;
+  padding: 0;
+}
+.paper {
+  width: 500px;
+  height: 300px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10% auto;
+  text-align: center;
+  align-items: center;
+  color: #666;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.paper > img {
+  margin-top: 20px;
+  height: 100px;
+  width: 150px;
+}
+.closeBtn {
+  width: 120px;
+  padding: 8px;
+  margin-top: 4%;
+  font-size: 21px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(104, 117, 219);
+  color: white;
+  cursor: pointer;
+}
+
+.paper > p:nth-child(2) {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+.paper > p:nth-child(3) {
+  font-size: 33px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
