@@ -6,9 +6,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../redux/RoomInner/actions";
 import { DetailsCard } from "./DetailsCard";
 import { useParams } from "react-router-dom";
+import { idState } from "../../redux/DatesData/actionTypes";
 
 export const RoomInner = () => {
+  const dispatch = useDispatch();
   const { id } = useParams();
+
+  useEffect(() => {
+    dispatch(idState(id));
+  }, []);
 
   return (
     <div className={styles.roomsLayoutWrapper}>
