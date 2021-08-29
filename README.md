@@ -1,6 +1,6 @@
-# Shine.com Clone
+# TravelGuru Website Clone
 
-In this project we made fully-functional clone of Shine website that provides travellers across India to book rooms in hotels at specified location.
+In this project we made fully-functional clone of TravelGuru website that provides travellers across India to book rooms in hotels at specified location.
 
 ### Technologies & Libraries used
 
