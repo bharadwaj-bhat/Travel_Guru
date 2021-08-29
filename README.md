@@ -1,16 +1,20 @@
 # TravelGuru Website Clone
 
+![Logo](https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png)
+
 In this project we made fully-functional clone of TravelGuru website that provides travellers across India to book rooms in hotels at specified location.
 
-### Technologies & Libraries used
+## Technologies & Libraries used
 
 #### Tech Stack-
 
-1. react.js
-2. javaScript
-3. html
-4. css
-5. redux
+<p float="left">
+    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png" width="100" height="100">
+    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_640.png" width="100" height="100">
+    <img src="https://raw.githubusercontent.com/krishaayjois21/krishaayjois21/master/assets/javascript.png" width="100" height="100">
+    <img src="https://yogalayout.com/static/reactnative.4e03ea5d.png" width="100" height="100">
+    <img src="https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" width="95" height="95">
+ </p>
 
 #### Libraries Stack-
 
