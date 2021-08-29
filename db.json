@@ -958,20 +958,22 @@
       "id": 6
     },
     {
-<<<<<<< HEAD
-      "firstName": "Dhruvasurya",
-      "lastName": "K N",
-      "mobile": "9481378985",
-      "email": "surya@gmail.com",
-=======
       "firstName": "Ramlala",
       "lastName": "Yadav",
       "mobile": "1234567890",
       "email": "someshkumar71524@gmail.com",
->>>>>>> bdb089d8945bc0b29e70f4bd99d053041f38f7f7
       "password": "12345678",
       "confirmPassword": "12345678",
       "id": 7
+    },
+    {
+      "firstName": "Somesh",
+      "lastName": "Yadav",
+      "mobile": "6354136407",
+      "email": "someshkumar71524@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": 8
     }
   ]
 }
