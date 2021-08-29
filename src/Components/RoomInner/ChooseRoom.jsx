@@ -19,6 +19,8 @@ import {
   checkOutDate,
 } from "../../redux/DatesData/actionTypes";
 
+import LoadingOverlay from "react-loading-overlay";
+
 export const ChooseRoom = ({ price }) => {
   const checkInState = useSelector((state) => state.date.checkInDate);
   const checkOutState = useSelector((state) => state.date.checkOutDate);
@@ -29,6 +31,15 @@ export const ChooseRoom = ({ price }) => {
 
   const [anchorElPop, setAnchorElPop] = useState(null);
   const openPop = Boolean(anchorElPop);
+
+  const [overLaySpinner, setOverLaySpinner] = useState(false);
+
+  const handleOverLay = () => {
+    setOverLaySpinner(true);
+    setTimeout(() => {
+      setOverLaySpinner(false);
+    }, 1000);
+  };
 
   const handleCheckIn = (e) => {
     dispatch(checkInDate(e));
@@ -152,6 +163,27 @@ export const ChooseRoom = ({ price }) => {
   const classes = useStyles();
   return (
     <div>
+      <LoadingOverlay
+        active={overLaySpinner}
+        spinner
+        text="Please wait ...."
+        overlay={"100%"}
+        styles={{
+          overlay: (base) => ({
+            ...base,
+            background: "rgba(0, 0, 0, 0.582)",
+          }),
+
+          wrapper: {
+            width: "100%",
+            height: "700px",
+            position: "absolute",
+            margin: "auto",
+            left: "0px",
+            top: "1400px",
+          },
+        }}
+      ></LoadingOverlay>
       <p className={styles.ChooseRoomP}> CHOOSE ROOM </p>
       <div className={styles.ChooseRoomWrapper}>
         <div>
@@ -254,12 +286,16 @@ export const ChooseRoom = ({ price }) => {
           </div>
           <div>
             <p style={{ color: "white" }}>.</p>
-            <button className={styles.CheckAvailabilityBtn}>
+            <button
+              className={styles.CheckAvailabilityBtn}
+              onClick={handleOverLay}
+            >
               {" "}
               Check Availability
             </button>
           </div>
         </div>
+
         <div style={{ display: "flex", flexDirection: "column" }}>
           <JuniorSuit
             title={"Junior"}

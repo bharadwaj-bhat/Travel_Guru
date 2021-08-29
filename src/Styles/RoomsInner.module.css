@@ -388,3 +388,7 @@
   margin-left: 19%;
   margin-top: 30px;
 }
+._loading_overlay_overlay {
+  background: rgba(0, 0, 0, 0.582);
+  position: absolute;
+}
