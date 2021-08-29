@@ -956,6 +956,15 @@
       "password": "12345678",
       "confirmPassword": "12345678",
       "id": 6
+    },
+    {
+      "firstName": "Ramlala",
+      "lastName": "Yadav",
+      "mobile": "1234567890",
+      "email": "someshkumar71524@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": 7
     }
   ]
 }

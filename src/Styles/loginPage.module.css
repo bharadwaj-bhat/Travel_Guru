@@ -8,6 +8,9 @@
 	padding-bottom: 4vh;
 	border-top: 1px solid rgb(211, 209, 209);
 }
+.login_main_container *:hover {
+	text-decoration: none;
+}
 .login_main_container_body {
 	border: 1px solid rgb(211, 209, 209);
 	height: 90vh;

@@ -12,6 +12,10 @@
 	box-sizing: border-box;
 	font-family: "Rubik";
 }
+.hotel_filter_main_container * :hover {
+	text-decoration: none;
+	color: inherit;
+}
 .hotel_filter_main_container_left {
 	width: 22%;
 	height: 1630px;
