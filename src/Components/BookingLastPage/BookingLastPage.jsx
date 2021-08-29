@@ -2,9 +2,11 @@ import styled from "styled-components";
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import { useState } from "react";
 import Button from "@material-ui/core/Button";
-import { makeStyles } from "@material-ui/core/styles";
+import {totalPrice} from "../../redux/DatesData/actionTypes"
 import TextField from "@material-ui/core/TextField";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import FinalPaymentPage from "./FinalPaymentPage"
 
 const MainDiv = styled.div`
   padding-top: 1%;
@@ -67,6 +69,7 @@ const Check = styled.div`
   p {
     color: #999999;
     font-size: 0.9em;
+    padding-bottom:1vh ;
   }
 
   h1 {
@@ -328,11 +331,33 @@ export default function BookingLastPage() {
   const [value, setValue] = useState("");
   const [cor, setCor] = useState(false);
   const [corr, setCorr] = useState(false);
+  const [finalData,setFinalData]=useState(true);
 
+  const dispatch=useDispatch()
   const priceState = useSelector((state) => state.date.price);
   const id_current = useSelector((state) => state.date.id);
+  const checkIndate=useSelector((state)=> state.date.checkInDate.day)
+  const checkOutdate=useSelector((state)=> state.date.checkOutDate.day)
+  const adults=useSelector((state)=>state.date.adults)
+  const child=useSelector((state)=> state.date.children)
+  const monthC=useSelector((state)=> state.date.checkInDate.month)
+  const monthO=useSelector((state)=> state.date.checkOutDate.month)
+  const dayCount=checkOutdate-checkIndate
+  const tp=priceState+840+227;
+const image=useSelector((state)=> state.hotel.data[id_current-1].headImage)
+const name=useSelector((state)=> state.hotel.data[id_current-1].name)
 
-  console.log(priceState, id_current);
+useEffect(()=>{
+dispatch(totalPrice(tp))
+
+},[])
+
+ 
+
+
+
+       
+
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -354,7 +379,9 @@ export default function BookingLastPage() {
     }
   };
   return (
+    
     <>
+    { (finalData)?
       <MainDiv onClick={handleColor1}>
         <SubDiv>
           <LefSide>
@@ -364,12 +391,12 @@ export default function BookingLastPage() {
             <LeftDivTop>
               <LeftPic>
                 <img
-                  src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1511414418/Hotel/00096502/13-Deluxe_Room_mpSdTs.jpg"
+                  src={`${image}`}
                   alt=""
                 />
               </LeftPic>
               <RightDetail>
-                <RightP>The Verda Driftwood</RightP>
+                <RightP>{name}</RightP>
                 <RightP1>
                   Shey Yokma, Near Shey Church, Ladakh, Village Shey, Leh,
                   194101, India
@@ -377,16 +404,16 @@ export default function BookingLastPage() {
                 <MidRight>
                   <Check>
                     <p>Check-In</p>
-                    <h1>29</h1>
+                    <h1>{checkIndate}</h1>
                   </Check>
                   <Check>
                     <p>Check-Out</p>
-                    <h1>30</h1>
+                    <h1>{checkOutdate}</h1>
                   </Check>
                   <MiddleLastDiv>
                     <div>
                       <div>
-                        <h3 style={{ marginTop: "-3px" }}>2 Days & 1 Night</h3>
+                        <h3 style={{ marginTop: "-3px" }}>{dayCount} Days & 1 Night</h3>
                       </div>
                       <div style={{ color: "#4197CD", cursor: "pointer" }}>
                         Change Room
@@ -394,14 +421,17 @@ export default function BookingLastPage() {
                     </div>
                     <DetailDiv>
                       <div>Room 1:</div>
-                      <div>1 Adult</div>
-                      <div>3 Children</div>
+                      <div>{adults} Adult</div>
+                      {(child>0)?<div>{child} childrens</div>:""
+
+                      }
+                    
                     </DetailDiv>
                   </MiddleLastDiv>
                 </MidRight>
                 <Date>
-                  <div>Aug | 12:00PM</div>
-                  <div>Aug | 10:00AM</div>
+                  <div>{(monthC==="08")?"Aug":(monthC==="09")?"Sep":"Oct"} | 12:00PM</div>
+                  <div>{(monthO==="08")?"Aug":(monthO==="09")?"Sep":"Oct"} | 10:00AM</div>
                 </Date>
                 <Inclusion>
                   <div>
@@ -488,6 +518,7 @@ export default function BookingLastPage() {
                 variant="contained"
                 color="secondary"
                 disableElevation
+                onClick={()=> setFinalData(false) }
                 style={{ backgroundColor: "green", width: "100%" }}
               >
                 CONTINUE
@@ -503,14 +534,14 @@ export default function BookingLastPage() {
                 <p>Service Charge </p>
               </DDiv>
               <DDiv1>
-                <p> &#8377; 6,999</p>
-                <p>&#8377;839</p>
+                <p> &#8377; {priceState}</p>
+                <p>&#8377;840</p>
                 <p>&#8377;277</p>
               </DDiv1>
             </Price>
             <Total>
               <Dddiv>You Pay</Dddiv>
-              <div>&#8377;6,999</div>
+              <div style={{color:"#333333"}}>&#8377;{tp}</div>
             </Total>
             <h3 style={{ color: "#333333" }}>Promo Code</h3>
             <Promo>
@@ -527,6 +558,10 @@ export default function BookingLastPage() {
           </RightSide>
         </SubDiv>
       </MainDiv>
+      :
+      <FinalPaymentPage />
+
+     }
     </>
   );
 }

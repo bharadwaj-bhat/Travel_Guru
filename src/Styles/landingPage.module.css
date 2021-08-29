@@ -81,7 +81,6 @@
 	color: gray;
 }
 .popUp {
-	display: none;
 	position: absolute;
 	top: 80px;
 	width: 410px;
@@ -98,10 +97,6 @@
 .popUp > p:hover {
 	background: #666;
 	color: #fff;
-}
-.BannerInputScreen > div:first-child > input:focus + .popUp,
-.popUp:hover {
-	display: block;
 }
 
 .calendarIcon {

@@ -5,6 +5,7 @@ import {
   ROOMS,
   CHILDREN,
   PRICE,
+  TOTAL_PRICE,
   ID_STATE,
 } from "./actions";
 
@@ -55,4 +56,14 @@ export const idState = (payload) => {
     type: ID_STATE,
     payload,
   };
+};
+
+export const totalPrice=(payload) =>{
+
+ return {
+ type:TOTAL_PRICE,
+ payload,
+
+ };
+
 };

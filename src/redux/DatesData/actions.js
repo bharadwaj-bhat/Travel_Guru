@@ -7,3 +7,5 @@ export const ROOMS = "ROOMS";
 
 export const PRICE = "PRICE";
 export const ID_STATE = "ID_STATE";
+
+export const TOTAL_PRICE="TOTAL_PRICE"

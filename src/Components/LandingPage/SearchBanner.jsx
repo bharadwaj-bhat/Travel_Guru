@@ -22,6 +22,7 @@ import {
   checkOutDate,
   children,
 } from "../../redux/DatesData/actionTypes";
+import styled from "styled-components";
 
 const useStyles = makeStyles((theme) => ({
   popUp: {},
@@ -89,10 +90,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const CustomDiv = styled.div`
+  & > div:first-child > div{
+    display:${props => ("leh".includes(props.text))&&props.text.length>0 ? "block" : "none"};
+  }
+`
+
 export const SearchBanner = () => {
   const checkInState = useSelector((state) => state.date.checkInDate);
   const checkOutState = useSelector((state) => state.date.checkOutDate);
-
+  const [text, setText] = useState("");
   const adultsCount = useSelector((state) => state.date.adults);
   const childrenCount = useSelector((state) => state.date.children);
 
@@ -212,12 +219,11 @@ export const SearchBanner = () => {
           <p> ADVENTURES </p>
         </div>
         <div>
-          <div className={styles.BannerInputScreen}>
+          <CustomDiv text={text.toLowerCase()} className={styles.BannerInputScreen}>
             <div>
-            <input
-              type="text"
-              name=""
-              id=""
+              <input
+                type="text"
+                onChange={(e) => { setText(e.target.value) }}
               placeholder={
                 hotels ? "Search for Hotels" : "Search for Home Stays"
               }
@@ -326,7 +332,7 @@ export const SearchBanner = () => {
                 fontSize="large"
               />{" "}
             </div>
-          </div>
+          </CustomDiv>
         </div>
       </div>
     </div>
