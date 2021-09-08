@@ -4,8 +4,8 @@ import Modal from "@material-ui/core/Modal";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import axios from "axios";
-import { useEffect } from "react";
+//import axios from "axios";
+//import { useEffect } from "react";
 import { Razorpay } from "razorpay-checkout";
 
 const loadRazorPay = () => {
@@ -66,18 +66,20 @@ const Payment = () => {
             return;
         }
         const options = {
-            key: "order_Hr19OrvXHIoDLg",
+            key: "rzp_test_k8s6vfpDLGVjUZ",
             amount: "70000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             currency: "INR",
             name: "Travel Guru",
             description: "Thank you",
             image:
                 "https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png",
-            order_id: "order_Hr0p5ASx2f3Bsv", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            order_id: "order_Hr25D9BwpWztX0t", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
             handler: function (response) {
                 setOpen(true);
                 // alert(response.razorpay_order_id);
                 // alert(response.razorpay_signature);
+
+                //order_Hr1IUCLlfxsh9M
             },
             prefill: {
                 name: "Somesh Yadav",
