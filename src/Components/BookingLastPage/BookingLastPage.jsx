@@ -6,6 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import FinalPaymentPage from "./FinalPaymentPage"
+import { HotelData } from "../../fakeData/HotelData";
 
 const MainDiv = styled.div`
   padding-top: 1%;
@@ -369,8 +370,7 @@ export default function BookingLastPage() {
   const [corr, setCorr] = useState(false);
   const [finalData, setFinalData] = useState(true);
   const user = useSelector((state) => state.auth.user);
-
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
   const priceState = useSelector((state) => state.date.price);
   const id_current = useSelector((state) => state.date.id);
   const checkIndate=useSelector((state)=> state.date.checkInDate.day)
@@ -380,11 +380,13 @@ export default function BookingLastPage() {
   const monthC=useSelector((state)=> state.date.checkInDate.month)
   const monthO=useSelector((state)=> state.date.checkOutDate.month)
   const dayCount=checkOutdate-checkIndate
-  const tp=priceState+840+227;
-const image=useSelector((state)=> state.hotel.data[id_current-1].headImage)
-const name=useSelector((state)=> state.hotel.data[id_current-1].name)
-
-useEffect(()=>{
+  const tp = priceState + 840 + 227;
+  console.log(id_current);
+  // const image = useSelector((state) => state.hotel.data[id_current - 1].headImage);
+  // const name = useSelector((state) => state.hotel.data[id_current - 1].name);
+  const image = HotelData[id_current - 1].headImage;
+  const name = HotelData[id_current - 1].name;
+  useEffect(() => {
 dispatch(totalPrice(tp))
 
 },[])
