@@ -4,8 +4,8 @@ import Modal from "@material-ui/core/Modal";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import axios from "axios";
-import { useEffect } from "react";
+//import axios from "axios";
+//import { useEffect } from "react";
 import { Razorpay } from "razorpay-checkout";
 
 const loadRazorPay = () => {
@@ -36,7 +36,8 @@ const Payment = () => {
   const monthO = useSelector((state) => state.date.checkOutDate.month);
 
   const handleOpen = () => {
-    displayRazorpay();
+    // displayRazorpay();
+    setOpen(true);
   };
 
   const handleClose = () => {
@@ -73,14 +74,17 @@ const Payment = () => {
       description: "Thank you",
       image:
         "https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png",
-      order_id: "order_HqwYVpWN61KC15", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      order_id: "order_Hr25D9BwpWztX0t", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       handler: function (response) {
         setOpen(true);
         // alert(response.razorpay_order_id);
         // alert(response.razorpay_signature);
+
+        //order_Hr1IUCLlfxsh9M
       },
       prefill: {
-        name: "Bhat",
+        name: "Somesh Yadav",
+        phone: "6354136407",
       },
     };
     const paymentObj = new Razorpay(options);
@@ -184,7 +188,7 @@ const Payment = () => {
                   <p>Check-in</p>
                   <p>{checkIndate}</p>
                 </div>
-                <p>
+                <p className={styles.month}>
                   {monthC === "08" ? "Aug" : monthC === "09" ? "Sep" : "Oct"}
                 </p>
               </div>
@@ -194,7 +198,7 @@ const Payment = () => {
                   <p>Check-out</p>
                   <p>{checkOutdate}</p>
                 </div>
-                <p>
+                <p className={styles.month}>
                   {monthO === "08" ? "Aug" : monthO === "09" ? "Sep" : "Oct"}
                 </p>
               </div>

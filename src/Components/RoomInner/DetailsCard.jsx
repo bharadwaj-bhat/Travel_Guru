@@ -12,6 +12,7 @@ export const DetailsCard = ({ id }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    console.log(id);
     dispatch(getData(id));
   }, []);
 

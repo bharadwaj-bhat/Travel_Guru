@@ -46,15 +46,6 @@ git clone <url>
 
 cd Travel_Guru
 
-npm install
-
-json-server db.json --port 3001
-
-```
-Open another terminal
-and
-
-```
 npm run start
 
 ```

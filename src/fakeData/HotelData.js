@@ -782,7 +782,6 @@ export const HotelData = [
 		villa: false,
 		welcomeHeritageHotel: true,
 	},
-
 	{
 		id: 17,
 		name: "Hotel OM Ladakh",

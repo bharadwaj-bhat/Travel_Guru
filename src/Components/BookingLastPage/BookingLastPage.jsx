@@ -6,6 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import FinalPaymentPage from "./FinalPaymentPage"
+import { HotelData } from "../../fakeData/HotelData";
 
 const MainDiv = styled.div`
   padding-top: 1%;
@@ -148,6 +149,7 @@ const Mdiv = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+    margin-bottom: 5px;
 `;
 const M1div = styled.div`
   width: 20%;
@@ -164,25 +166,34 @@ const M2div = styled.div`
   padding: 1%;
   border: 1px solid;
   font-size: 1em;
+  overflow:hidden;
   margin-right: 1%;
+  display: flex;
+  align-items: center;
   background-color: #eceeef;
   opacity: 1;
   border: 1px solid #a3a3a3;
+
 `;
 const M3div = styled.div`
   width: 35%;
   display: flex;
+
 `;
 const M31div = styled.div`
   width: 10%;
   padding: 2%;
   background-color: #eceeef;
   opacity: 1;
+  display: flex;
+  align-items: center;
   border: 1px solid #a3a3a3;
 `;
 const M32div = styled.div`
   width: 90%;
   padding: 2%;
+  display: flex;
+  align-items: center;
   background-color: #eceeef;
   opacity: 1;
   border: 1px solid #a3a3a3;
@@ -291,10 +302,9 @@ const RightSide = styled.div`
 `;
 
 const Price = styled.div`
-  padding: 2%;
+  padding:2% 5%;
   background-color: #fff;
   display: flex;
-
   p {
     color: #666666;
   }
@@ -307,7 +317,7 @@ const DDiv1 = styled.div`
   width: 40%;
 `;
 const Total = styled.div`
-  padding: 2%;
+  padding: 2% 5%;
   color: #666666;
   font-size: 1.3em;
   border-radius: 3px;
@@ -327,7 +337,7 @@ const Promo = styled.div`
   display: flex;
   border-radius: 3px;
 input{
-  width: 40%;
+  width: 80%;
 }
 
 `;
@@ -336,8 +346,9 @@ const Button=styled.div`
 width: 50%;
 text-align: center;
 background-color: green;
-padding: 2%;
+padding: 3%;
 font-size: 0.9em;
+border-radius:5px;
 color: #fff;
 cursor: pointer;
 
@@ -357,9 +368,9 @@ export default function BookingLastPage() {
   const [value, setValue] = useState("");
   const [cor, setCor] = useState(false);
   const [corr, setCorr] = useState(false);
-  const [finalData,setFinalData]=useState(true);
-
-  const dispatch=useDispatch()
+  const [finalData, setFinalData] = useState(true);
+  const user = useSelector((state) => state.auth.user);
+  const dispatch = useDispatch();
   const priceState = useSelector((state) => state.date.price);
   const id_current = useSelector((state) => state.date.id);
   const checkIndate=useSelector((state)=> state.date.checkInDate.day)
@@ -369,11 +380,13 @@ export default function BookingLastPage() {
   const monthC=useSelector((state)=> state.date.checkInDate.month)
   const monthO=useSelector((state)=> state.date.checkOutDate.month)
   const dayCount=checkOutdate-checkIndate
-  const tp=priceState+840+227;
-const image=useSelector((state)=> state.hotel.data[id_current-1].headImage)
-const name=useSelector((state)=> state.hotel.data[id_current-1].name)
-
-useEffect(()=>{
+  const tp = priceState + 840 + 227;
+  console.log(id_current);
+  // const image = useSelector((state) => state.hotel.data[id_current - 1].headImage);
+  // const name = useSelector((state) => state.hotel.data[id_current - 1].name);
+  const image = HotelData[id_current - 1].headImage;
+  const name = HotelData[id_current - 1].name;
+  useEffect(() => {
 dispatch(totalPrice(tp))
 
 },[])
@@ -485,10 +498,10 @@ dispatch(totalPrice(tp))
               <Mdiv>
                 <M1div>Contact Details</M1div>
 
-                <M2div>koligesurya@gmail.com</M2div>
+                <M2div>{user.email}</M2div>
                 <M3div>
                   <M31div>+91 </M31div>
-                  <M32div>9481378985</M32div>
+                    <M32div>{ user.mobile}</M32div>
                 </M3div>
               </Mdiv>
               <Instruction>
@@ -501,11 +514,7 @@ dispatch(totalPrice(tp))
                 <Ms>
                   <Md1 onClick={handleColor} value={cor}>
                     <div>
-                      <Select  onClick={handleClick}>
-                        <option value="Title">Title</option>
-                        <option value="Mr">Mr.</option>
-                        <option value="Mrs">Mrs.</option>
-                      </Select>
+                      
                     </div>
                     <div>
                       {" "}

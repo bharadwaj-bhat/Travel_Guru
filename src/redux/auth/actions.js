@@ -49,7 +49,7 @@ export const logoutUser = (payload) => (dispatch) => {
 export const getData = () => (dispatch) => {
 	dispatch(getRequest());
 	axios
-		.get("http://localhost:3001/users")
+		.get("https://create-him-app.herokuapp.com/users")
 		.then((res) => {
 			//console.log(res.data);
 			dispatch(getSuccess(res.data));
@@ -62,14 +62,16 @@ export const getData = () => (dispatch) => {
 export const registerUser = (payload) => (dispatch) => {
 	dispatch(registerRequest());
 	console.log(payload);
-	axios.post("http://localhost:3001/users", payload).then((res) => {
-		console.log(res.data);
-		if (res.data.error) {
-			dispatch(registerFailure(res.data.message));
-			//alert(res.data.message);
-		} else {
-			dispatch(registerSuccess());
-			//alert(res.data.message);
-		}
-	});
+	axios
+		.post("https://create-him-app.herokuapp.com/users", payload)
+		.then((res) => {
+			console.log(res.data);
+			if (res.data.error) {
+				dispatch(registerFailure(res.data.message));
+				//alert(res.data.message);
+			} else {
+				dispatch(registerSuccess());
+				//alert(res.data.message);
+			}
+		});
 };
