@@ -45,13 +45,13 @@ export const Testing = () => {
     }
     const options = {
       key: "rzp_test_k8s6vfpDLGVjUZ",
-      amount: "70000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      amount: "906600", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
       currency: "INR",
       name: "Travel Guru",
       description: "Thank you",
       image:
         "https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png",
-      order_id: "order_HqwYVpWN61KC15", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      order_id: "order_HuCmVKKIr8melP", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       handler: function (response) {
         alert(response.razorpay_payment_id);
         // alert(response.razorpay_order_id);

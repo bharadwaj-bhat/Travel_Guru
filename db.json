@@ -15,8 +15,8 @@
         "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1509531839/Hotel/00096502/Executive_Room_1_cVsaDz.jpg",
         "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1509531871/Hotel/00096502/exterior_view_11(1)_bqbW9b.jpg",
         "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1509531889/Hotel/00096502/Privilege_Suite_Pj04ju.jpg",
-        "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1509531920/Hotel/00096502/Privilege_Suite1_UWwp5T.jpg",
-        ""
+        "https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1509531920/Hotel/00096502/Privilege_Suite1_UWwp5T.jpg"
+    
       ],
       "rating": 4.5,
       "price": 6999,
@@ -958,17 +958,10 @@
       "id": 6
     },
     {
-<<<<<<< HEAD
       "firstName": "Dhruvasurya",
       "lastName": "K N",
       "mobile": "9481378985",
       "email": "surya@gmail.com",
-=======
-      "firstName": "Ramlala",
-      "lastName": "Yadav",
-      "mobile": "1234567890",
-      "email": "someshkumar71524@gmail.com",
->>>>>>> bdb089d8945bc0b29e70f4bd99d053041f38f7f7
       "password": "12345678",
       "confirmPassword": "12345678",
       "id": 7

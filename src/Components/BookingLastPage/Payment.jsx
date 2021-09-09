@@ -193,103 +193,24 @@ const Payment = () => {
                 <div className={styles.checked}>
                   <p>Check-out</p>
                   <p>{checkOutdate}</p>
-                  <div className={styles.rightDiv}>
-                    <div className={styles.paymentDetails}>
-                      <div>
-                        <div>
-                          <p>Hotel Charges</p>
-                        </div>
-                        <div>
-                          <p>₹ {price}</p>
-                        </div>
-                      </div>
-
-                      <div>
-                        <div>
-                          <p>Hotel GST</p>
-                        </div>
-                        <div>
-                          <p>₹ 840</p>
-                        </div>
-                      </div>
-
-                      <div>
-                        <div>
-                          <p>Convenience Fee & Taxes</p>
-                        </div>
-                        <div>
-                          <p>₹ 277</p>
-                        </div>
-                      </div>
-
-                      <div className={styles.youPay}>
-                        <div>
-                          <h4>You Pay</h4>
-                        </div>
-                        <div>
-                          <h4>₹ {totalPrice}</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <h3 className={styles.bookingText}>Booking Summary</h3>
-                    <div className={styles.bookingSummary}>
-                      <div className={styles.pDiv}>
-                        <p>The Verda Driftwood</p>
-                        <p>Leh, India</p>
-                        <p>
-                          Rooms: <strong>1</strong> Adults:{" "}
-                          <strong>{adults}</strong>
-                        </p>
-                      </div>
-                      <div className={styles.dates}>
-                        <div>
-                          <div className={styles.checked}>
-                            <p>Check-in</p>
-                            <p>{checkIndate}</p>
-                          </div>
-                          <p className={styles.month}>
-                            {monthC === "08"
-                              ? "Aug"
-                              : monthC === "09"
-                              ? "Sep"
-                              : "Oct"}
-                          </p>
-                        </div>
-
-                        <div>
-                          <div className={styles.checked}>
-                            <p>Check-out</p>
-                            <p>{checkOutdate}</p>
-                          </div>
-                          <p className={styles.month}>
-                            {monthO === "08"
-                              ? "Aug"
-                              : monthO === "09"
-                              ? "Sep"
-                              : "Oct"}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    {monthO === "08" ? "Aug" : monthO === "09" ? "Sep" : "Oct"}
-                  </p>
                 </div>
+                <p>
+                  {monthO === "08" ? "Aug" : monthO === "09" ? "Sep" : "Oct"}
+                </p>
               </div>
             </div>
           </div>
         </div>
-
-        <Modal
-          open={open}
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
-          className={styles.modal}
-        >
-          {body}
-        </Modal>
       </div>
+
+      <Modal
+        open={open}
+        aria-labelledby="simple-modal-title"
+        aria-describedby="simple-modal-description"
+        className={styles.modal}
+      >
+        {body}
+      </Modal>
     </div>
   );
 };
