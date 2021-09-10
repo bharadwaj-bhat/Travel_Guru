@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import {MainDiv , SubDiv,LefSide,LeftDivTop,LeftPic,RightDetail,Input,RightP,RightP1,MidRight,Check,MiddleLastDiv,DetailDiv,Date,Inclusion,Policy,D1,D2,MiddleDiv,Mdiv ,M1div ,M2div,M3div ,M31div ,M32div,Instruction,MsecondRow,Ms,Md1, Room,Md2,MthirdRow,Special,RequestIn,Instruction1,Continue,RightSide,Price,DDiv,DDiv1 ,Total,Dddiv,Promo,Button,Button1,H03,Div001,Div002,Div003,D301,H333 } from "./LastPageStyle"
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import { useState } from "react";
 import {totalPrice} from "../../redux/DatesData/actionTypes"
@@ -9,361 +9,6 @@ import FinalPaymentPage from "./FinalPaymentPage"
 import { HotelData } from "../../fakeData/HotelData";
 import { useHistory } from "react-router";
 
-const MainDiv = styled.div`
-  padding-top: 1%;
-  padding-bottom: 1%;
-  background-color: #e2e2e2;
-`;
-const SubDiv = styled.div`
-  width: 70%;
-  display: flex;
-  margin: auto;
-`;
-const LefSide = styled.div`
-  width: 75%;
-`;
-const LeftDivTop = styled.div`
-  width: 95%;
-
-  background: #fff;
-  border-radius: 3px;
-  padding: 1%;
-  display: flex;
-`;
-const LeftPic = styled.div`
-  width: 25%;
-
-  margin-right: 2%;
-
-  img {
-    width: 100%;
-    height: 20vh;
-    border-radius: 5px;
-  }
-`;
-const RightDetail = styled.div`
-  width: 74%;
-
-  margin-right: 2%;
-`;
-const RightP = styled.div`
-  color: #333333;
-  font-size: 1.4em;
-  font-weight: 900;
-`;
-const RightP1 = styled.div`
-  color: #999999;
-  font-size: 0.9em;
-`;
-const MidRight = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 1vh;
-`;
-const Check = styled.div`
-  width: 15%;
-  padding: 0.5%;
-  background-color: #e2e2e2;
-  text-align: center;
-  border-radius: 3px;
-
-  p {
-    color: #999999;
-    font-size: 0.9em;
-    padding-bottom:1vh ;
-  }
-
-  h1 {
-    margin-top: -20px;
-  }
-`;
-
-const MiddleLastDiv = styled.div`
-  width: 60%;
-  div {
-    display: flex;
-    justify-content: space-between;
-  }
-`;
-const DetailDiv = styled.div`
-  border-top: 1px solid #e2e2e2;
-  border-bottom: 1px solid #e2e2e2;
-  display: flex;
-  padding: 2%;
-
-  div {
-    color: #999999;
-    width: 50%;
-  }
-`;
-const Date = styled.div`
-  display: flex;
-
-  div {
-    width: 16%;
-    color: #999999;
-    margin-right: 4%;
-    font-size: 0.8em;
-  }
-`;
-const Inclusion = styled.div`
-  width: 30%;
-  margin-top: 10px;
-  div {
-    display: flex;
-  }
-`;
-const Policy = styled.div`
-  padding: 1%;
-
-  width: 95%;
-
-  background: #f1f1f1;
-
-  display: flex;
-
-  div {
-    margin-right: 1%;
-  }
-`;
-
-const D1 = styled.div`
-  color: #333333;
-  font-size: 14px;
-  margin-right: 1%;
-`;
-const D2 = styled.div`
-  color: #666666;
-  font-size: 14px;
-  margin-right: 1%;
-`;
-const D3 = styled.div`
-  margin-right: 1%;
-`;
-const MiddleDiv = styled.div`
-  padding: 1%;
-  background: #fff;
-  width: 95%;
-  margin-bottom: 2vh;
-`;
-const Mdiv = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-    margin-bottom: 5px;
-`;
-const M1div = styled.div`
-  width: 20%;
-  padding: 1%;
-  margin-right: 1%;
-  color: #333333;
-  font-weight: 900;
-  font-size: 1.2em;
-
-  text-align: right;
-`;
-const M2div = styled.div`
-  width: 25%;
-  padding: 1%;
-  border: 1px solid;
-  font-size: 1em;
-  overflow:hidden;
-  margin-right: 1%;
-  display: flex;
-  align-items: center;
-  background-color: #eceeef;
-  opacity: 1;
-  border: 1px solid #a3a3a3;
-
-`;
-const M3div = styled.div`
-  width: 35%;
-  display: flex;
-
-`;
-const M31div = styled.div`
-  width: 10%;
-  padding: 2%;
-  background-color: #eceeef;
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  border: 1px solid #a3a3a3;
-`;
-const M32div = styled.div`
-  width: 90%;
-  padding: 2%;
-  display: flex;
-  align-items: center;
-  background-color: #eceeef;
-  opacity: 1;
-  border: 1px solid #a3a3a3;
-`;
-const Instruction = styled.div`
-  width: 60%;
-  margin-left: 31%;
-  font-size: 0.9em;
-  padding-bottom: 3vh;
-  margin-bottom: 1vh;
-  border-bottom: 1px solid #a3a3a3;
-`;
-// const Select = styled.select`
-//   padding: 1%;
-//   width: 100%;
-//   font-size: 0.9em;
-//   font-weight: 300;
-//   border: none;
-//   border-right: 1px solid #a3a3a3;
-//   background-color: #fff;
-// `;
-
-const MsecondRow = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 3vh;
-`;
-const Ms = styled.div`
-  width: 40%;
-  display: flex;
-`;
-const Md1 = styled.div`
-  width: 80%;
-  padding: 2.5%;
-  display: flex;
-  border: 1px solid #a3a3a3;
-  background-color: #fff;
-  border-bottom: ${(props) =>
-    props.value ? "2px solid black" : "1px solid #a3a3a3"};
-`;
-
-const Room = styled.div`
-  width: 20%;
-  padding: 1%;
-  margin-right: 2%;
-  color: #333333;
-  font-weight: 900;
-  font-size: 1.2em;
-  text-align: right;
-`;
-
-// const Inp1 = styled.input`
-//   padding: 1%;
-//   border: none !important;
-//   font-size: 1em;
-// `;
-
-const Md2 = styled.div`
-  padding: 1%;
-  display: flex;
-  border: 1px solid #a3a3a3;
-  background-color: #fff;
-  border-bottom: ${(props) =>
-    props.value ? "2px solid black" : "1px solid #a3a3a3"};
-`;
-
-const MthirdRow = styled.div`
-  width: 100%;
-  display: flex;
-  margin-left: 15%;
-  margin-top: 4vh;
-`;
-const Special = styled.div`
-  width: 10%;
-  padding: 1%;
-  margin-right: 2%;
-  color: #333333;
-  font-weight: 900;
-  font-size: 1.2em;
-  text-align: right;
-`;
-
-const RequestIn = styled.div`
-  width: 80%;
-`;
-const Input = styled.input`
-  width: 80%;
-  height: 7vh;
-`;
-const Instruction1 = styled.div`
-  width: 61%;
-  margin-left: 31%;
-  padding-bottom: 3vh;
-  margin-bottom: 1vh;
-  font-size: 0.9em;
-`;
-const Continue = styled.div`
-  width: 30%;
-  margin: auto;
-
-`;
-const RightSide = styled.div`
-  width: 23%;
-  padding: 1%;
-`;
-
-const Price = styled.div`
-  padding:2% 5%;
-  background-color: #fff;
-  display: flex;
-  p {
-    color: #666666;
-  }
-`;
-
-const DDiv = styled.div`
-  width: 60%;
-`;
-const DDiv1 = styled.div`
-  width: 40%;
-`;
-const Total = styled.div`
-  padding: 2% 5%;
-  color: #666666;
-  font-size: 1.3em;
-  border-radius: 3px;
-  display: flex;
-  font-weight: 900;
-  border-top: 1px solid #e4e4e4;
-  border-bottom: 1px solid #e4e4e4;
-  background-color: #f4f4f4;
-`;
-const Dddiv = styled.div`
-  width: 60%;
-`;
-
-const Promo = styled.div`
-  padding: 8%;
-  background-color: #fff;
-  display: flex;
-  border-radius: 3px;
-input{
-  width: 80%;
-}
-
-`;
-
-const Button=styled.div`
-width: 50%;
-text-align: center;
-background-color: green;
-padding: 3%;
-font-size: 0.9em;
-border-radius:5px;
-color: #fff;
-cursor: pointer;
-
-`
-
-const Button1=styled.div`
-
-background-color: #DDDDDD ;
-padding: 2%;
-
-cursor: pointer;
-
-
-`
 
 export default function BookingLastPage() {
   // const [value,setValue] = useState("");
@@ -442,11 +87,11 @@ export default function BookingLastPage() {
                   <MiddleLastDiv>
                     <div>
                       <div>
-                        <h3 style={{ marginTop: "-3px" }}>{dayCount} Days & {dayCount} Night</h3>
+                        <H03>{dayCount} Days & {dayCount} Night</H03>
                       </div>
-                      <div style={{ color: "#4197CD", cursor: "pointer" }}>
+                      <Div001>
                         Change Room
-                      </div>
+                      </Div001>
                     </div>
                     <DetailDiv>
                       <div>Room 1:</div>
@@ -464,7 +109,7 @@ export default function BookingLastPage() {
                 </Date>
                 <Inclusion>
                   <div>
-                    <div style={{ marginRight: "10px" }}>Inclusion</div>
+                    <Div002>Inclusion</Div002>
                     <div>
                       <div>
                         <CheckRoundedIcon style={{ color: "green" }} />
@@ -478,7 +123,7 @@ export default function BookingLastPage() {
             <Policy>
               <D1>Cancellation Policy: </D1>
               <D2>No refund if you cancel this booking. </D2>
-              <D3 style={{ color: "#4197CD", cursor: "pointer" }}>View More</D3>
+              <D301>View More</D301>
             </Policy>
 
             <div>
@@ -559,9 +204,9 @@ export default function BookingLastPage() {
             </Price>
             <Total>
               <Dddiv>You Pay</Dddiv>
-              <div style={{color:"#333333"}}>&#8377;{tp}</div>
+              <Div003>&#8377;{tp}</Div003>
             </Total>
-            <h3 style={{ color: "#333333" }}>Promo Code</h3>
+            <H333>Promo Code</H333>
             <Promo>
               <input type="text" placeholder="Apply Promo Code" />
                 <Button1>Apply</Button1>
