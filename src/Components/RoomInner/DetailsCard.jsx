@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../redux/RoomInner/actions";
-import { Carousel, CarouselComp } from "./Carousel";
+import {  CarouselComp } from "./Carousel";
 import { NameHeader } from "./NameHeader";
 import { NavigationBar } from "./NavigationBar";
 import Loader from "react-loader-spinner";
-
+import React from "react"
+import {v4 as uuid} from "uuid"
 export const DetailsCard = ({ id }) => {
   const data = useSelector((state) => state.room.data);
   const loading = useSelector((state) => state.room.isLoading);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log(id);
     dispatch(getData(id));
-  }, []);
+  }, [dispatch,id]);
 
   if (loading) {
     return (
@@ -43,11 +43,11 @@ export const DetailsCard = ({ id }) => {
   return (
     <div>
       {data && (
-        <>
+        <React.Fragment  key={uuid()}>
           <NameHeader data={data} />
           <NavigationBar />
           <CarouselComp data={data} />
-        </>
+        </React.Fragment>
       )}
     </div>
   );

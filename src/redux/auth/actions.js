@@ -51,7 +51,7 @@ export const getData = () => (dispatch) => {
 	axios
 		.get("https://create-him-app.herokuapp.com/users")
 		.then((res) => {
-			//console.log(res.data);
+			//g(res.data);
 			dispatch(getSuccess(res.data));
 		})
 		.catch((err) => {
@@ -61,11 +61,9 @@ export const getData = () => (dispatch) => {
 };
 export const registerUser = (payload) => (dispatch) => {
 	dispatch(registerRequest());
-	console.log(payload);
 	axios
 		.post("https://create-him-app.herokuapp.com/users", payload)
 		.then((res) => {
-			console.log(res.data);
 			if (res.data.error) {
 				dispatch(registerFailure(res.data.message));
 				//alert(res.data.message);

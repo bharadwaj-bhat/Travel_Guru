@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect } from "react";
 import { Razorpay } from "razorpay-checkout";
 
@@ -16,14 +15,14 @@ const loadRazorPay = () => {
   });
 };
 
-const data = {
-  amount: 70000,
-  currency: "INR",
-  receipt: "receipt#1",
-};
-const username = "rzp_test_k8s6vfpDLGVjUZ";
-const password = "mxfzlfR60GuQjY69sl91JqOb";
-const token = Buffer.from(`${username}:${password}`, "utf8").toString("base64");
+// const data = {
+//   amount: 70000,
+//   currency: "INR",
+//   receipt: "receipt#1",
+// };
+// const username = "rzp_test_k8s6vfpDLGVjUZ";
+// const password = "mxfzlfR60GuQjY69sl91JqOb";
+// const token = Buffer.from(`${username}:${password}`, "utf8").toString("base64");
 export const Testing = () => {
   useEffect(() => {
     // axios

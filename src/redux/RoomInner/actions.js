@@ -19,7 +19,6 @@ const dataRequestSuccess = (payload) => {
 };
 
 const dataRequestFailed = (payload) => {
-	console.log(payload);
 	return {
 		type: DATA_REQUEST_FAILED,
 	};

@@ -248,7 +248,6 @@ export function scanData(payload) {
 			let amenities_temp = data.filter((item) => {
 				return item.wifi === true;
 			});
-			console.log(amenities_temp);
 			amenities_final = [...amenities_final, ...amenities_temp];
 		}
 		if (amenities[1]) {
@@ -363,6 +362,5 @@ export function scanData(payload) {
 		}
 		data = [...hotel_final];
 	}
-	console.log(data);
 	return [...data];
 }

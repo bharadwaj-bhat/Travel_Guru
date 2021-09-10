@@ -135,9 +135,7 @@ export function HotelFilterRight() {
       </div>
       <div className={styles.hotel_right_card}>
         {data.map((item) => (
-          <>
               <HotelFilterCard key={item.id} data={item} />
-          </>
         ))}
       </div>
     </>

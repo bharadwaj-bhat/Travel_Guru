@@ -128,7 +128,6 @@ export const SearchBanner = () => {
   };
 
   const handleSearch = () => {
-    console.log("fired form search btn");
     history.push("/hotel-search");
   };
 
@@ -205,13 +204,13 @@ export const SearchBanner = () => {
         <div className={styles.SearchBannerHeader}>
           <p
             onClick={() => setHotels(true)}
-            className={hotels && `${styles.underLine}`}
+            className={hotels ? `${styles.underLine}`:undefined}
           >
             HOTELS
           </p>
           <p
             onClick={() => setHotels(false)}
-            className={!hotels && `${styles.underLine}`}
+            className={!hotels ? `${styles.underLine}`:undefined}
           >
             {" "}
             HOME STAYS{" "}

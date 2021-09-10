@@ -21,26 +21,27 @@ const carouselStyles = {
   },
 };
 export default function HotelFilterCard({ data }) {
+  const nodeRef = React.useRef(null);
   return (
     <React.Fragment>
       <div className={styles.hotel_card_container}>
-        <Carousel
+        <Carousel nodeRef={nodeRef}
           navButtonsProps={carouselStyles}
           autoPlay={false}
           className={styles.carousel}
           navButtonsAlwaysVisible={true}
           indicators={false}
         >
-          {data.images.map((item) => {
+          {data.images.map((item,i) => {
             return (
-              <div className={styles.hotel_card_left}>
+              <div ref={nodeRef} key={i} className={styles.hotel_card_left}>
                 {" "}
                 <img
                   className={styles.hotel_card_left_img}
                   src={`${item}`}
                   alt=""
                 />
-                <div>
+                <div ref={nodeRef}>
                   <span>#Friends getaways &nbsp;&nbsp;#Family</span>
                   <span>
                     <SearchIcon />
@@ -57,8 +58,8 @@ export default function HotelFilterCard({ data }) {
           <div className={styles.hotel_card_middle_2}>
             {Array(Math.floor(data.rating))
               .fill("")
-              .map((item) => (
-                <StarIcon className={styles.star_icon_2} />
+              .map((item,i) => (
+                <StarIcon key={i} className={styles.star_icon_2} />
               ))}
             <RoomIcon className={styles.room_icon} />
             <span>{data.location}</span>

@@ -25,7 +25,7 @@ export const TrendingDestinations = () => {
                                         className={isActivePage?styles.TrendingDestination_container_pagination_1:styles.TrendingDestination_container_pagination}
 										key={page}
 										onClick={() => onClick(page)}
-										active={isActivePage}
+										active={isActivePage.toString()}
 									>
 										{page + 1}
 									</div>

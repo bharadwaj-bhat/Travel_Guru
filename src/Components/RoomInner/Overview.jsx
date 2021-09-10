@@ -27,8 +27,8 @@ export const OverViewCard = () => {
       <div>
         <p> AMENITIES </p>
         <div className={styles.OverViewIcons}>
-          {iconArray.map((el) => (
-            <div>{el}</div>
+          {iconArray.map((el,i) => (
+            <div key={i}>{el}</div>
           ))}
         </div>
         <p> OVERVIEW </p>

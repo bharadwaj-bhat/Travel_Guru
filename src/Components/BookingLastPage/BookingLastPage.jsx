@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import FinalPaymentPage from "./FinalPaymentPage"
 import { HotelData } from "../../fakeData/HotelData";
+import { useHistory } from "react-router";
 
 const MainDiv = styled.div`
   padding-top: 1%;
@@ -206,15 +207,15 @@ const Instruction = styled.div`
   margin-bottom: 1vh;
   border-bottom: 1px solid #a3a3a3;
 `;
-const Select = styled.select`
-  padding: 1%;
-  width: 100%;
-  font-size: 0.9em;
-  font-weight: 300;
-  border: none;
-  border-right: 1px solid #a3a3a3;
-  background-color: #fff;
-`;
+// const Select = styled.select`
+//   padding: 1%;
+//   width: 100%;
+//   font-size: 0.9em;
+//   font-weight: 300;
+//   border: none;
+//   border-right: 1px solid #a3a3a3;
+//   background-color: #fff;
+// `;
 
 const MsecondRow = styled.div`
   display: flex;
@@ -246,11 +247,11 @@ const Room = styled.div`
   text-align: right;
 `;
 
-const Inp1 = styled.input`
-  padding: 1%;
-  border: none !important;
-  font-size: 1em;
-`;
+// const Inp1 = styled.input`
+//   padding: 1%;
+//   border: none !important;
+//   font-size: 1em;
+// `;
 
 const Md2 = styled.div`
   padding: 1%;
@@ -365,7 +366,7 @@ cursor: pointer;
 `
 
 export default function BookingLastPage() {
-  const [value, setValue] = useState("");
+  // const [value,setValue] = useState("");
   const [cor, setCor] = useState(false);
   const [corr, setCorr] = useState(false);
   const [finalData, setFinalData] = useState(true);
@@ -378,30 +379,19 @@ export default function BookingLastPage() {
   const adults=useSelector((state)=>state.date.adults)
   const child=useSelector((state)=> state.date.children)
   const monthC=useSelector((state)=> state.date.checkInDate.month)
-  const monthO=useSelector((state)=> state.date.checkOutDate.month)
+  const monthO = useSelector((state) => state.date.checkOutDate.month)
+  const history = useHistory()
   const dayCount=checkOutdate-checkIndate
   const tp = priceState + 840 + 227;
-  console.log(id_current);
-  // const image = useSelector((state) => state.hotel.data[id_current - 1].headImage);
-  // const name = useSelector((state) => state.hotel.data[id_current - 1].name);
+  useEffect(() => {
+    dispatch(totalPrice(tp)) 
+  },[dispatch,tp])
+  if (id_current === -1) {
+    history.push("/hotel-search");
+    return <></>
+  }
   const image = HotelData[id_current - 1].headImage;
   const name = HotelData[id_current - 1].name;
-  useEffect(() => {
-dispatch(totalPrice(tp))
-
-},[])
-
- 
-
-
-
-       
-
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    setValue(e.target.value);
-  };
 
   const handleColor = () => {
     setCor(!cor);
@@ -452,7 +442,7 @@ dispatch(totalPrice(tp))
                   <MiddleLastDiv>
                     <div>
                       <div>
-                        <h3 style={{ marginTop: "-3px" }}>{dayCount} Days & 1 Night</h3>
+                        <h3 style={{ marginTop: "-3px" }}>{dayCount} Days & {dayCount} Night</h3>
                       </div>
                       <div style={{ color: "#4197CD", cursor: "pointer" }}>
                         Change Room

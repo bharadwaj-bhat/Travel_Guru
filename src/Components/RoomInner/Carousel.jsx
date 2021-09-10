@@ -1,8 +1,8 @@
 import styles from "../../Styles/RoomsInner.module.css";
 import Carousel from "react-material-ui-carousel";
-import { useState } from "react";
+import React from "react";
 import Divider from "@material-ui/core/Divider";
-import Box from "@material-ui/core/Box";
+// import Box from "@material-ui/core/Box";
 
 import CheckIcon from "@material-ui/icons/Check";
 import { OverViewCard } from "./Overview";
@@ -51,7 +51,7 @@ export const CarouselComp = ({ data }) => {
               <Divider />
               {otherRatingName1 &&
                 otherRatingName1.map((el, i) => (
-                  <div
+                  <div key={i}
                     style={{
                       display: "flex",
                       alignItems: "center",

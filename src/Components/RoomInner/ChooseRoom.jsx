@@ -7,8 +7,8 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 // For pop over
 import Popover from "@material-ui/core/Popover";
 import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
+// import Typography from "@material-ui/core/Typography";
+// import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import { JuniorSuit } from "./Suits/JuniorSuit";

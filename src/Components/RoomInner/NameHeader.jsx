@@ -1,4 +1,3 @@
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 import StarIcon from "@material-ui/icons/Star";
 import styles from "../../Styles/RoomsInner.module.css";
 
@@ -11,8 +10,8 @@ export const NameHeader = ({ data }) => {
           <div>
             <div className={styles.NameHeader}>
               <h2> {name} </h2>
-              {[1, 2, 3, 4, 5].map((el) => (
-                <StarIcon fontSize="inherit" color="inherit" />
+              {[1, 2, 3, 4, 5].map((el,i) => (
+                <StarIcon key={i} fontSize="inherit" color="inherit" />
               ))}
               <img
                 src="https://css.yatra.com/content/b2c-cdn/bongo-cdn/banners/hotel/yatra-safetyAssured/cleanPass.png"

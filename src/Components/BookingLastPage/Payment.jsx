@@ -6,21 +6,21 @@ import { useSelector } from "react-redux";
 
 //import axios from "axios";
 //import { useEffect } from "react";
-import { Razorpay } from "razorpay-checkout";
+// import { Razorpay } from "razorpay-checkout";
 
-const loadRazorPay = () => {
-  return new Promise((resolve) => {
-    const script = document.createElement("script");
-    script.src = "https://checkout.razorpay.com/v1/checkout.js";
-    script.onload = () => {
-      resolve(true);
-    };
-    script.onerror = () => {
-      resolve(false);
-    };
-    document.body.appendChild(script);
-  });
-};
+// const loadRazorPay = () => {
+//   return new Promise((resolve) => {
+//     const script = document.createElement("script");
+//     script.src = "https://checkout.razorpay.com/v1/checkout.js";
+//     script.onload = () => {
+//       resolve(true);
+//     };
+//     script.onerror = () => {
+//       resolve(false);
+//     };
+//     document.body.appendChild(script);
+//   });
+// };
 
 const Payment = () => {
   const history = useHistory();
@@ -59,37 +59,37 @@ const Payment = () => {
     </div>
   );
 
-  async function displayRazorpay() {
-    const res = await loadRazorPay();
+  // async function displayRazorpay() {
+  //   const res = await loadRazorPay();
 
-    if (!res) {
-      alert("something went wrong");
-      return;
-    }
-    const options = {
-      key: "rzp_test_k8s6vfpDLGVjUZ",
-      amount: "70000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "Travel Guru",
-      description: "Thank you",
-      image:
-        "https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png",
-      order_id: "order_Hr25D9BwpWztX0t", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: function (response) {
-        setOpen(true);
-        // alert(response.razorpay_order_id);
-        // alert(response.razorpay_signature);
+  //   if (!res) {
+  //     alert("something went wrong");
+  //     return;
+  //   }
+  //   const options = {
+  //     key: "rzp_test_k8s6vfpDLGVjUZ",
+  //     amount: "70000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+  //     currency: "INR",
+  //     name: "Travel Guru",
+  //     description: "Thank you",
+  //     image:
+  //       "https://www.travelguru.com/travelguru/resources/beetle/images/tg/travelguru-homestay-logo-199x52.png",
+  //     order_id: "order_Hr25D9BwpWztX0t", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+  //     handler: function (response) {
+  //       setOpen(true);
+  //       // alert(response.razorpay_order_id);
+  //       // alert(response.razorpay_signature);
 
-        //order_Hr1IUCLlfxsh9M
-      },
-      prefill: {
-        name: "Somesh Yadav",
-        phone: "6354136407",
-      },
-    };
-    const paymentObj = new Razorpay(options);
-    paymentObj.open();
-  }
+  //       //order_Hr1IUCLlfxsh9M
+  //     },
+  //     prefill: {
+  //       name: "Somesh Yadav",
+  //       phone: "6354136407",
+  //     },
+  //   };
+  //   const paymentObj = new Razorpay(options);
+  //   paymentObj.open();
+  // }
 
   return (
     <div className={styles.mainDivision}>

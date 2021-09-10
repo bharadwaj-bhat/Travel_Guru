@@ -2,8 +2,7 @@ import { BreadCrum } from "./BreadCrum";
 import styles from "../../Styles/RoomsInner.module.css";
 import Divider from "@material-ui/core/Divider";
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getData } from "../../redux/RoomInner/actions";
+import { useDispatch } from "react-redux";
 import { DetailsCard } from "./DetailsCard";
 import { useParams } from "react-router-dom";
 import { idState } from "../../redux/DatesData/actionTypes";
@@ -14,7 +13,7 @@ export const RoomInner = () => {
 
   useEffect(() => {
     dispatch(idState(id));
-  }, []);
+  }, [dispatch,id]);
 
   return (
     <div className={styles.roomsLayoutWrapper}>

@@ -127,15 +127,15 @@ export const NavBar = () => {
             >
               <Paper className={classes.Paper} onMouseLeave={handleClose}>
                 <Box m={2}>
-                  <Typography variant="subtitle"> Contact Us </Typography>
+                  <Typography variant="subtitle1"> Contact Us </Typography>
                 </Box>
                 <Divider />
                 <Box m={2}>
-                  <Typography variant="subtitle"> Cancel Booking </Typography>
+                  <Typography variant="subtitle1"> Cancel Booking </Typography>
                 </Box>
                 <Divider />
                 <Box m={2}>
-                  <Typography variant="subtitle"> List Your hotel </Typography>
+                  <Typography variant="subtitle1"> List Your hotel </Typography>
                 </Box>
                 <Divider />
               </Paper>
@@ -174,7 +174,7 @@ export const NavBar = () => {
                 </button>
 
                 <Box m={2}>
-                  <Typography variant="subtitle">
+                  <Typography variant="subtitle1">
                     {" "}
                     New customer ?
                     <Link to="/register" style={{ textDecoration: "none" }}>
