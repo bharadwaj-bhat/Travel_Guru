@@ -74,6 +74,18 @@ We are a learner and this is our third clone so faced many issues to build this 
 ## Optimizations
 
 We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
+
+## Snippets
+
+<p>
+    <img src="https://user-images.githubusercontent.com/77038733/133294139-cb3b6655-fac1-4a33-87db-d2e608d1ed08.jpeg" width="320" height="250">
+    <img src="https://user-images.githubusercontent.com/77038733/133294316-56a40994-8fa7-4bc3-837a-d5d67b264d24.jpeg" width="320" height="250">
+    <img src="https://user-images.githubusercontent.com/77038733/133294441-367c6f57-c20c-437c-9eb3-264c92b51ee1.jpeg" width="320" height="250">
+    <img src="https://user-images.githubusercontent.com/77038733/133294595-459b3d8b-ccb0-443a-b9c2-128a50250cb0.jpeg" width="320" height="250">
+ </p>
+ 
+ Click the link to view project: 
+ <a href="https://travelguru-clone.herokuapp.com/">Travel_Guru</a>
   
 ## Support
 
