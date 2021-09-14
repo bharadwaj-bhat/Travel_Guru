@@ -1,5 +1,6 @@
 import {MainDiv , SubDiv,LefSide,LeftDivTop,LeftPic,RightDetail,Input,RightP,RightP1,MidRight,Check,MiddleLastDiv,DetailDiv,Date,Inclusion,Policy,D1,D2,MiddleDiv,Mdiv ,M1div ,M2div,M3div ,M31div ,M32div,Instruction,MsecondRow,Ms,Md1, Room,Md2,MthirdRow,Special,RequestIn,Instruction1,Continue,RightSide,Price,DDiv,DDiv1 ,Total,Dddiv,Promo,Button,Button1,H03,Div001,Div002,Div003,D301,H333 } from "./LastPageStyle"
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
+import styles from "../../Styles/BookingLast.module.css"
 import { useState } from "react";
 import {totalPrice} from "../../redux/DatesData/actionTypes"
 import TextField from "@material-ui/core/TextField";
@@ -11,7 +12,7 @@ import { useHistory } from "react-router";
 
 
 export default function BookingLastPage() {
-  // const [value,setValue] = useState("");
+  
   const [cor, setCor] = useState(false);
   const [corr, setCorr] = useState(false);
   const [finalData, setFinalData] = useState(true);
@@ -104,7 +105,7 @@ export default function BookingLastPage() {
                   </MiddleLastDiv>
                 </MidRight>
                 <Date>
-                  <div>{(monthC==="08")?"Aug":(monthC==="09")?"Sep":"Oct"} | 12:00PM</div>
+                  <div className={styles.month_left}>{(monthC==="08")?"Aug":(monthC==="09")?"Sep":"Oct"} | 12:00PM</div>
                   <div>{(monthO==="08")?"Aug":(monthO==="09")?"Sep":"Oct"} | 10:00AM</div>
                 </Date>
                 <Inclusion>
@@ -112,7 +113,7 @@ export default function BookingLastPage() {
                     <Div002>Inclusion</Div002>
                     <div>
                       <div>
-                        <CheckRoundedIcon style={{ color: "green" }} />
+                        <CheckRoundedIcon className={styles.checkIcon} />
                       </div>
                       <div>Breakfast</div>
                     </div>
@@ -126,7 +127,7 @@ export default function BookingLastPage() {
               <D301>View More</D301>
             </Policy>
 
-            <div>
+            <div className={styles.second_top}>
               <img src={process.env.PUBLIC_URL + "/travel.png"} alt="" />
             </div>
             <MiddleDiv>
@@ -154,7 +155,7 @@ export default function BookingLastPage() {
                     <div>
                       {" "}
                       <TextField
-                        style={{ marginLeft: "10px",fontSize:"0.9em" }}
+                        className={styles.textField}
                         placeholder="First Name"
                         fullWidth
                       />
@@ -165,7 +166,7 @@ export default function BookingLastPage() {
                 <Md2 onClick={handleColorr} value={corr}>
                   <TextField
                     id="standard-full-width"
-                    style={{ marginLeft: "10px", borderBottomColor: "none" }}
+                    className={styles.textField1}
                     placeholder="Last Name"
                     fullWidth
                   />
@@ -189,7 +190,7 @@ export default function BookingLastPage() {
             </Continue>
           </LefSide>
           <RightSide>
-            <h3 style={{ color: "#333333" }}>Tariff Details</h3>
+            <h3 className={styles.h3}>Tariff Details</h3>
             <Price>
               <DDiv>
                 <p>Hotel Charges</p>
