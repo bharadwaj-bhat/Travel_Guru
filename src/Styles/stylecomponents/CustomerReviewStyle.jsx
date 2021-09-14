@@ -82,3 +82,9 @@ export const BodyP=styled.p`
     font-size: 0.9em;
 
 `
+export const CustomDiv = styled.div`
+  & > div:first-child > div{
+    display:${props => ("leh".includes(props.text))&&props.text.length>0 ? "block" : "none"};
+  }
+`
+

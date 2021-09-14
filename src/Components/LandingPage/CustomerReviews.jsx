@@ -1,12 +1,9 @@
-import { MainDiv,ReviewDiv,P,ReviewInnerDiv,Symbol,RatingDiv,H3,ReviewSection,SubDiv,HeadP,BodyP} from './CustomerReviewStyle';
+import { MainDiv,ReviewDiv,P,ReviewInnerDiv,Symbol,RatingDiv,H3,ReviewSection,SubDiv,HeadP,BodyP} from '../../Styles/stylecomponents/CustomerReviewStyle';
 import Rating from '@material-ui/lab/Rating';
 
 
 
 export const CustomerReviews = () => {
-  
-
-
     return (
         <>
        <MainDiv>

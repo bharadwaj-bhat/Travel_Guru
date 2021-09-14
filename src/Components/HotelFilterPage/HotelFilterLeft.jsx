@@ -1,27 +1,13 @@
 import React from "react";
 import styles from "../../Styles/hotelFilter.module.css"
 import SearchIcon from '@material-ui/icons/Search';
-import Checkbox from '@material-ui/core/Checkbox';
-import { grey } from "@material-ui/core/colors";
-import { withStyles } from '@material-ui/core/styles';
+import {GreyCheckbox} from "../../Styles/stylecomponents/stylecomponents"
 import StarIcon from '@material-ui/icons/Star';
 import createArray from "../../utils/createArray";
 import { customFunction,customFunction_2 } from "../../utils/customFunction";
 import { useDispatch } from "react-redux";
 import { updateData } from "../../redux/hotelData/actions";
-const GreyCheckbox = withStyles({
-  root: {
-        color: grey[300],
-        margin: '3px 10px 3px 0px',
-      padding: "0px",
-    '&$checked': {
-        color: grey[300],
-        margin: '3px 10px 3px 0px',
-         padding: "0px",
-        }
-  },
-  checked: {},
-})((props) => <Checkbox {...props} />);
+
 
 export default function HotelFilterLeft(props) {
     const [hotelSearch, setHotelSearch] = React.useState(true);

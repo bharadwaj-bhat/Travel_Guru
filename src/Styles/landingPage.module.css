@@ -7,6 +7,9 @@
 	width: 85%;
 	font-size: 0.9rem;
 }
+.trend_flex {
+	display: flex;
+}
 .gridDiv {
 	display: flex;
 	justify-content: space-around;
@@ -344,4 +347,24 @@
 	align-items: center;
 	background: #666;
 	color: #fff;
+}
+.search_banner_1 {
+	text-align: left;
+	height: 40px;
+	border: none;
+	border-right: 1px solid grey;
+	width: 200px;
+	padding: 2px 5px;
+	margin-top: 30px;
+	outline: none;
+}
+.search_banner_2 {
+	text-align: left;
+	height: 40px;
+	border: none;
+	border-right: 1px solid grey;
+	padding: 2px 5px;
+	width: 200px;
+	outline: none;
+	margin-top: 30px;
 }

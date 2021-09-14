@@ -7,14 +7,12 @@ import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import { useHistory } from "react-router-dom";
-// for popover
+import {CustomDiv} from '../../Styles/stylecomponents/CustomerReviewStyle';
 import Popover from "@material-ui/core/Popover";
 import Paper from "@material-ui/core/Paper";
-// import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
-// import { Button } from "@material-ui/core";
+import {useStyles2} from "../../Styles/stylecomponents/stylecomponents"
 import { useDispatch, useSelector } from "react-redux";
 import {
   adults,
@@ -22,79 +20,6 @@ import {
   checkOutDate,
   children,
 } from "../../redux/DatesData/actionTypes";
-import styled from "styled-components";
-
-const useStyles = makeStyles((theme) => ({
-  popUp: {},
-  paper: {
-    width: "300px",
-  },
-  rooms: {
-    display: "flex",
-  },
-  grid: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop: "-10px",
-  },
-  subHead1: {
-    fontSize: "0.8rem",
-    fontWeight: "600",
-    marginTop: "-5px",
-    marginRight: "80px",
-  },
-  subHead2: {
-    fontSize: "0.7rem",
-  },
-  Room1p: {
-    fontSize: "1rem",
-    fontWeight: "600",
-  },
-  wrapper: {
-    padding: "0px 15px",
-  },
-  btn: {
-    border: "none",
-    height: "29px",
-    padding: "2px 8px",
-    outline: "1px solid grey",
-    background: "white",
-    margin: "1px",
-  },
-  btnM: {
-    border: "none",
-    height: "29px",
-    padding: "2px 8px",
-    outline: "1px solid grey",
-    background: "white",
-    margin: "1px",
-    marginLeft: "-42px",
-  },
-  btnP: {
-    padding: "5px 8px",
-    outline: "1px solid grey",
-    background: "white",
-  },
-  h5: {
-    margin: "0px 0px 10px 0px",
-  },
-  doneBtn: {
-    border: "none",
-    width: "100%",
-    margin: " 20px auto",
-    padding: "10px",
-    background: "rgb(122,175,234)",
-    color: "white",
-    fontWeight: "600",
-  },
-}));
-
-const CustomDiv = styled.div`
-  & > div:first-child > div{
-    display:${props => ("leh".includes(props.text))&&props.text.length>0 ? "block" : "none"};
-  }
-`
 
 export const SearchBanner = () => {
   const checkInState = useSelector((state) => state.date.checkInDate);
@@ -102,14 +27,13 @@ export const SearchBanner = () => {
   const [text, setText] = useState("");
   const adultsCount = useSelector((state) => state.date.adults);
   const childrenCount = useSelector((state) => state.date.children);
-
   const [hotels, setHotels] = useState(true);
   const history = useHistory();
   const dispatch = useDispatch();
-  const classes = useStyles();
+  const classes = useStyles2();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  var checkOutRef;
+  let checkOutRef;
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -151,17 +75,8 @@ export const SearchBanner = () => {
               ? `${checkInState.day}/${checkInState.month}/${checkInState.year}`
               : ""
           }
-          style={{
-            textAlign: "left",
-            height: "40px",
-            border: "none",
-            borderRight: "1px solid grey",
-            padding: "2px 5px",
-            width: "200px",
-            outline: "none",
-            marginTop: "30px",
-          }}
-          className="my-custom-input-class" // a styling class
+         className={styles.search_banner_2}
+          // a styling class
         />
         <div className={styles.calendarIcon}>
           <DateRangeIcon color="inherit" />
@@ -181,16 +96,7 @@ export const SearchBanner = () => {
             ? `${checkOutState.day}/${checkOutState.month}/${checkOutState.year}`
             : ""
         }
-        style={{
-          textAlign: "left",
-          height: "40px",
-          border: "none",
-          borderRight: "1px solid grey",
-          width: "200px",
-          padding: "2px 5px",
-          marginTop: "30px",
-          outline: "none",
-        }}
+        className={styles.search_banner_1}
       />
       <div className={styles.calendar2Icon}>
         <DateRangeIcon color="inherit" />

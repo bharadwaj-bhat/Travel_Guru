@@ -1,22 +1,10 @@
 import React from 'react'
 import styles from '../../Styles/loginPage.module.css'
-import Checkbox from '@material-ui/core/Checkbox';
-import { withStyles } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
+import {RedCheckbox} from "../../Styles/stylecomponents/stylecomponents"
 import { Link, useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { useDispatch } from 'react-redux';
 import { getData, registerUser } from '../../redux/auth/actions';
-
-const RedCheckbox = withStyles({
-  root: {
-        color: red[400],
-    '&$checked': {
-        color: red[600],
-    },
-  },
-  checked: {},
-})((props) => <Checkbox color="default" {...props} />);
 
 export function RegisterMain() {
     const [state, setState] = React.useState(true);

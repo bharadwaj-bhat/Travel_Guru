@@ -4,60 +4,12 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { Link, useHistory } from "react-router-dom";
-
-import { makeStyles } from "@material-ui/core/styles";
-
+import {useStyles} from "../../Styles/stylecomponents/stylecomponents"
 import {  useState } from "react";
 import styles from "../../Styles/landingPage.module.css";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../redux/auth/actions";
-
-const useStyles = makeStyles((theme) => ({
-  Paper: {
-    textAlign: "left",
-    width: "200px",
-    padding: "0px 4px",
-  },
-  Paper2: {
-    height: "100px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    fontSize: "0.8rem",
-  },
-  span: {
-    color: "orange",
-    cursor: "pointer",
-  },
-  Nav: {
-    fontSize: "0.8rem",
-    fontWeight: "600",
-    letterSpacing: "1px",
-  },
-  LogIn: {
-    border: "none",
-    padding: "10px 4px",
-    margin: "5px 25px",
-    background: "rgb(244,121,50) ",
-    color: "white",
-    fontSize: "1rem",
-    cursor: "pointer",
-  },
-  LogOut: {
-    border: "none",
-    padding: "10px 4px",
-    margin: "5px 25px",
-    background: "#fff ",
-    color: "#999",
-    fontSize: "1rem",
-    cursor: "pointer",
-  },
-  flex: {
-    display: "flex",
-    alignItems: "center",
-  },
-}));
 
 export const NavBar = () => {
   const classes = useStyles();
@@ -84,12 +36,10 @@ export const NavBar = () => {
   };
 
   const handleClose = (e) => {
-    // e.stopPropagation();
     setAnchorEl(null);
   };
 
   const handleClose2 = (e) => {
-    // e.stopPropagation();
     setAnchorEl2(null);
   };
 

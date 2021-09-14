@@ -17,7 +17,7 @@ export const TrendingDestinations = () => {
                 showArrows={false}
 				renderPagination={({ pages, activePage, onClick }) => {
 					return (
-						<div style={{ display: "flex" }} direction="row">
+						<div className={styles.trend_flex} direction="row">
 							{pages.map((page) => {
                                 const isActivePage = activePage === page;
 								return (

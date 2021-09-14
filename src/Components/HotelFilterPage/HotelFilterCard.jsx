@@ -7,19 +7,9 @@ import RoomIcon from "@material-ui/icons/Room";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import FreeBreakfastOutlinedIcon from "@material-ui/icons/FreeBreakfastOutlined";
 import LoyaltyOutlinedIcon from "@material-ui/icons/LoyaltyOutlined";
+import {carouselStyles} from "../../Styles/stylecomponents/stylecomponents"
 import { Link } from "react-router-dom";
 
-const carouselStyles = {
-  style: {
-    background: "#fff",
-    color: "#999",
-    opacity: "0.8",
-    borderRadius: "50%",
-    height: "30px",
-    width: "30px",
-    margin: "5px",
-  },
-};
 export default function HotelFilterCard({ data }) {
   const nodeRef = React.useRef(null);
   return (

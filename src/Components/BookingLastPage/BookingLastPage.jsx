@@ -1,4 +1,4 @@
-import {MainDiv , SubDiv,LefSide,LeftDivTop,LeftPic,RightDetail,Input,RightP,RightP1,MidRight,Check,MiddleLastDiv,DetailDiv,Date,Inclusion,Policy,D1,D2,MiddleDiv,Mdiv ,M1div ,M2div,M3div ,M31div ,M32div,Instruction,MsecondRow,Ms,Md1, Room,Md2,MthirdRow,Special,RequestIn,Instruction1,Continue,RightSide,Price,DDiv,DDiv1 ,Total,Dddiv,Promo,Button,Button1,H03,Div001,Div002,Div003,D301,H333 } from "./LastPageStyle"
+import {MainDiv , SubDiv,LefSide,LeftDivTop,LeftPic,RightDetail,Input,RightP,RightP1,MidRight,Check,MiddleLastDiv,DetailDiv,Date,Inclusion,Policy,D1,D2,MiddleDiv,Mdiv ,M1div ,M2div,M3div ,M31div ,M32div,Instruction,MsecondRow,Ms,Md1, Room,Md2,MthirdRow,Special,RequestIn,Instruction1,Continue,RightSide,Price,DDiv,DDiv1 ,Total,Dddiv,Promo,Button,Button1,H03,Div001,Div002,Div003,D301,H333 } from "../../Styles/stylecomponents/LastPageStyle"
 import CheckRoundedIcon from "@material-ui/icons/CheckRounded";
 import styles from "../../Styles/BookingLast.module.css"
 import { useState } from "react";
