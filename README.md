@@ -62,18 +62,6 @@ npm run start
 Contributions are always welcome!
 
 You can contribute with us to make this more functionable.
-  
-## Lessons Learned
-
-We are a learner and this is our third clone so faced many issues to build this site. These are some topic that challenges us to make this:-
-- Routing of pages in react
-- using redux for state management
-- making custom hooks
-- using various styling libraries to write less code.
-  
-## Optimizations
-
-We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
 
 ## Snippets
 
@@ -86,6 +74,18 @@ We made this website so much optimized way as compared to the original website w
  
  Click the link to view project: 
  <a href="https://travelguru-clone.herokuapp.com/">Travel_Guru</a>
+  
+## Lessons Learned
+
+We are a learner and this is our third clone so faced many issues to build this site. These are some topic that challenges us to make this:-
+- Routing of pages in react
+- using redux for state management
+- making custom hooks
+- using various styling libraries to write less code.
+  
+## Optimizations
+
+We made this website so much optimized way as compared to the original website we write less no. Of code and more functional.
   
 ## Support
 
