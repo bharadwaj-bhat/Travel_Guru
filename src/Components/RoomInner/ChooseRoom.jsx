@@ -7,8 +7,6 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 // For pop over
 import Popover from "@material-ui/core/Popover";
 import Paper from "@material-ui/core/Paper";
-// import Typography from "@material-ui/core/Typography";
-// import Divider from "@material-ui/core/Divider";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import { JuniorSuit } from "./Suits/JuniorSuit";
@@ -285,7 +283,7 @@ export const ChooseRoom = ({ price }) => {
             </div>
           </div>
           <div>
-            <p style={{ color: "white" }}>.</p>
+            <p className={styles.CarouselSubDivAboveJuniorSuitP}>.</p>
             <button
               className={styles.CheckAvailabilityBtn}
               onClick={handleOverLay}
@@ -296,7 +294,7 @@ export const ChooseRoom = ({ price }) => {
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div className={styles.CarouselSubDivAboveJuniorSuit}>
           <JuniorSuit
             title={"Junior"}
             price={price}

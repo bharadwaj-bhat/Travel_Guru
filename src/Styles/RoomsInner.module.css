@@ -392,3 +392,43 @@
   background: rgba(0, 0, 0, 0.582);
   position: absolute;
 }
+
+.linkTagOne {
+  text-decoration: none;
+  color: rgb(136, 135, 135);
+}
+.CarouselWrapperDivOne {
+  width: 95%;
+  margin: 15px;
+}
+.CarouselWrapperDivOne img {
+  width: 100%;
+}
+.CarouselWrapperDivInnerOne {
+  display: flex;
+  align-items: center;
+}
+.CarouselWrapperDivInnerOneP1 {
+  font-size: 0.9rem;
+  padding: 0px 4px;
+}
+.CarouselWrapperDivInnerOneP2 {
+  color: rgb(0, 166, 128);
+  font-size: 0.9rem;
+}
+.CarouselSubDivAboveJuniorSuit{
+  display: flex;
+  flex-direction: column;
+}
+.CarouselSubDivAboveJuniorSuitP{
+  color:white;
+}
+
+.DetailsCardDivWrapperOne{
+  margin:150px auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding-bottom:200px;
+}

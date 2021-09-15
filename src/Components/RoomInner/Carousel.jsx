@@ -2,7 +2,6 @@ import styles from "../../Styles/RoomsInner.module.css";
 import Carousel from "react-material-ui-carousel";
 import React from "react";
 import Divider from "@material-ui/core/Divider";
-// import Box from "@material-ui/core/Box";
 
 import CheckIcon from "@material-ui/icons/Check";
 import { OverViewCard } from "./Overview";
@@ -16,21 +15,11 @@ export const CarouselComp = ({ data }) => {
       {data ? (
         <>
           <div className={styles.CarouselWrapper}>
-            <div
-              style={{
-                width: "95%",
-                margin: "15px",
-              }}
-            >
+            <div className={styles.CarouselWrapperDivOne}>
               {images && (
                 <Carousel animation="fade" interval="100000">
                   {images.map((el, i) => (
-                    <img
-                      key={i}
-                      src={el}
-                      alt=" carousal"
-                      style={{ width: "100%" }}
-                    />
+                    <img key={i} src={el} alt=" carousal" />
                   ))}
                 </Carousel>
               )}
@@ -51,19 +40,12 @@ export const CarouselComp = ({ data }) => {
               <Divider />
               {otherRatingName1 &&
                 otherRatingName1.map((el, i) => (
-                  <div key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
+                  <div key={i} className={styles.CarouselWrapperDivInnerOne}>
                     <CheckIcon fontSize="inherit" />{" "}
                     <p
-                      style={{ fontSize: "0.9rem", padding: "0px 4px" }}
+                      className={styles.CarouselWrapperDivInnerOneP1}
                     >{`${el}`}</p>
-                    <p
-                      style={{ color: "rgb(0, 166, 128)", fontSize: "0.9rem" }}
-                    >
+                    <p className={styles.CarouselWrapperDivInnerOneP2}>
                       {" "}
                       {ratingArray[i]}{" "}
                     </p>

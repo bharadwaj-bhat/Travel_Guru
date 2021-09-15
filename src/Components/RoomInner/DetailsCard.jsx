@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../../redux/RoomInner/actions";
-import {  CarouselComp } from "./Carousel";
+import { CarouselComp } from "./Carousel";
+import styles from "../../Styles/RoomsInner.module.css";
 import { NameHeader } from "./NameHeader";
 import { NavigationBar } from "./NavigationBar";
 import Loader from "react-loader-spinner";
-import React from "react"
-import {v4 as uuid} from "uuid"
+import React from "react";
+import { v4 as uuid } from "uuid";
 export const DetailsCard = ({ id }) => {
   const data = useSelector((state) => state.room.data);
   const loading = useSelector((state) => state.room.isLoading);
@@ -14,20 +15,11 @@ export const DetailsCard = ({ id }) => {
 
   useEffect(() => {
     dispatch(getData(id));
-  }, [dispatch,id]);
+  }, [dispatch, id]);
 
   if (loading) {
     return (
-      <div
-        style={{
-          margin: "150px auto",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingBottom: "200px",
-        }}
-      >
+      <div className={styles.DetailsCardDivWrapperOne}>
         <Loader
           type="Circles"
           color="#F47932"
@@ -43,7 +35,7 @@ export const DetailsCard = ({ id }) => {
   return (
     <div>
       {data && (
-        <React.Fragment  key={uuid()}>
+        <React.Fragment key={uuid()}>
           <NameHeader data={data} />
           <NavigationBar />
           <CarouselComp data={data} />

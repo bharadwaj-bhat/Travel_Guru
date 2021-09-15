@@ -6,10 +6,7 @@ import { Link } from "react-router-dom";
 export const BreadCrum = () => {
   return (
     <div className={styles.BreadCrumWrapper}>
-      <Link
-        to="/hotel-search"
-        style={{ textDecoration: "none", color: "rgb(136, 135, 135)" }}
-      >
+      <Link to="/hotel-search" className={styles.linkTagOne}>
         <div className={styles.BreadCrum}>
           <ArrowBackIosIcon size="small" />
           <p className={styles.BreadCrumUnderLine}> Back to Search Results </p>
