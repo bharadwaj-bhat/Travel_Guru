@@ -8,7 +8,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import Popover from "@material-ui/core/Popover";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
-import { makeStyles } from "@material-ui/core/styles";
+import { useStyles3 } from "../../Styles/stylecomponents/stylecomponents"
 import { JuniorSuit } from "./Suits/JuniorSuit";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -61,12 +61,7 @@ export const ChooseRoom = ({ price }) => {
               ? `${checkInState.day}/${checkInState.month}/${checkInState.year}`
               : ""
           }
-          style={{
-            width: "200px",
-            height: "30px",
-            padding: "0px 5px",
-            cursor: "pointer",
-          }}
+          className={styles.room_inner_div}
         />
         <div className={styles.calendarIcon}>
           <DateRangeIcon color="inherit" />
@@ -87,12 +82,7 @@ export const ChooseRoom = ({ price }) => {
               ? `${checkOutState.day}/${checkOutState.month}/${checkOutState.year}`
               : ""
           }
-          style={{
-            width: "200px",
-            height: "30px",
-            padding: "0px 5px",
-            cursor: "pointer",
-          }}
+          className={styles.room_inner_div}
         />
         <div className={styles.calendarIcon2}>
           <DateRangeIcon color="inherit" />
@@ -101,64 +91,7 @@ export const ChooseRoom = ({ price }) => {
     );
   };
 
-  const useStyles = makeStyles((theme) => ({
-    paper: {
-      width: "300px",
-    },
-    rooms: {
-      display: "flex",
-    },
-    grid: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: "-10px",
-    },
-    subHead1: {
-      fontSize: "0.8rem",
-      fontWeight: "600",
-      marginTop: "-5px",
-      marginRight: "80px",
-    },
-    subHead2: {
-      fontSize: "0.7rem",
-    },
-    Room1p: {
-      fontSize: "1rem",
-      fontWeight: "600",
-    },
-    wrapper: {
-      padding: "0px 15px",
-      color: "rgb(51, 51, 51)",
-    },
-    btn: {
-      border: "none",
-      height: "29px",
-      padding: "2px 8px",
-      outline: "1px solid grey",
-      background: "white",
-      margin: "1px",
-    },
-    btnM: {
-      border: "none",
-      height: "29px",
-      padding: "2px 8px",
-      outline: "1px solid grey",
-      background: "white",
-      margin: "1px",
-      marginLeft: "-42px",
-    },
-    btnP: {
-      padding: "5px 8px",
-      outline: "1px solid grey",
-      background: "white",
-    },
-    h5: {
-      margin: "0px 0px 10px 0px",
-    },
-  }));
-
-  const classes = useStyles();
+  const classes = useStyles3();
   return (
     <div>
       <LoadingOverlay

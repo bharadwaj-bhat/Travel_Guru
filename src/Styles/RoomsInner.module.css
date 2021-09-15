@@ -1,434 +1,446 @@
 .roomsLayoutWrapper {
-  width: 100%;
-  margin: auto;
-  background-color: rgb(242, 242, 242);
+	width: 100%;
+	margin: auto;
+	background-color: rgb(242, 242, 242);
 }
 
 .roomsLayout {
-  width: 85%;
-  margin: auto;
+	width: 85%;
+	margin: auto;
 }
 
 .BreadCrumWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  color: rgb(136, 135, 135);
-  align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.75rem;
+	color: rgb(136, 135, 135);
+	align-items: center;
 }
 
 .BreadCrum {
-  display: flex;
-  margin: 10px 0px;
-  align-items: center;
+	display: flex;
+	margin: 10px 0px;
+	align-items: center;
 }
 .BreadCrumSearchBtn {
-  align-items: center;
-  display: flex;
-  font-size: 0.7rem;
-  border: 1px solid gray;
-  padding: 0px 12px;
-  height: 30px;
-  border-radius: 3px;
-  background-color: rgb(228, 228, 228);
-  cursor: pointer;
+	align-items: center;
+	display: flex;
+	font-size: 0.7rem;
+	border: 1px solid gray;
+	padding: 0px 12px;
+	height: 30px;
+	border-radius: 3px;
+	background-color: rgb(228, 228, 228);
+	cursor: pointer;
 }
 .BreadCrumSearchBtn:hover {
-  border: 1px solid black;
+	border: 1px solid black;
 }
 
 .BreadCrumUnderLine:hover {
-  cursor: pointer;
-  color: rgb(244, 121, 50);
-  text-decoration: underline;
-  text-decoration-color: rgb(244, 121, 50);
+	cursor: pointer;
+	color: rgb(244, 121, 50);
+	text-decoration: underline;
+	text-decoration-color: rgb(244, 121, 50);
 }
 
 /* Details Card */
 
 .NameHeaderWrapper {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .NameHeader {
-  display: flex;
-  align-items: center;
-  margin-bottom: -20px;
-  color: rgb(51, 51, 51);
+	display: flex;
+	align-items: center;
+	margin-bottom: -20px;
+	color: rgb(51, 51, 51);
 }
 .NameHeader img {
-  height: 26px;
-  font-size: 0.8rem;
+	height: 26px;
+	font-size: 0.8rem;
 }
 .NameHeader h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: rgb(51, 51, 51);
-  padding-right: 10px;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: rgb(51, 51, 51);
+	padding-right: 10px;
 }
 .locationP {
-  font-size: 0.94rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  color: rgb(102, 102, 102);
+	font-size: 0.94rem;
+	letter-spacing: 1px;
+	font-weight: 500;
+	color: rgb(102, 102, 102);
 }
 .PricePer {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  color: rgb(51, 51, 51);
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	color: rgb(51, 51, 51);
 }
 .PricePer button {
-  margin-top: 4px;
-  border: none;
-  color: white;
-  background-color: rgb(85, 150, 28);
-  font-size: 1rem;
-  font-weight: 500;
-  height: 40px;
-  border-radius: 3px;
-  padding: 1px 18px;
-  margin-left: 15px;
+	margin-top: 4px;
+	border: none;
+	color: white;
+	background-color: rgb(85, 150, 28);
+	font-size: 1rem;
+	font-weight: 500;
+	height: 40px;
+	border-radius: 3px;
+	padding: 1px 18px;
+	margin-left: 15px;
 }
 .PricePer button:hover {
-  transform: scale(1.1);
-  transition: 0.2s ease-in;
+	transform: scale(1.1);
+	transition: 0.2s ease-in;
 }
 .perNightPtag {
-  font-size: 0.9rem;
-  margin-top: -25px;
-  margin-left: -15px;
+	font-size: 0.9rem;
+	margin-top: -25px;
+	margin-left: -15px;
 }
 .navigationBar {
-  width: 100%;
-  background-color: rgb(51, 51, 51);
-  display: flex;
-  height: 35px;
-  border-radius: 4px;
-  align-items: center;
-  color: white;
-  font-size: 0.93rem;
-  cursor: pointer;
-  transition: ease-in 200ms;
+	width: 100%;
+	background-color: rgb(51, 51, 51);
+	display: flex;
+	height: 35px;
+	border-radius: 4px;
+	align-items: center;
+	color: white;
+	font-size: 0.93rem;
+	cursor: pointer;
+	transition: ease-in 200ms;
 }
 .navigationBar p {
-  padding: 5px 12px;
-  border-left: 1px solid grey;
-  margin: 0px 1px;
+	padding: 5px 12px;
+	border-left: 1px solid grey;
+	margin: 0px 1px;
 }
 .navigationBar p:hover {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 .CarouselWrapper {
-  background-color: white;
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 9fr 3fr;
-  width: 100%;
-  height: 500px;
+	background-color: white;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	width: 100%;
+	height: 500px;
 }
 .otherReviews {
-  display: flex;
-  margin-left: 5px;
-  flex-direction: column;
-  width: 90%;
-  /* margin: 0 auto; */
+	display: flex;
+	margin-left: 5px;
+	flex-direction: column;
+	width: 90%;
+	/* margin: 0 auto; */
 }
 .otherReviews > p {
-  margin-top: -5px;
-  font-size: 1rem;
+	margin-top: -5px;
+	font-size: 1rem;
 }
 .otherReviews > div {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 .otherReviews h1 {
-  color: rgb(0, 166, 128);
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: -10px;
+	color: rgb(0, 166, 128);
+	font-weight: 500;
+	font-size: 2rem;
+	margin-bottom: -10px;
 }
 .reviewsP {
-  font-size: 0.7rem;
-  text-decoration: underline;
-  margin-left: 40px;
+	font-size: 0.7rem;
+	text-decoration: underline;
+	margin-left: 40px;
 }
 .otherReviewsP {
-  color: rgb(0, 166, 128);
-  font-size: 1.2rem;
-  font-weight: 600;
+	color: rgb(0, 166, 128);
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 .checkInsP {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin-top: 20px;
 }
 .checkInsP p {
-  font-size: 0.95rem;
-  font-weight: 600;
+	font-size: 0.95rem;
+	font-weight: 600;
 }
 .checkInsP span {
-  font-size: 0.95rem;
-  font-weight: 500;
+	font-size: 0.95rem;
+	font-weight: 500;
 }
 
 /* Overview Card */
 .OverViewCard {
-  margin-top: -14px;
-  width: 100%;
-  /* height: 650px; */
-  background-color: white;
+	margin-top: -14px;
+	width: 100%;
+	/* height: 650px; */
+	background-color: white;
 }
 .OverViewCard > div {
-  padding: 10px 20px;
-  font-weight: 600;
+	padding: 10px 20px;
+	font-weight: 600;
 }
 
 .OverViewIcons {
-  display: flex;
-  overflow-x: hidden;
+	display: flex;
+	overflow-x: hidden;
 }
 .OverViewIcons div {
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(242, 242, 242);
-  font-size: 2rem;
-  margin-right: 5px;
-  color: grey;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(242, 242, 242);
+	font-size: 2rem;
+	margin-right: 5px;
+	color: grey;
 }
 .longText {
-  font-weight: 500;
-  font-size: 0.92rem;
-  line-height: 1.5rem;
-  max-width: 90%;
-  overflow: hidden;
+	font-weight: 500;
+	font-size: 0.92rem;
+	line-height: 1.5rem;
+	max-width: 90%;
+	overflow: hidden;
 }
 .ReadMore {
-  color: rgb(63, 63, 235);
+	color: rgb(63, 63, 235);
 }
 .ReadLess {
-  color: orange;
+	color: orange;
 }
 .advantagesDiv {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .advantagesDiv > div {
-  margin-top: 25px;
-  display: flex;
-  text-align: center;
+	margin-top: 25px;
+	display: flex;
+	text-align: center;
 }
 .advantagesDiv img {
-  height: 30px;
-  margin-top: 10px;
-  margin-right: 10px;
+	height: 30px;
+	margin-top: 10px;
+	margin-right: 10px;
 }
 .pointersP {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .pointersP div {
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 500;
+	display: flex;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: 500;
 }
 
 /* Choose room component */
 .ChooseRoomP {
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 6px 0px;
-  color: rgb(51, 51, 51);
+	font-size: 0.95rem;
+	font-weight: 600;
+	padding: 6px 0px;
+	color: rgb(51, 51, 51);
 }
 .ChooseRoomWrapper {
-  background-color: white;
-  width: 100%;
-  margin: 0px auto;
-  color: rgb(51, 51, 51);
-  margin-bottom: 150px;
+	background-color: white;
+	width: 100%;
+	margin: 0px auto;
+	color: rgb(51, 51, 51);
+	margin-bottom: 150px;
 }
 .ChooseRoomWrapper > div {
-  width: 95%;
-  margin: auto;
-  display: flex;
-  margin-bottom: 20px;
+	width: 95%;
+	margin: auto;
+	display: flex;
+	margin-bottom: 20px;
 }
 .ChooseRoomWrapper > div > div {
-  padding-top: 15px;
-  position: relative;
-  margin-right: 25px;
+	padding-top: 15px;
+	position: relative;
+	margin-right: 25px;
 }
 .ChooseRoomWrapper > div > div > p {
-  font-size: 0.8rem;
-  font-weight: 600;
+	font-size: 0.8rem;
+	font-weight: 600;
 }
 
 .calendarIcon {
-  position: absolute;
-  left: 183px;
-  top: 5px;
-  color: rgb(51, 51, 51);
+	position: absolute;
+	left: 183px;
+	top: 5px;
+	color: rgb(51, 51, 51);
 }
 .calendarIcon2 {
-  position: absolute;
-  left: 183px;
-  top: 5px;
-  color: rgb(51, 51, 51);
+	position: absolute;
+	left: 183px;
+	top: 5px;
+	color: rgb(51, 51, 51);
 }
 .RoomsSelectorPopUp {
-  width: 180px;
-  height: 30px;
-  padding: 0px 5px;
-  outline: 1px solid grey;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
+	width: 180px;
+	height: 30px;
+	padding: 0px 5px;
+	outline: 1px solid grey;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
 }
 .RoomsSelectorPopUp p {
-  font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 .CheckAvailabilityBtn {
-  width: 180px;
-  height: 30px;
-  font-size: 1rem;
-  border-radius: 3px;
-  background-color: rgb(85, 150, 28);
-  color: white;
-  border: none;
-  cursor: pointer;
+	width: 180px;
+	height: 30px;
+	font-size: 1rem;
+	border-radius: 3px;
+	background-color: rgb(85, 150, 28);
+	color: white;
+	border: none;
+	cursor: pointer;
 }
 .JuniorSuitWrapper {
-  outline: 1px solid rgba(202, 202, 202, 0.726);
-  width: 100%;
-  margin-bottom: 30px;
-  padding-bottom: 50px;
+	outline: 1px solid rgba(202, 202, 202, 0.726);
+	width: 100%;
+	margin-bottom: 30px;
+	padding-bottom: 50px;
 }
 .JuniorSuitWrapper > div {
-  width: 97%;
-  margin: -10px auto;
+	width: 97%;
+	margin: -10px auto;
 }
 .JuniorSuitWrapper > div > p {
-  font-size: 1rem;
-  font-weight: 600;
+	font-size: 1rem;
+	font-weight: 600;
 }
 .JuniorSuitWrapper img {
-  width: 180px;
+	width: 180px;
 }
 .JuniorSuitFlex {
-  display: flex;
-  font-size: 0.9rem;
-  font-weight: 600;
+	display: flex;
+	font-size: 0.9rem;
+	font-weight: 600;
 }
 .JuniorSuitFlexColumn {
-  font-size: 0.8rem;
-  font-weight: 500;
-  display: flex;
-  width: 80%;
-  margin: 0px auto;
-  flex-direction: column;
-  border-bottom: 1px grey dotted;
+	font-size: 0.8rem;
+	font-weight: 500;
+	display: flex;
+	width: 80%;
+	margin: 0px auto;
+	flex-direction: column;
+	border-bottom: 1px grey dotted;
 }
 
 .JuniorSuitDiv {
-  width: 100%;
-  padding: 0px 5px;
+	width: 100%;
+	padding: 0px 5px;
 }
 .JuniorSuitDivInner {
-  margin-bottom: -15px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  align-items: center;
-  grid-gap: 55px;
+	margin-bottom: -15px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	align-items: center;
+	grid-gap: 55px;
 }
 .highlightedPTag {
-  font-weight: 600;
+	font-weight: 600;
 }
 .suiteHeader {
-  font-size: 0.9rem;
-  font-weight: 600;
+	font-size: 0.9rem;
+	font-weight: 600;
 }
 #iconId {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
 .priceTagDiv {
-  position: relative;
+	position: relative;
 }
 .priceTag {
-  position: absolute;
-  font-size: 1.8rem;
-  top: -50px;
+	position: absolute;
+	font-size: 1.8rem;
+	top: -50px;
 }
 .priceTagDiv button {
-  position: absolute;
-  padding: 10px 20px;
-  background-color: rgb(85, 150, 28);
-  color: white;
-  border: none;
-  border-radius: 3px;
-  top: -25px;
-  font-weight: 600;
-  cursor: pointer;
+	position: absolute;
+	padding: 10px 20px;
+	background-color: rgb(85, 150, 28);
+	color: white;
+	border: none;
+	border-radius: 3px;
+	top: -25px;
+	font-weight: 600;
+	cursor: pointer;
 }
 #tabIdFrMr {
-  padding-bottom: 50px;
-  margin-left: 19%;
-  margin-top: 30px;
+	padding-bottom: 50px;
+	margin-left: 19%;
+	margin-top: 30px;
 }
 ._loading_overlay_overlay {
-  background: rgba(0, 0, 0, 0.582);
-  position: absolute;
+	background: rgba(0, 0, 0, 0.582);
+	position: absolute;
 }
 
 .linkTagOne {
-  text-decoration: none;
-  color: rgb(136, 135, 135);
+	text-decoration: none;
+	color: rgb(136, 135, 135);
 }
 .CarouselWrapperDivOne {
-  width: 95%;
-  margin: 15px;
+	width: 95%;
+	margin: 15px;
 }
 .CarouselWrapperDivOne img {
-  width: 100%;
+	width: 100%;
 }
 .CarouselWrapperDivInnerOne {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 .CarouselWrapperDivInnerOneP1 {
-  font-size: 0.9rem;
-  padding: 0px 4px;
+	font-size: 0.9rem;
+	padding: 0px 4px;
 }
 .CarouselWrapperDivInnerOneP2 {
-  color: rgb(0, 166, 128);
-  font-size: 0.9rem;
+	color: rgb(0, 166, 128);
+	font-size: 0.9rem;
 }
-.CarouselSubDivAboveJuniorSuit{
-  display: flex;
-  flex-direction: column;
+.CarouselSubDivAboveJuniorSuit {
+	display: flex;
+	flex-direction: column;
 }
-.CarouselSubDivAboveJuniorSuitP{
-  color:white;
+.CarouselSubDivAboveJuniorSuitP {
+	color: white;
 }
 
-.DetailsCardDivWrapperOne{
-  margin:150px auto;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  padding-bottom:200px;
+.DetailsCardDivWrapperOne {
+	margin: 150px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 200px;
+}
+.box_1_1 {
+	font-weight: 500;
+}
+.box_1_2 {
+	width: 20px !important;
+}
+.room_inner_div {
+	width: 200px;
+	height: 30px;
+	padding: 0px 5px;
+	cursor: pointer;
 }

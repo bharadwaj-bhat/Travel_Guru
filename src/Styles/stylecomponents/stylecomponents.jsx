@@ -150,3 +150,60 @@ export const RedCheckbox = withStyles({
   },
   checked: {},
 })((props) => <Checkbox color="default" {...props} />);
+
+export const useStyles3 = makeStyles((theme) => ({
+    paper: {
+      width: "300px",
+    },
+    rooms: {
+      display: "flex",
+    },
+    grid: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: "-10px",
+    },
+    subHead1: {
+      fontSize: "0.8rem",
+      fontWeight: "600",
+      marginTop: "-5px",
+      marginRight: "80px",
+    },
+    subHead2: {
+      fontSize: "0.7rem",
+    },
+    Room1p: {
+      fontSize: "1rem",
+      fontWeight: "600",
+    },
+    wrapper: {
+      padding: "0px 15px",
+      color: "rgb(51, 51, 51)",
+    },
+    btn: {
+      border: "none",
+      height: "29px",
+      padding: "2px 8px",
+      outline: "1px solid grey",
+      background: "white",
+      margin: "1px",
+    },
+    btnM: {
+      border: "none",
+      height: "29px",
+      padding: "2px 8px",
+      outline: "1px solid grey",
+      background: "white",
+      margin: "1px",
+      marginLeft: "-42px",
+    },
+    btnP: {
+      padding: "5px 8px",
+      outline: "1px solid grey",
+      background: "white",
+    },
+    h5: {
+      margin: "0px 0px 10px 0px",
+    },
+  }));

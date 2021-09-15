@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Payment.module.css";
+import styles from '../../Styles/Payment.module.css'
 import Modal from "@material-ui/core/Modal";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";

@@ -64,7 +64,7 @@ export const JuniorSuit = ({ price, title, image }) => {
               </div>
               <div className={styles.JuniorSuitDivInner}>
                 <img
-                  style={{ width: "20px" }}
+                  className={styles.box_1_2}
                   src="https://image.flaticon.com/icons/png/512/681/681494.png"
                   alt=""
                 />
@@ -79,7 +79,7 @@ export const JuniorSuit = ({ price, title, image }) => {
                 <div className={styles.priceTagDiv}>
                   <h4 className={styles.priceTag}>
                     {" "}
-                    <span style={{ fontWeight: "500" }}> ₹</span> {price}{" "}
+                    <span  className={styles.box_1_1}> ₹</span> {price}{" "}
                   </h4>
                 </div>
                 <div className={styles.priceTagDiv}>
@@ -104,7 +104,7 @@ export const JuniorSuit = ({ price, title, image }) => {
             </div>
             <div className={styles.JuniorSuitDivInner}>
               <img
-                style={{ width: "20px" }}
+                className={styles.box_1_2}
                 src="https://image.flaticon.com/icons/png/512/681/681494.png"
                 alt=""
               />
@@ -119,7 +119,7 @@ export const JuniorSuit = ({ price, title, image }) => {
               <div className={styles.priceTagDiv}>
                 <h4 className={styles.priceTag}>
                   {" "}
-                  <span style={{ fontWeight: "500" }}> ₹</span>{" "}
+                  <span  className={styles.box_1_1}> ₹</span>{" "}
                   {Number(price) + 1000}{" "}
                 </h4>
               </div>
@@ -153,7 +153,7 @@ export const JuniorSuit = ({ price, title, image }) => {
             </div>
             <div className={styles.JuniorSuitDivInner}>
               <img
-                style={{ width: "20px" }}
+                className={styles.box_1_2}
                 src="https://image.flaticon.com/icons/png/512/681/681494.png"
                 alt=""
               />
@@ -168,7 +168,7 @@ export const JuniorSuit = ({ price, title, image }) => {
               <div className={styles.priceTagDiv}>
                 <h4 className={styles.priceTag}>
                   {" "}
-                  <span style={{ fontWeight: "500" }}> ₹</span>{" "}
+                  <span  className={styles.box_1_1}> ₹</span>{" "}
                   {Number(price) + 2000}{" "}
                 </h4>
               </div>
@@ -202,7 +202,7 @@ export const JuniorSuit = ({ price, title, image }) => {
             </div>
             <div className={styles.JuniorSuitDivInner}>
               <img
-                style={{ width: "20px" }}
+                className={styles.box_1_2}
                 src="https://image.flaticon.com/icons/png/512/681/681494.png"
                 alt=""
               />
@@ -217,7 +217,7 @@ export const JuniorSuit = ({ price, title, image }) => {
               <div className={styles.priceTagDiv}>
                 <h4 className={styles.priceTag}>
                   {" "}
-                  <span style={{ fontWeight: "500" }}> ₹</span>{" "}
+                  <span className={styles.box_1_1}> ₹</span>{" "}
                   {Number(price) + 3000}{" "}
                 </h4>
               </div>

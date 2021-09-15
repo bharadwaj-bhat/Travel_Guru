@@ -1,6 +1,6 @@
 import React from 'react'
 import Payment from './Payment'
-import styles from './Payment.module.css'
+import styles from '../../Styles/Payment.module.css'
 
 const FinalPaymentPage = () => {
     return (
