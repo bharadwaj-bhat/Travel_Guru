@@ -2,38 +2,54 @@ import styles from "../../../Styles/RoomsInner.module.css";
 import CheckIcon from "@material-ui/icons/Check";
 import MoneyOffIcon from "@material-ui/icons/MoneyOff";
 import FreeBreakfastIcon from "@material-ui/icons/FreeBreakfast";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addPrice } from "../../../redux/DatesData/actionTypes";
 import { useHistory } from "react-router-dom";
 
 export const JuniorSuit = ({ price, title, image }) => {
-  // const dateI = useSelector((state) => state.date.checkInDate.day);
-  // const dateO = useSelector((state) => state.date.checkOutDate.day);
+  const isAuth = useSelector((state) => state.auth.isAuth);
   const history = useHistory();
-  // const priceState = useSelector((state) => state.date.price);
 
   const dispatch = useDispatch();
 
-  // let diff = Math.abs(dateI - dateO);
-
   const handleOnlyRoom = () => {
-    dispatch(addPrice(price));
-    history.push("/payments");
+    if (!isAuth) {
+      alert("You are not logged in !!!")
+      history.push("/payments");
+    } else {
+      dispatch(addPrice(price));
+      history.push("/payments");
+    }
   };
 
   const handleWithBreakFast = () => {
-    dispatch(addPrice(price + 1000));
-    history.push("/payments");
+    if (!isAuth) {
+      alert("You are not logged in !!!")
+      history.push("/payments");
+    } else {
+      dispatch(addPrice(price + 1000));
+      history.push("/payments");
+    }
   };
 
   const handleWithLunch = () => {
-    dispatch(addPrice(price + 2000));
-    history.push("/payments");
+    if (!isAuth) {
+      alert("You are not logged in !!!")
+      history.push("/payments");
+    } else {
+      dispatch(addPrice(price + 2000));
+      history.push("/payments");
+    }
   };
 
   const handleWithAll = () => {
-    dispatch(addPrice(price + 3000));
-    history.push("/payments");
+    if (!isAuth) {
+      alert("You are not logged in !!!")
+      history.push("/payments");
+    } else {
+      dispatch(addPrice(price + 3000));
+      history.push("/payments");
+    }
   };
 
   return (

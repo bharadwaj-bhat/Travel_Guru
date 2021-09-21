@@ -28,6 +28,7 @@ export const SearchBanner = () => {
   const adultsCount = useSelector((state) => state.date.adults);
   const childrenCount = useSelector((state) => state.date.children);
   const [hotels, setHotels] = useState(true);
+  const [person, setPerson] = useState(adultsCount);
   const history = useHistory();
   const dispatch = useDispatch();
   const classes = useStyles2();
@@ -39,6 +40,7 @@ export const SearchBanner = () => {
   };
 
   const handleClose = () => {
+    setPerson(adultsCount);
     setAnchorEl(null);
   };
 
@@ -52,7 +54,10 @@ export const SearchBanner = () => {
   };
 
   const handleSearch = () => {
-    history.push("/hotel-search");
+    text.length===0?alert("Enter a place name"):history.push("/hotel-search");
+  };
+  const handleText = (text) => {
+    setText(text)
   };
 
   const addAdults = (payload) => {
@@ -128,14 +133,15 @@ export const SearchBanner = () => {
             <div>
               <input
                 type="text"
+                value={text}
                 onChange={(e) => { setText(e.target.value) }}
               placeholder={
                 hotels ? "Search for Hotels" : "Search for Home Stays"
               }
               />
               <div className={styles.popUp}>
-                <p onClick={handleSearch}>Leh</p>
-                <p onClick={handleSearch}>Ladakh</p>
+                <p onClick={()=>handleText("Leh")}>Leh</p>
+                <p onClick={()=>handleText("Ladakh")}>Ladakh</p>
               </div>
             </div>
             <div className={styles.locationIcon}>
@@ -156,7 +162,7 @@ export const SearchBanner = () => {
             />
             <div onClick={handleClick} className={styles.personDiv}>
               {" "}
-              <p> 1 Person in 1 Room </p>
+              <p> {person} Person in 1 Room </p>
               <ArrowDropDownIcon />
             </div>
             <div>
@@ -220,7 +226,7 @@ export const SearchBanner = () => {
                         </div>
                       </div>
                       <Divider />
-                      <button className={classes.doneBtn} onClick={handleClose}>
+                      <button className={classes.doneBtn} onClick={() => { handleClose() }}>
                         {" "}
                         DONE{" "}
                       </button>
@@ -233,6 +239,7 @@ export const SearchBanner = () => {
               {" "}
               <SearchIcon
                 onClick={handleSearch}
+                className={styles.searchBtn2}
                 color="inherit"
                 fontSize="large"
               />{" "}

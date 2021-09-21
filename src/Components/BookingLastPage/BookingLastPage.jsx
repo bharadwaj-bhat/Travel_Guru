@@ -8,11 +8,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import FinalPaymentPage from "./FinalPaymentPage"
 import { HotelData } from "../../fakeData/HotelData";
-import { useHistory } from "react-router";
+import {  useHistory } from "react-router";
 
 
 export default function BookingLastPage() {
-  
+  const isAuth = useSelector((state) => state.auth.isAuth);
   const [cor, setCor] = useState(false);
   const [corr, setCorr] = useState(false);
   const [finalData, setFinalData] = useState(true);
@@ -26,12 +26,15 @@ export default function BookingLastPage() {
   const child=useSelector((state)=> state.date.children)
   const monthC=useSelector((state)=> state.date.checkInDate.month)
   const monthO = useSelector((state) => state.date.checkOutDate.month)
-  const history = useHistory()
+  const history = useHistory();
   const dayCount=checkOutdate-checkIndate
   const tp = priceState + 840 + 227;
   useEffect(() => {
+    if (!isAuth) {
+      history.push("/login")
+    }
     dispatch(totalPrice(tp)) 
-  },[dispatch,tp])
+  },[dispatch,tp,isAuth,history])
   if (id_current === -1) {
     history.push("/hotel-search");
     return <></>

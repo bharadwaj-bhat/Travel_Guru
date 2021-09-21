@@ -84,7 +84,13 @@ export const BodyP=styled.p`
 `
 export const CustomDiv = styled.div`
   & > div:first-child > div{
-    display:${props => ("leh".includes(props.text))&&props.text.length>0 ? "block" : "none"};
+    display:${props => ("le".includes(props.text)||"ladak".includes(props.text))&&props.text.length>0 ? "block" : "none"};
+  }
+  & > div:first-child >div> p:first-child{
+    display:${props => ("le".includes(props.text))&&props.text.length>0 ? "block" : "none"};
+  }
+  & > div:first-child>div >p:last-child{
+    display:${props => ("ladak".includes(props.text))&&props.text.length>0 ? "block" : "none"};
   }
 `
 

@@ -64,7 +64,9 @@
 	position: relative;
 	justify-content: center;
 }
-
+.searchBtn2 {
+	cursor: pointer;
+}
 .BannerInputScreen > div:first-child > input {
 	height: 40px;
 	border: none;
